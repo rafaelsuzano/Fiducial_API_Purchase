@@ -1,7 +1,13 @@
+const addContext = require('mochawesome/addContext');
+
+
 let tt
-let r
-let result
+
+
 let id_suppliers
+
+
+
 describe('Suppliers', () => {
   before(function () {
 
@@ -38,9 +44,8 @@ describe('Suppliers', () => {
         id_suppliers=(d[index].id)
         //cy.log(d[index].id)
       }
- 
- 
-
+      cy.addContext("Test get Suppliers")
+   
 
     })
   })    
@@ -59,7 +64,7 @@ describe('Suppliers', () => {
  
       expect(Response.status).to.eq(200)
   
-
+      cy.addContext("Test get Suppliers" + id_suppliers)
   })   
 
 })
@@ -77,10 +82,11 @@ it('Get Export a Supplier ', () => {
     cy.log(d)
     expect(Response.status).to.eq(200)
 
+    cy.addContext("Test get Supplier export" )
+
+
   })
 }) 
-
-
 
   })
 })
