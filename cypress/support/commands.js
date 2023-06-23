@@ -27,7 +27,7 @@
 
 
 
-Cypress.Commands.add('GetToken',()=>
+Cypress.Commands.add('GetToken',function()
 {
   let t
   cy.api("POST", "https://yav2-dev.yesaccount.com/login", {
@@ -35,7 +35,7 @@ Cypress.Commands.add('GetToken',()=>
         "password": "123"
       }).then((response) => {
        // t=JSON.stringify(response.body['token'])
-       t=(response.body['token'])
+       t=(response.body.token)
         return  t
 })
 })
