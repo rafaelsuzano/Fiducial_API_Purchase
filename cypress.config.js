@@ -1,13 +1,31 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  env:{
-  ELECTRON_EXTRA_LAUNCH_ARGS: '--disable-gpu'
+  
+
+  env: {
+  Login_dev: 'https://yav2-dev.yesaccount.com/',
+  Url: 'https://purchases-dev.yesaccount.com/'
+
   },
+
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'custom-title',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false},
+ 
   
   e2e: {
+    
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+    require('cypress-mochawesome-reporter/plugin')(on);
+
+   
+
+
     },
   },
 });
