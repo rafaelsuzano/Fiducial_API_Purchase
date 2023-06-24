@@ -1,31 +1,4 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
-
-
+import addContext from "mochawesome/addContext"
 
 Cypress.Commands.add('GetToken',function()
 {
@@ -40,8 +13,27 @@ Cypress.Commands.add('GetToken',function()
 })
 })
 
-import addContext from "mochawesome/addContext"
+
 
 Cypress.Commands.add("addContext", (context) => {
   cy.once("test:after:run", (test) => addContext({ test }, context))
 })
+
+
+
+
+Cypress.Commands.add('Post_API_With_Body',(Endpoint,Token,pBody)=>
+
+ 
+  cy.api({
+    method: "POST",
+    url: Cypress.env('Url')+Endpoint,
+    body: pBody,
+    
+    
+    headers: {
+      'Authorization': Token
+    },
+    failOnStatusCode: false
+  }).then(Response => {return Response})
+)

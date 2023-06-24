@@ -1,0 +1,34 @@
+
+{
+"code201":
+
+{
+
+    "legalInfo": {
+      "commercialName": "TESTE AUTOMATICO",
+      "address": "TESTE AUTOMATICO",
+      "postalCode": "0000000",
+      "city": "TESTE",
+      "country": {
+        "isoAlpha2": "st",
+        "name": "TESTE AUTOMATICO",
+        "id": "TESTE AUTOMATICO",
+        "isEUCountry": true,
+        "regexCondition": "TESTE AUTOMATICO"
+      }
+    },
+    "headOfficeInfo": {
+      "companyName": "TESTE AUTOMATICO",
+      "address": "TESTE AUTOMATICO",
+      "postalCode": "TESTE AUTOMATICO",
+      "city": "TESTE AUTOMATICO",
+      "country": {
+        "isoAlpha2": "st",
+        "name": "TESTE AUTOMATICO",
+        "id": "TESTE AUTOMATICO",
+        "isEUCountry": true,
+        "regexCondition": "TESTE AUTOMATICO"
+      }
+    }
+  }
+}

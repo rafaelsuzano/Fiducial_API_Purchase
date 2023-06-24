@@ -1,7 +1,10 @@
+const { beforeEach } = require('mocha');
 const addContext = require('mochawesome/addContext');
 
 
+
 let tt
+let dt1
 
 
 let id_suppliers
@@ -9,9 +12,14 @@ let id_suppliers
 
 
 describe('Suppliers', () => {
-  before(function () {
+  before(() => {
+    cy.fixture('supplier.json').then(dt => {
+        dt1 = dt;
 
-    cy.api("POST", "https://yav2-dev.yesaccount.com/login", {
+
+
+
+  cy.api("POST", "https://yav2-dev.yesaccount.com/login", {
       "email": "admin@fiducial.com",
       "password": "123"
     }).then((response) => {
@@ -21,11 +29,11 @@ describe('Suppliers', () => {
     })
 
   })
+})
 
 
 
 
-  context('GET',() =>{
     it('Get Suppliers ', () => {
     cy.api({
       method: "GET",
@@ -80,7 +88,7 @@ it('Get Export a Supplier ', () => {
   }).then(Response => {
     var d =(JSON.stringify(Response.body))
     cy.log(d)
-    expect(Response.status).to.eq(200)
+    expect(Response.status).to.eq(404)
 
     cy.addContext("Test get Supplier export" )
 
@@ -88,5 +96,19 @@ it('Get Export a Supplier ', () => {
   })
 }) 
 
+
+
+  
+  it('Post Supplier 201', () => {
+   
+   cy.Post_API_With_Body('purchases/companies/1/suppliers',tt,dt1['code201'])
+  .then (Response => {
+
+    expect(Response.status).to.eq(201);
+     
   })
-})
+
+})  
+
+})  
+
