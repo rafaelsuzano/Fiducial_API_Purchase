@@ -30,5 +30,68 @@
         "regexCondition": "TESTE AUTOMATICO"
       }
     }
+  },
+
+"code201_France":{
+
+  "legalInfo": {
+    "commercialName": "TESTE AUTOMATICO",
+    "address": "TESTE AUTOMATICO",
+    "postalCode": "0000000",
+    "city": "TESTE",
+    "siret": null,
+    "country": {
+      "isoAlpha2": "st",
+      "name": "TESTE AUTOMATICO",
+      "id": 73,
+      "isEUCountry": true,
+      "regexCondition": "TESTE AUTOMATICO"
+    }
+  },
+  "headOfficeInfo": {
+    "companyName": "TESTE AUTOMATICO",
+    "address": "TESTE AUTOMATICO",
+    "postalCode": "TESTE AUTOMATICO",
+    "city": "TESTE AUTOMATICO",
+    "country": {
+      "isoAlpha2": "st",
+      "name": "TESTE AUTOMATICO",
+      "id": 73,
+      "isEUCountry": true,
+      "regexCondition": "TESTE AUTOMATICO"
+    }
   }
+},
+
+"code400_Malformed":{
+
+  "legalInfo": {
+  
+    "address": "TESTE AUTOMATICO",
+    "postalCode": "0000000",
+    "city": "TESTE",
+    "siret": null,
+    "country": {
+      "isoAlpha2": "st",
+      "name": "TESTE AUTOMATICO",
+      "id": 73,
+      "isEUCountry": true,
+      "regexCondition": "TESTE AUTOMATICO"
+    }
+  },
+  "headOfficeInfo": {
+    "companyName": "TESTE AUTOMATICO",
+    "address": "TESTE AUTOMATICO",
+    "postalCode": "TESTE AUTOMATICO",
+    "city": "TESTE AUTOMATICO",
+    "country": {
+      "isoAlpha2": "st",
+      "name": "TESTE AUTOMATICO",
+      "id": 73,
+      "isEUCountry": true,
+      "regexCondition": "TESTE AUTOMATICO"
+    }
+  }
+
+}
 }
