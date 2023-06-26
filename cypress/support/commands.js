@@ -37,3 +37,41 @@ Cypress.Commands.add('Post_API_With_Body',(Endpoint,Token,pBody)=>
     failOnStatusCode: false
   }).then(Response => {return Response})
 )
+
+
+
+
+
+Cypress.Commands.add('GET_API',(Endpoint,Token)=>
+
+ 
+  cy.api({
+    method: "GET",
+    url: Cypress.env('Url')+Endpoint,
+
+        
+    headers: {
+      'Authorization': Token
+    },
+    failOnStatusCode: false
+  }).then(Response => {return Response})
+)
+
+
+
+
+Cypress.Commands.add('DELETE_API',(Endpoint,Token)=>
+
+ 
+  cy.api({
+    method: "DELETE",
+    url: Cypress.env('Url')+Endpoint,
+
+        
+    headers: {
+      'Authorization': Token
+    },
+    failOnStatusCode: false
+  }).then(Response => {return Response})
+)
+

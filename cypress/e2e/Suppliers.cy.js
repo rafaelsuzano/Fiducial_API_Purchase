@@ -5,7 +5,7 @@ const addContext = require('mochawesome/addContext');
 
 let tt
 let dt1
-
+let id_delete
 
 let id_suppliers
 
@@ -32,17 +32,11 @@ describe('Suppliers', () => {
 })
 
 
-
+//GET_API
 
     it('Get Suppliers ', () => {
-    cy.api({
-      method: "GET",
-      url:  Cypress.env('Url')+"purchases/companies/1/suppliers",
-      headers: {
-        'Authorization': tt
-      },
-      failOnStatusCode: false
-    }).then(Response => {
+      cy.GET_API('purchases/companies/1/suppliers/',tt)
+      .then(Response => {
       expect(Response.status).to.eq(200)
       //var d =(JSON.stringify(Response.body))
       var d =((Response.body.items))
@@ -59,14 +53,8 @@ describe('Suppliers', () => {
   })    
 
   it('Get a Supplier List', () => {
-    cy.api({
-      method: "GET",
-      url:  Cypress.env('Url')+"purchases/companies/1/suppliers/"+id_suppliers,
-      headers: {
-        'Authorization': tt
-      },
-      failOnStatusCode: false
-    }).then(Response => {
+    cy.GET_API('purchases/companies/1/suppliers/'+id_suppliers,tt)
+    .then(Response => {
       var d =(JSON.stringify(Response.body))
       cy.log(JSON.stringify(d))
  
@@ -76,16 +64,12 @@ describe('Suppliers', () => {
   })   
 
 })
-
-it('Get Export a Supplier ', () => {
-  cy.api({
-    method: "GET",
-    url: Cypress.env('Url')+"companies/1/suppliers/export",
-    headers: {
-      'Authorization': tt
-    },
-    failOnStatusCode: false
-  }).then(Response => {
+//   cy.Post_API_With_Body('companies/1/suppliers/export',tt)
+  it('Get Export a Supplier ', () => {
+  
+  
+    cy.GET_API('companies/1/suppliers/export',tt)
+    .then(Response => {
     var d =(JSON.stringify(Response.body))
     cy.log(d)
     expect(Response.status).to.eq(404)
@@ -96,8 +80,6 @@ it('Get Export a Supplier ', () => {
   })
 }) 
 
-
-
   
   it('Post Supplier 201', () => {
    
@@ -105,10 +87,78 @@ it('Get Export a Supplier ', () => {
   .then (Response => {
 
     expect(Response.status).to.eq(201);
-     
+    cy.log(JSON.stringify(Response.body)) 
+    id_delete=(JSON.stringify(Response.body["id"])) 
   })
 
 })  
 
+
+
+it('Delete Supplier 201', () => {
+   
+  cy.DELETE_API('purchases/companies/1/suppliers/'+id_suppliers,tt)
+ .then (Response => {
+
+   expect(Response.status).to.eq(204);
+   cy.log(JSON.stringify(Response.body)) 
+   id_delete=(JSON.stringify(Response.body["id"])) 
+ })
+
 })  
 
+
+}) 
+
+
+
+describe('Supplier Family', () => {
+
+  it('Get Supplier Families List', () => {
+    cy.GET_API('purchases/companies/1/supplier-families',tt)
+    .then(Response => {
+      var d =(JSON.stringify(Response.body))
+      cy.log(JSON.stringify(d))
+ 
+      expect(Response.status).to.eq(200)
+  
+      cy.addContext("Test get Supplier Family" )
+  })   
+
+})
+    it('Export Supplier Families ', () => {
+      
+      
+      cy.GET_API('purchases/companies/1/supplier-families/export',tt)
+      .then(Response => {
+      var d =(JSON.stringify(Response.body))
+      cy.log(d)
+      expect(Response.status).to.eq(404)
+
+      cy.addContext("Test get Supplier export" )
+
+
+})
+}) 
+
+
+
+
+}) 
+
+describe('Supplier Notes', () => {
+
+  it('Get Supplier Families List', () => {
+    cy.GET_API('purchases/companies/1/suppliers/'+id_suppliers+'/notes',tt)
+    .then(Response => {
+      var d =(JSON.stringify(Response.body))
+      cy.log(JSON.stringify(d))
+ 
+      expect(Response.status).to.eq(200)
+  
+      cy.addContext("Test get Supplier Family" )
+  })   
+
+})
+
+})

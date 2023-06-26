@@ -12,7 +12,7 @@
       "country": {
         "isoAlpha2": "st",
         "name": "TESTE AUTOMATICO",
-        "id": "TESTE AUTOMATICO",
+        "id": 1,
         "isEUCountry": true,
         "regexCondition": "TESTE AUTOMATICO"
       }
@@ -25,7 +25,7 @@
       "country": {
         "isoAlpha2": "st",
         "name": "TESTE AUTOMATICO",
-        "id": "TESTE AUTOMATICO",
+        "id": 1,
         "isEUCountry": true,
         "regexCondition": "TESTE AUTOMATICO"
       }
