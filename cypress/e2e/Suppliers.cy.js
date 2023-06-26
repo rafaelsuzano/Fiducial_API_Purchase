@@ -87,9 +87,9 @@ describe('Suppliers', () => {
    
    cy.Post_API_With_Body('purchases/companies/1/suppliers',tt,dt1['code201'])
   .then (Response => {
-
-    expect(Response.status).to.eq(201);
     cy.log(JSON.stringify(Response.body)) 
+    expect(Response.status).to.eq(201);
+
     id_delete=(JSON.stringify(Response.body["id"])) 
   })
 
