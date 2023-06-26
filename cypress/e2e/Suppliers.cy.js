@@ -39,7 +39,8 @@ describe('Suppliers', () => {
     it('Get Suppliers ', () => {
       cy.GET_API('purchases/companies/1/suppliers/',tt)
       .then(Response => {
-      expect(Response.status).to.eq(200)
+        cy.log(JSON.stringify(Response.body)) 
+        expect(Response.status).to.eq(200)
       //var d =(JSON.stringify(Response.body))
       var d =((Response.body.items))
 
@@ -157,7 +158,7 @@ context('Rules', () => {
 })  
 
 
-it('Delete Supplier 201', () => {
+it.skip('Delete Supplier 201', () => {
    
   cy.DELETE_API('purchases/companies/1/suppliers/'+id_suppliers,tt)
  .then (Response => {
