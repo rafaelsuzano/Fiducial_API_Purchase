@@ -39,8 +39,7 @@ describe('Suppliers', () => {
     it('Get Suppliers ', () => {
       cy.GET_API('purchases/companies/1/suppliers/',tt)
       .then(Response => {
-        cy.log(JSON.stringify(Response.body)) 
-        expect(Response.status).to.eq(200)
+      expect(Response.status).to.eq(200)
       //var d =(JSON.stringify(Response.body))
       var d =((Response.body.items))
 
@@ -88,9 +87,9 @@ describe('Suppliers', () => {
    
    cy.Post_API_With_Body('purchases/companies/1/suppliers',tt,dt1['code201'])
   .then (Response => {
-    cy.log(JSON.stringify(Response.body)) 
-    expect(Response.status).to.eq(201);
 
+    expect(Response.status).to.eq(201);
+    cy.log(JSON.stringify(Response.body)) 
     id_delete=(JSON.stringify(Response.body["id"])) 
   })
 
@@ -146,7 +145,7 @@ context('Rules', () => {
   })  
   it('Post Supplier 400 Malformaed', () => {
    
-    cy.Post_API_With_Body('purchases/companies/1/suppliers',tt,dt1['code400_Malformaed'])
+    cy.Post_API_With_Body('purchases/companies/1/suppliers',tt,dt1['code400_Malformed'])
    .then (Response => {
     cy.log(JSON.stringify(Response.body)) 
      expect(Response.status).to.eq(400);
@@ -158,7 +157,7 @@ context('Rules', () => {
 })  
 
 
-it.skip('Delete Supplier 201', () => {
+it('Delete Supplier 201', () => {
    
   cy.DELETE_API('purchases/companies/1/suppliers/'+id_suppliers,tt)
  .then (Response => {
@@ -184,7 +183,21 @@ describe('Supplier Family', () => {
       })
  })
  
- 
+ it('Get Supplier Family 200', () => {
+   
+  cy.GET_API('purchases/companies/1/supplier-families',tt)
+ .then (Response => {
+
+   expect(Response.status).to.eq(200);
+   cy.log(JSON.stringify(Response.body)) 
+
+ })
+
+})  
+
+
+
+
  it('Post Supplier Family 201', () => {
    
   cy.Post_API_With_Body('purchases/companies/1/supplier-families',tt,dt_Family['code201'])
@@ -220,7 +233,7 @@ describe('Supplier Family', () => {
       .then(Response => {
       var d =(JSON.stringify(Response.body))
       cy.log(d)
-      expect(Response.status).to.eq(404)
+      expect(Response.status).to.eq(405)
 
       cy.addContext("Test get Supplier export" )
 
@@ -228,7 +241,17 @@ describe('Supplier Family', () => {
 })
 }) 
 
+  it('Delete Supplier 201', () => {
+    
+    cy.DELETE_API('purchases/companies/1/supplier-families/97',tt)
+  .then (Response => {
 
+    expect(Response.status).to.eq(204);
+    cy.log(JSON.stringify(Response.body)) 
+    id_delete=(JSON.stringify(Response.body["id"])) 
+  })
+
+  })  
 
 
 }) 

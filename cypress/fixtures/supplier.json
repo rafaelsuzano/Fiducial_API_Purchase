@@ -65,8 +65,8 @@
   
   "code400_Malformed":{
   
-    "legalInfo": {
-    
+    "": {
+      "commercialName":  null,
       "address": "TESTE AUTOMATICO",
       "postalCode": "0000000",
       "city": "TESTE",
