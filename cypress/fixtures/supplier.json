@@ -10,11 +10,13 @@
         "postalCode": "0000000",
         "city": "TESTE",
         "country": {
-          "isoAlpha2": "st",
-          "name": "TESTE AUTOMATICO",
-          "id": 1,
-          "isEUCountry": true,
-          "regexCondition": "TESTE AUTOMATICO"
+          "id":2,
+          "name":"ALBANIA",
+          "country":"Albanie",
+          "isoAlpha2":"AL",
+          "isoAlpha3":"ALB",
+          "isoDig3":"008",
+          "phonePrefix":355
         }
       },
       "headOfficeInfo": {
@@ -93,5 +95,11 @@
       }
     }
   
+  },
+
+  "code201_With_Contact":{
+
+
+
   }
   }
