@@ -7,7 +7,7 @@
       "legalInfo": {
         "commercialName": "TESTE AUTOMATICO",
         "address": "TESTE AUTOMATICO",
-        "postalCode": "0000000",
+        "postalCode": 123456,
         "city": "TESTE",
         "country": {
           "id":2,
@@ -22,7 +22,7 @@
       "headOfficeInfo": {
         "companyName": "TESTE AUTOMATICO",
         "address": "TESTE AUTOMATICO",
-        "postalCode": "TESTE AUTOMATICO",
+        "postalCode": 123456,
         "city": "TESTE AUTOMATICO",
         "country": {
           "isoAlpha2": "st",
@@ -39,38 +39,54 @@
     "legalInfo": {
       "commercialName": "TESTE AUTOMATICO",
       "address": "TESTE AUTOMATICO",
-      "postalCode": "0000000",
+      "postalCode": 123456,
       "city": "TESTE",
-      "siret": null,
+      "siret": 90802424300010,
       "country": {
-        "isoAlpha2": "st",
-        "name": "TESTE AUTOMATICO",
-        "id": 73,
-        "isEUCountry": true,
-        "regexCondition": "TESTE AUTOMATICO"
+
+        "id":73,
+        "name":"FRANCE",
+        "country":"France",
+        "isoAlpha2":"FR",
+        "isoAlpha3":"FRA",
+        "isoDig3":"250",
+        "phonePrefix":33,
+        "label":"+33"
       }
     },
     "headOfficeInfo": {
       "companyName": "TESTE AUTOMATICO",
       "address": "TESTE AUTOMATICO",
-      "postalCode": "TESTE AUTOMATICO",
+      
+      "siren": 412250714,
+      
+      "postalCode": 123456,
       "city": "TESTE AUTOMATICO",
       "country": {
-        "isoAlpha2": "st",
-        "name": "TESTE AUTOMATICO",
-        "id": 73,
-        "isEUCountry": true,
-        "regexCondition": "TESTE AUTOMATICO"
+                "id":73,
+        "name":"FRANCE",
+        "country":"France",
+        "isoAlpha2":"FR",
+        "isoAlpha3":"FRA",
+        "isoDig3":"250",
+        "phonePrefix":33,
+        "label":"+33"
+      
+      
+      
       }
     }
   },
+  
+
+
   
   "code400_Malformed":{
   
     "": {
       "commercialName":  null,
       "address": "TESTE AUTOMATICO",
-      "postalCode": "0000000",
+      "postalCode": 123456,
       "city": "TESTE",
       "siret": null,
       "country": {
@@ -84,7 +100,7 @@
     "headOfficeInfo": {
       "companyName": "TESTE AUTOMATICO",
       "address": "TESTE AUTOMATICO",
-      "postalCode": "TESTE AUTOMATICO",
+      "postalCode": 123456,
       "city": "TESTE AUTOMATICO",
       "country": {
         "isoAlpha2": "st",
@@ -97,9 +113,163 @@
   
   },
 
-  "code201_With_Contact":{
+
+
+  "code201_France_Not_Siret":{
+  
+    "legalInfo": {
+      "commercialName": "TESTE AUTOMATICO",
+      "address": "TESTE AUTOMATICO",
+      "postalCode": 123456,
+      "city": "TESTE",
+      "siret": null,
+      "country": {
+
+        "id":73,
+        "name":"FRANCE",
+        "country":"France",
+        "isoAlpha2":"FR",
+        "isoAlpha3":"FRA",
+        "isoDig3":"250",
+        "phonePrefix":33,
+        "label":"+33"
+      }
+    },
+    "headOfficeInfo": {
+      "companyName": "TESTE AUTOMATICO",
+      "address": "TESTE AUTOMATICO",
+      "postalCode": 123456,
+      "city": "TESTE AUTOMATICO",
+      "country": {
+                "id":73,
+        "name":"FRANCE",
+        "country":"France",
+        "isoAlpha2":"FR",
+        "isoAlpha3":"FRA",
+        "isoDig3":"250",
+        "phonePrefix":33,
+        "label":"+33"
+            
+      
+      }
+    }
+  },
+
+
+  "Code201SuppliersComplete":{
+  
+    "legalInfo": {
+      "commercialName": "TESTE AUTOMATICO",
+      "address": "TESTE AUTOMATICO",
+      "postalCode": 123456,
+      "city": "TESTE",
+   
+      "country":{
+        "id":4,
+        "name":"AMERICAN SAMOA",
+        "country":"Samoa Américaines",
+        "isoAlpha2":"AS",
+        "isoAlpha3":"ASM",
+        "isoDig3":"016",
+        "phonePrefix":1684,
+        "label":"+1684"
+     }
+    },
+    "headOfficeInfo": {
+      "companyName": "TESTE AUTOMATICO",
+      "address": "TESTE AUTOMATICO",
+      "postalCode": 123456,
+      "city": "TESTE AUTOMATICO",
+      "country":{
+        "id":4,
+        "name":"AMERICAN SAMOA",
+        "country":"Samoa Américaines",
+        "isoAlpha2":"AS",
+        "isoAlpha3":"ASM",
+        "isoDig3":"016",
+        "phonePrefix":1684,
+        "label":"+1684"
+     }
+    },
+    "contacts":[
+      {
+         "name":"TESTE AUTOMATICO COM CONTATO",
+         "surname":"TESTE AUTOMATICO COM CONTATO",
+         "role":"TESTE AUTOMATICO COM CONTATO",
+         "email":"TESTE@TESTE.TESTE",
+         "mobilePhone":{
+            "phoneNumber":"222222222222222",
+            "country":{
+               "id":4,
+               "name":"AMERICAN SAMOA",
+               "country":"Samoa Américaines",
+               "isoAlpha2":"AS",
+               "isoAlpha3":"ASM",
+               "isoDig3":"016",
+               "phonePrefix":1684,
+               "label":"+1684"
+            }
+         },
+         "phone":{
+            "phoneNumber":"222222222222222",
+            "country":{
+              "id":4,
+              "name":"AMERICAN SAMOA",
+              "country":"Samoa Américaines",
+              "isoAlpha2":"AS",
+              "isoAlpha3":"ASM",
+              "isoDig3":"016",
+              "phonePrefix":1684,
+              "label":"+1684"
+           }
+         },
+         "isMainContact":true
+      },
+      {
+         "name":"TESTE AUTOMATICO COM CONTATO",
+         "surname":"TESTE AUTOMATICO COM CONTATO",
+         "role":"TESTE AUTOMATICO COM CONTATO",
+         "email":"TESTE@TESTE.TESTE",
+         "mobilePhone":{
+            "phoneNumber":"232323",
+            "country":{
+              "id":4,
+              "name":"AMERICAN SAMOA",
+              "country":"Samoa Américaines",
+              "isoAlpha2":"AS",
+              "isoAlpha3":"ASM",
+              "isoDig3":"016",
+              "phonePrefix":1684,
+              "label":"+1684"
+           }
+         },
+         "phone":{
+            "phoneNumber":"232323",
+            "country":{
+               "id":4,
+               "name":"AMERICAN SAMOA",
+               "country":"Samoa Américaines",
+               "isoAlpha2":"AS",
+               "isoAlpha3":"ASM",
+               "isoDig3":"016",
+               "phonePrefix":1684,
+               "label":"+1684"
+            }
+         },
+         "isMainContact":null
+      }
+   ],
+   "family":null,
+   "paymentInfo":[
+      
+   ]
+}
+
 
 
 
   }
-  }
+
+
+  
+  

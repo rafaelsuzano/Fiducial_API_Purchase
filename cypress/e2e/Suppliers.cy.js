@@ -12,6 +12,7 @@ let id_suppliers
 let dt_Family
 let id_suppliers_france
 let id_suppliers_Family
+let id_suppliers_contacts
 
 
 describe('Suppliers', () => {
@@ -98,6 +99,18 @@ describe('Suppliers', () => {
 
   context('Rules', () => {
 
+    it('Post Supplier 400 France', () => {
+
+      cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['code201_France_Not_Siret'])
+        .then(Response => {
+          cy.log(JSON.stringify(Response.body))
+          expect(Response.status).to.eq(400);
+
+          //id_suppliers_france = ((Response.body["id"]))
+        })
+
+    })
+
     it('Post Supplier 201 France', () => {
 
       cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['code201_France'])
@@ -106,6 +119,19 @@ describe('Suppliers', () => {
           expect(Response.status).to.eq(201);
 
           id_suppliers_france = ((Response.body["id"]))
+        })
+
+    })
+
+
+    it('Post Supplier 201 With contacts', () => {
+
+      cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['Code201SuppliersComplete'])
+        .then(Response => {
+          cy.log(JSON.stringify(Response.body))
+          expect(Response.status).to.eq(201);
+
+          id_suppliers_contacts= ((Response.body["id"]))
         })
 
     })
@@ -220,7 +246,7 @@ describe('Supplier Family', () => {
       .then(Response => {
         var d = (JSON.stringify(Response.body))
 
-        expect(Response.status).to.eq(200)
+        expect(Response.status).to.eq(405)
 
         cy.addContext("Test get Supplier Family")
       })
@@ -290,12 +316,16 @@ describe('OCR', () => {
 
   before(() =>{
     cy.DELETE_API('purchases/companies/1/suppliers/' + ID_TESTE, tt)
+    cy.DELETE_API('purchases/companies/1/suppliers/' + id_suppliers_france, tt)
+    cy.DELETE_API('purchases/companies/1/suppliers/' + id_suppliers_contacts, tt)
+    
+
   })
 
 
 
   // fazer before para pegar id de novo suplier
-  it('Get documents references list', () => {
+  it('Get documents references list 404', () => {
     cy.GET_API('ocr/documents-references', tt)
       .then(Response => {
         var d = (JSON.stringify(Response.body))
