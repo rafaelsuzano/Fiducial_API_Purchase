@@ -197,7 +197,7 @@
          "surname":"TESTE AUTOMATICO COM CONTATO",
          "role":"TESTE AUTOMATICO COM CONTATO",
          "email":"TESTE@TESTE.TESTE",
-         "mobilePhone":{
+         "mobile":{
             "phoneNumber":"222222222222222",
             "country":{
                "id":4,
@@ -223,14 +223,14 @@
               "label":"+1684"
            }
          },
-         "isMainContact":true
+         "defaultContact":true
       },
       {
          "name":"TESTE AUTOMATICO COM CONTATO",
          "surname":"TESTE AUTOMATICO COM CONTATO",
          "role":"TESTE AUTOMATICO COM CONTATO",
          "email":"TESTE@TESTE.TESTE",
-         "mobilePhone":{
+         "mobile":{
             "phoneNumber":"232323",
             "country":{
               "id":4,
@@ -256,7 +256,7 @@
                "label":"+1684"
             }
          },
-         "isMainContact":null
+         "defaultContact":null
       }
    ],
    "family":null,
