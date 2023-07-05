@@ -13,7 +13,7 @@ let dt_Family
 let id_suppliers_france
 let id_suppliers_Family
 let id_suppliers_contacts
-
+let id_suppliers_paymentInfo
 
 describe('Suppliers', () => {
   before(() => {
@@ -135,6 +135,20 @@ describe('Suppliers', () => {
         })
 
     })
+  //Code201SupplierspaymentInfo
+
+  it('Post Supplier 201 With paymentInfo', () => {
+
+    cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['Code201SupplierspaymentInfo'])
+      .then(Response => {
+        cy.log(JSON.stringify(Response.body))
+        expect(Response.status).to.eq(201);
+
+        id_suppliers_paymentInfo= ((Response.body["id"]))
+      })
+
+  })
+
 
 
     it('Post Supplier 403 Invalid Token', () => {
@@ -318,7 +332,8 @@ describe('OCR', () => {
     cy.DELETE_API('purchases/companies/1/suppliers/' + ID_TESTE, tt)
     cy.DELETE_API('purchases/companies/1/suppliers/' + id_suppliers_france, tt)
     cy.DELETE_API('purchases/companies/1/suppliers/' + id_suppliers_contacts, tt)
-    
+    cy.DELETE_API('purchases/companies/1/suppliers/' + id_suppliers_paymentInfo, tt)
+
 
   })
 

@@ -39,9 +39,9 @@
     "legalInfo": {
       "commercialName": "TESTE AUTOMATICO",
       "address": "TESTE AUTOMATICO",
-      "postalCode": 123456,
+      "postalCode": 12345,
       "city": "TESTE",
-      "siret": 90802424300010,
+      "siret": 31761525000014,
       "country": {
 
         "id":73,
@@ -60,7 +60,7 @@
       
       "siren": 412250714,
       
-      "postalCode": 123456,
+      "postalCode": 12345,
       "city": "TESTE AUTOMATICO",
       "country": {
                 "id":73,
@@ -263,7 +263,132 @@
    "paymentInfo":[
       
    ]
+},
+
+
+
+"Code201SupplierspaymentInfo":{
+  
+  "legalInfo": {
+    "commercialName": "TESTE AUTOMATICO",
+    "address": "TESTE AUTOMATICO",
+    "postalCode": 123456,
+    "city": "TESTE",
+ 
+    "country":{
+      "id":4,
+      "name":"AMERICAN SAMOA",
+      "country":"Samoa Américaines",
+      "isoAlpha2":"AS",
+      "isoAlpha3":"ASM",
+      "isoDig3":"016",
+      "phonePrefix":1684,
+      "label":"+1684"
+   }
+  },
+  "headOfficeInfo": {
+    "companyName": "TESTE AUTOMATICO",
+    "address": "TESTE AUTOMATICO",
+    "postalCode": 123456,
+    "city": "TESTE AUTOMATICO",
+    "country":{
+      "id":4,
+      "name":"AMERICAN SAMOA",
+      "country":"Samoa Américaines",
+      "isoAlpha2":"AS",
+      "isoAlpha3":"ASM",
+      "isoDig3":"016",
+      "phonePrefix":1684,
+      "label":"+1684"
+   }
+  },
+  "contacts":[
+    {
+       "name":"TESTE AUTOMATICO COM CONTATO",
+       "surname":"TESTE AUTOMATICO COM CONTATO",
+       "role":"TESTE AUTOMATICO COM CONTATO",
+       "email":"TESTE@TESTE.TESTE",
+       "mobile":{
+          "phoneNumber":"222222222222222",
+          "country":{
+             "id":4,
+             "name":"AMERICAN SAMOA",
+             "country":"Samoa Américaines",
+             "isoAlpha2":"AS",
+             "isoAlpha3":"ASM",
+             "isoDig3":"016",
+             "phonePrefix":1684,
+             "label":"+1684"
+          }
+       },
+       "phone":{
+          "phoneNumber":"222222222222222",
+          "country":{
+            "id":4,
+            "name":"AMERICAN SAMOA",
+            "country":"Samoa Américaines",
+            "isoAlpha2":"AS",
+            "isoAlpha3":"ASM",
+            "isoDig3":"016",
+            "phonePrefix":1684,
+            "label":"+1684"
+         }
+       },
+       "defaultContact":true
+    },
+    {
+       "name":"TESTE AUTOMATICO COM CONTATO",
+       "surname":"TESTE AUTOMATICO COM CONTATO",
+       "role":"TESTE AUTOMATICO COM CONTATO",
+       "email":"TESTE@TESTE.TESTE",
+       "mobile":{
+          "phoneNumber":"232323",
+          "country":{
+            "id":4,
+            "name":"AMERICAN SAMOA",
+            "country":"Samoa Américaines",
+            "isoAlpha2":"AS",
+            "isoAlpha3":"ASM",
+            "isoDig3":"016",
+            "phonePrefix":1684,
+            "label":"+1684"
+         }
+       },
+       "phone":{
+          "phoneNumber":"232323",
+          "country":{
+             "id":4,
+             "name":"AMERICAN SAMOA",
+             "country":"Samoa Américaines",
+             "isoAlpha2":"AS",
+             "isoAlpha3":"ASM",
+             "isoDig3":"016",
+             "phonePrefix":1684,
+             "label":"+1684"
+          }
+       },
+       "defaultContact":null
+    }
+ ],
+ "family":null,
+ "paymentInfo":[
+  {
+     "bankInfo":{
+        "id":1,
+        "name":"Airwallex",
+        "bic":"CMCIFR2A123"
+     },
+     "iban":"3333333333333333333333333333",
+     "paymentMode":"CASH"
+  }
+]
 }
+
+
+
+
+
+
 
 
 
