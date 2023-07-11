@@ -75,3 +75,12 @@ Cypress.Commands.add('DELETE_API',(Endpoint,Token)=>
   }).then(Response => {return Response})
 )
 
+// match specified selector
+Cypress.Commands.add('getBySel', (selector, ...args) => {
+  return cy.get(`[data-test=${selector}]`, ...args)
+})
+
+//contains specified selector
+Cypress.Commands.add('getBySelLike', (selector, ...args) => {
+  return cy.get(`[data-test*=${selector}]`, ...args)
+})
