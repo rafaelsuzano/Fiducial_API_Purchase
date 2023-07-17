@@ -4,7 +4,9 @@
   "description": "teste api",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress run",
+    "test:launchpad": "npx cypress open",
+    "test:login": "cypress run --spec cypress/e2e/web/e2e/login.cy.js --browser chrome"
   },
   "author": "rafael suzano cruz",
   "license": "ISC",
