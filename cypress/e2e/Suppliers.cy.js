@@ -346,7 +346,7 @@ describe('OCR', () => {
         var d = (JSON.stringify(Response.body))
         cy.log(JSON.stringify(d))
 
-        expect(Response.status).to.eq(404)
+        expect(Response.status).to.eq(401)
 
         cy.addContext("Test get Supplier Family")
       })

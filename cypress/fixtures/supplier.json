@@ -309,7 +309,7 @@
        "role":"TESTE AUTOMATICO COM CONTATO",
        "email":"TESTE@TESTE.TESTE",
        "mobile":{
-          "phoneNumber":"222222222222222",
+          "phoneNumber":222222222222222,
           "country":{
              "id":4,
              "name":"AMERICAN SAMOA",
