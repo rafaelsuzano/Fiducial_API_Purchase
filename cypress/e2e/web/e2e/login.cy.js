@@ -13,8 +13,8 @@ describe("testing automation", () => {
         cy.login(this.credential.credentialAdmin);
       });
 
-      context("when Articles form fields are validated", () => {
-        it("should be required", function () {
+      context("When validate Supplier functionalities", () => {
+        it("should create supplier", function () {
           menuItem.openServices();
           menuItem.menuItem("fournisseur").click();
           supplier.createGenericSupplier("Liechtenstein", this.sup.properties);
