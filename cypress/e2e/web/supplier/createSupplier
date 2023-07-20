@@ -1,0 +1,40 @@
+class createSupplier {
+
+  createGenericSupplier(country, data) {
+    this.pathToSupplierForm(country);
+    this.supplierInfo(data);
+    this.headQuaterInfo(data);
+  }
+
+  pathToSupplierForm(country) {
+    cy.getBySelLike("menu-button").click();
+    cy.getBySel('create-Fournisseur').click();
+    cy.get('#country').click();
+    cy.get('p-dropdownitem').each(($el) => {
+      let text = $el.text().toLowerCase().trim();
+      if (text === country.toLowerCase().trim()) {
+        cy.wrap($el).click();
+      }
+    })
+    cy.getBySel('continue-button').click();
+  }
+
+  supplierInfo(data) {
+    cy.getBySel('infoCommercialName-input').type(data.legalInfo.infoCommercialName)
+    cy.getBySel('infoAddress-input').type(data.legalInfo.infoAddress)
+    cy.getBySel('infoAdditionalAddress-input').type(data.legalInfo.infoAdditionalAddress)
+    cy.getBySel('infoPostalCode-input').type(data.legalInfo.infoPostalCode)
+    cy.getBySel('infoCity-input').type(data.legalInfo.infoCity)
+  }
+
+  headQuaterInfo(data) {
+    cy.getBySel('companyName-input').type(data.officeInfo.companyName)
+    cy.getBySel('address-input').type(data.officeInfo.address)
+    cy.getBySel('additionalAddress-input').type(data.officeInfo.additionalAddress)
+    cy.getBySel('postalCode-input').type(data.officeInfo.postalCode)
+    cy.getBySel('city-input').type(data.officeInfo.city)
+  }
+
+}
+
+export default new createSupplier();

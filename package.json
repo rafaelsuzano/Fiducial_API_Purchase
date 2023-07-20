@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "test:launchpad": "npx cypress open",
     "test:login:dev": "cypress run --spec cypress/e2e/web/e2e/login.cy.js --browser chrome --config baseUrl=https://dev.yesaccount.com"
   },
   "author": "rafael suzano cruz",

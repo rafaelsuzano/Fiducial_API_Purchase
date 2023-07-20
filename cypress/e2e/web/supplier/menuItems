@@ -1,0 +1,25 @@
+class menuItems {
+  openServices() {
+    cy.contains(" apps ")
+      .should("be.visible")
+      .click();
+    cy.get("#suppliers").should("be.visible");
+  }
+
+  menuItem(item) {
+    switch (item) {
+      case "accueil":
+        return cy.get("#dashboard");
+      case "validation":
+        return cy.get("#invoices-validation-list");
+      case "paiement":
+        return cy.get("#payments");
+      case "fournisseur":
+        return cy.get("#suppliers");
+      default:
+        throw new Error("Menu not found!");
+    }
+  }
+}
+
+export default new menuItems();

@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "legalInfo": {
+      "infoCommercialName": "fournisseur",
+      "infoAddress": "25 avenue de l'Amandier",
+      "infoAdditionalAddress": "Midi-Pyrénées",
+      "infoPostalCode": "41000",
+      "infoCity": "Toulouse"
+    },
+    "officeInfo": {
+      "companyName": "fournisseur",
+      "address": "4 quai Saint-Nicolas",
+      "additionalAddress": "Île-de-France",
+      "postalCode": "95170",
+      "city": "Blois"
+    }
+  }
+}
