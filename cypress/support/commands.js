@@ -74,23 +74,3 @@ Cypress.Commands.add('DELETE_API',(Endpoint,Token)=>
     failOnStatusCode: false
   }).then(Response => {return Response})
 )
-
-// match specified selector
-Cypress.Commands.add('getBySel', (selector, ...args) => {
-  return cy.get(`[data-test=${selector}]`, ...args)
-})
-
-//contains specified selector
-Cypress.Commands.add('getBySelLike', (selector, ...args) => {
-  return cy.get(`[data-test*=${selector}]`, ...args)
-})
-
-Cypress.Commands.add('login', (data) => {
-  cy.intercept("POST", "/login").as("loginUser");
-  cy.visit('/');
-  cy.getBySel("login-form-email").type(data.email, {log: false});
-  cy.getBySel("login-form-password").type(data.password, {log: false});
-  cy.getBySel("login-form-submit").click();
-  cy.wait('@loginUser').its('response.statusCode').should('eq', 200);
-  cy.getBySel("logout-button").should('be.visible');
-})
