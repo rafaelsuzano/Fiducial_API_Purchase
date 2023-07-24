@@ -15,6 +15,9 @@ let id_suppliers_Family
 let id_suppliers_contacts
 let id_suppliers_paymentInfo
 
+
+let Company = Cypress.env("companyId")
+
 describe('Suppliers', () => {
   before(() => {
     cy.fixture('supplier.json').then(dt => {
@@ -23,9 +26,9 @@ describe('Suppliers', () => {
 
 
 
-      cy.api("POST", "https://yav2-dev.yesaccount.com/login", {
-        "email": "admin@fiducial.com",
-        "password": "123"
+      cy.api("POST",  Cypress.env('Login') , {
+        "email": "sad@fiducial.net",
+        "password": "1234"
       }).then((response) => {
 
         //tt=JSON.stringify(response.body.token)

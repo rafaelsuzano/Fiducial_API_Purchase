@@ -15,17 +15,19 @@ let id_suppliers_Family
 let id_suppliers_contacts
 let id_suppliers_paymentInfo
 
+let Company = Cypress.env("companyId")
+
 describe('Suppliers', () => {
   before(() => {
     cy.fixture('supplier.json').then(dt => {
       dt1 = dt;
 
+  
 
 
-
-      cy.api("POST", "https://yav2-dev.yesaccount.com/login", {
-        "email": "admin@fiducial.com",
-        "password": "123"
+      cy.api("POST",  Cypress.env('Login') , {
+        "email": "sad@fiducial.net",
+        "password": "1234"
       }).then((response) => {
 
         //tt=JSON.stringify(response.body.token)
@@ -37,9 +39,8 @@ describe('Suppliers', () => {
 
 
 
-
   it('Get Suppliers ', () => {
-    cy.GET_API('purchases/companies/1/suppliers/', tt)
+    cy.GET_API('purchases/companies/'+Company+'/suppliers/', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
@@ -57,7 +58,7 @@ describe('Suppliers', () => {
   })
 
   it('Get a Supplier List', () => {
-    cy.GET_API('purchases/companies/1/suppliers/' + id_suppliers, tt)
+    cy.GET_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers, tt)
       .then(Response => {
         var d = (JSON.stringify(Response.body))
         cy.log(JSON.stringify(d))
@@ -72,7 +73,7 @@ describe('Suppliers', () => {
   it('Get Export a Supplier ', () => {
 
 
-    cy.GET_API('companies/1/suppliers/export', tt)
+    cy.GET_API('companies/'+Company+'/suppliers/export', tt)
       .then(Response => {
         var d = (JSON.stringify(Response.body))
         cy.log(d)
@@ -85,9 +86,10 @@ describe('Suppliers', () => {
   })
 
 
+
   it('Post Supplier 201', () => {
 
-    cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['code201'])
+    cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code201'])
       .then(Response => {
 
         expect(Response.status).to.eq(201);
@@ -101,7 +103,7 @@ describe('Suppliers', () => {
 
     it('Post Supplier 400 France', () => {
 
-      cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['code201_France_Not_Siret'])
+      cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code201_France_Not_Siret'])
         .then(Response => {
           cy.log(JSON.stringify(Response.body))
           expect(Response.status).to.eq(400);
@@ -113,7 +115,7 @@ describe('Suppliers', () => {
 
     it('Post Supplier 201 France', () => {
 
-      cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['code201_France'])
+      cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code201_France'])
         .then(Response => {
           cy.log(JSON.stringify(Response.body))
           expect(Response.status).to.eq(201);
@@ -126,7 +128,7 @@ describe('Suppliers', () => {
 
     it('Post Supplier 201 With contacts', () => {
 
-      cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['Code201SuppliersComplete'])
+      cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['Code201SuppliersComplete'])
         .then(Response => {
           cy.log(JSON.stringify(Response.body))
           expect(Response.status).to.eq(201);
@@ -139,7 +141,7 @@ describe('Suppliers', () => {
 
   it('Post Supplier 201 With paymentInfo', () => {
 
-    cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['Code201SupplierspaymentInfo'])
+    cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['Code201SupplierspaymentInfo'])
       .then(Response => {
         cy.log(JSON.stringify(Response.body))
         expect(Response.status).to.eq(201);
@@ -153,7 +155,7 @@ describe('Suppliers', () => {
 
     it('Post Supplier 403 Invalid Token', () => {
 
-      cy.Post_API_With_Body('purchases/companies/1/suppliers', "555", dt1['code201_France'])
+      cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', "555", dt1['code201_France'])
         .then(Response => {
           cy.log(JSON.stringify(Response.body))
           expect(Response.status).to.eq(403);
@@ -165,7 +167,7 @@ describe('Suppliers', () => {
 
     it('Post Supplier 401 Not Authorized', () => {
 
-      cy.Post_API_With_Body('purchases/companies/1/suppliers', "Bearer eJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBmaWR1Y2lhbC5jb20iLCJleHAiOjE2ODc4NjIyODAsInR5cGUiOiJGQUNJTElBIn0.eO8UAdnxQ7YvDez-F3IuCOg3jvF6mEsPbTcpxNXNchiBzA7MOhy-_zexgC4nWhV-Ysqh7KbXEjUwvCf4PexmuA", dt1['code201_France'])
+      cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', "Bearer eJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBmaWR1Y2lhbC5jb20iLCJleHAiOjE2ODc4NjIyODAsInR5cGUiOiJGQUNJTElBIn0.eO8UAdnxQ7YvDez-F3IuCOg3jvF6mEsPbTcpxNXNchiBzA7MOhy-_zexgC4nWhV-Ysqh7KbXEjUwvCf4PexmuA", dt1['code201_France'])
         .then(Response => {
           cy.log(JSON.stringify(Response.body))
           expect(Response.status).to.eq(401);
@@ -176,7 +178,7 @@ describe('Suppliers', () => {
 
     it('Post Supplier 404 Not Found', () => {
 
-      cy.Post_API_With_Body('purchases/companies/1/supplier', tt, dt1['code201_France'])
+      cy.Post_API_With_Body('purchases/companies/'+Company+'/supplier', tt, dt1['code201_France'])
         .then(Response => {
           cy.log(JSON.stringify(Response.body))
           expect(Response.status).to.eq(404);
@@ -186,7 +188,7 @@ describe('Suppliers', () => {
     })
     it('Post Supplier 400 Malformaed', () => {
 
-      cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['code400_Malformed'])
+      cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code400_Malformed'])
         .then(Response => {
           cy.log(JSON.stringify(Response.body))
           expect(Response.status).to.eq(400);
@@ -200,7 +202,7 @@ describe('Suppliers', () => {
 
   it('Delete Supplier 201', () => {
 
-    cy.DELETE_API('purchases/companies/1/suppliers/' + id_delete, tt)
+    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_delete, tt)
       .then(Response => {
 
         expect(Response.status).to.eq(204);
@@ -226,7 +228,7 @@ describe('Supplier Family', () => {
 
   it('Get Supplier Family List 200', () => {
 
-    cy.GET_API('purchases/companies/1/supplier-families', tt)
+    cy.GET_API('purchases/companies/'+Company+'/supplier-families', tt)
       .then(Response => {
 
         expect(Response.status).to.eq(200);
@@ -241,7 +243,7 @@ describe('Supplier Family', () => {
 
   it('Post Supplier Family 201', () => {
 
-    cy.Post_API_With_Body('purchases/companies/1/supplier-families', tt, dt_Family['code201'])
+    cy.Post_API_With_Body('purchases/companies/'+Company+'/supplier-families', tt, dt_Family['code201'])
       .then(Response => {
 
         expect(Response.status).to.eq(201);
@@ -256,7 +258,7 @@ describe('Supplier Family', () => {
 
 
   it('Get Supplier Families 200', () => {
-    cy.GET_API('purchases/companies/1/supplier-families/'+id_suppliers_Family, tt)
+    cy.GET_API('purchases/companies/'+Company+'/supplier-families/'+id_suppliers_Family, tt)
       .then(Response => {
         var d = (JSON.stringify(Response.body))
 
@@ -269,7 +271,7 @@ describe('Supplier Family', () => {
   it('Export Supplier Families ', () => {
 
 
-    cy.GET_API('purchases/companies/1/supplier-families/export', tt)
+    cy.GET_API('purchases/companies/'+Company+'/supplier-families/export', tt)
       .then(Response => {
         var d = (JSON.stringify(Response.body))
         cy.log(d)
@@ -283,7 +285,7 @@ describe('Supplier Family', () => {
 
   it('Delete Families Supplier 201', () => {
 
-    cy.DELETE_API('purchases/companies/1/supplier-families/'+id_suppliers_Family, tt)
+    cy.DELETE_API('purchases/companies/'+Company+'/supplier-families/'+id_suppliers_Family, tt)
       .then(Response => {
 
         expect(Response.status).to.eq(204);
@@ -301,7 +303,7 @@ describe('Supplier Notes', () => {
 
   before(() => {
 
-    cy.Post_API_With_Body('purchases/companies/1/suppliers', tt, dt1['code201'])
+    cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code201'])
       .then(Response => {
 
         expect(Response.status).to.eq(201);
@@ -313,7 +315,7 @@ describe('Supplier Notes', () => {
 
   })
   it('Get Supplier Families List Notes', () => {
-    cy.GET_API('purchases/companies/1/suppliers/' + ID_TESTE + '/notes', tt)
+    cy.GET_API('purchases/companies/'+Company+'/suppliers/' + ID_TESTE + '/notes', tt)
       .then(Response => {
         var d = (JSON.stringify(Response.body))
         cy.log(JSON.stringify(d))
@@ -329,10 +331,10 @@ describe('Supplier Notes', () => {
 describe('OCR', () => {
 
   before(() =>{
-    cy.DELETE_API('purchases/companies/1/suppliers/' + ID_TESTE, tt)
-    cy.DELETE_API('purchases/companies/1/suppliers/' + id_suppliers_france, tt)
-    cy.DELETE_API('purchases/companies/1/suppliers/' + id_suppliers_contacts, tt)
-    cy.DELETE_API('purchases/companies/1/suppliers/' + id_suppliers_paymentInfo, tt)
+    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + ID_TESTE, tt)
+    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_france, tt)
+    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_contacts, tt)
+    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_paymentInfo, tt)
 
 
   })

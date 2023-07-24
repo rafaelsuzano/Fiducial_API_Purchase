@@ -3,9 +3,9 @@ import addContext from "mochawesome/addContext"
 Cypress.Commands.add('GetToken',function()
 {
   let t
-  cy.api("POST", "https://yav2-dev.yesaccount.com/login", {
-        "email": "admin@fiducial.com",
-        "password": "123"
+  cy.api("POST", Cypress.env('Login') , {
+        "email": "sad@fiducial.net",
+        "password": "1234"
       }).then((response) => {
        // t=JSON.stringify(response.body['token'])
        t=(response.body.token)

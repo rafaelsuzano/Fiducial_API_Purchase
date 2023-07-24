@@ -4,9 +4,17 @@ module.exports = defineConfig({
   
 
   env: {
-  Login_dev: 'https://yav2-dev.yesaccount.com/',
-  Url: 'https://purchases-dev.yesaccount.com/',
-  companyId:1
+  //Login: 'https://yav2-dev.yesaccount.com/',
+  //Url: 'https://purchases-dev.yesaccount.com/',
+  
+  Login: 'https://recette-int-qa.facilia.com/login',
+  Url: '  https://purchase-qa.facilia.com/',
+  
+
+
+
+  
+  companyId:2
 
   },
 

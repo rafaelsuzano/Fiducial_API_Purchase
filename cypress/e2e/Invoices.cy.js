@@ -15,6 +15,8 @@ let id_suppliers_Family
 let id_suppliers_contacts
 let id_suppliers_paymentInfo
 
+let Company = Cypress.env("companyId")
+
 describe('Suppliers', () => {
   before(() => {
     cy.fixture('supplier.json').then(dt => {
@@ -23,9 +25,9 @@ describe('Suppliers', () => {
 
 
 
-      cy.api("POST", "https://yav2-dev.yesaccount.com/login", {
-        "email": "admin@fiducial.com",
-        "password": "123"
+      cy.api("POST", Cypress.env('Login') , {
+        "email": "sad@fiducial.net",
+        "password": "1234"
       }).then((response) => {
 
         //tt=JSON.stringify(response.body.token)
@@ -36,7 +38,7 @@ describe('Suppliers', () => {
   })
 
   it('Get a list of invoices payments', () => {
-    cy.GET_API('purchases/companies/1/invoice/invoices-payments', tt)
+    cy.GET_API('purchases/companies/'+Company+'/invoice/invoices-payments', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
@@ -54,7 +56,7 @@ describe('Suppliers', () => {
   })
 
   it('Get Invoices Payments Summary', () => {
-    cy.GET_API('purchases/companies/1/invoices-payments/summary', tt)
+    cy.GET_API('purchases/companies/'+Company+'/invoices-payments/summary', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
