@@ -382,18 +382,16 @@
      "paymentMode":"CASH"
   }
 ]
+},
+ "code201_notes":
+    {
+      "note":"TESTESAUTOMATICOS",
+      "title":"TESTESAUTOMATICOS"
+  
 }
 
+}
 
-
-
-
-
-
-
-
-
-  }
 
 
   

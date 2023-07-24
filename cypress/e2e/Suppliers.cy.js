@@ -325,7 +325,21 @@ describe('Supplier Notes', () => {
         cy.addContext("Test get Supplier Family")
       })
 
-  })
+
+    it('Post Supplier Families List Notes 201', () => {
+      cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers/' + ID_TESTE + '/notes', tt,dt1['code201_notes'])
+        .then(Response => {
+            var d = (JSON.stringify(Response.body))
+            cy.log(JSON.stringify(d))
+    
+            expect(Response.status).to.eq(201)
+    
+            cy.addContext("Test get Supplier Family")
+          })
+    
+      })
+
+
 })
 
 describe('OCR', () => {
@@ -355,4 +369,5 @@ describe('OCR', () => {
 
   })
 
+})
 })
