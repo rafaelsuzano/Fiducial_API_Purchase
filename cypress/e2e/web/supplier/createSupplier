@@ -1,8 +1,8 @@
 class createSupplier {
 
-  createGenericSupplier(country, data) {
+  createGenericSupplier(country, name, data) {
     this.pathToSupplierForm(country);
-    this.supplierInfo(data);
+    this.supplierInfo(name, data);
     this.headQuaterInfo(data);
   }
 
@@ -19,8 +19,8 @@ class createSupplier {
     cy.getBySel('continue-button').click();
   }
 
-  supplierInfo(data) {
-    cy.getBySel('infoCommercialName-input').type(data.legalInfo.infoCommercialName)
+  supplierInfo(name, data) {
+    cy.getBySel('infoCommercialName-input').type(name)
     cy.getBySel('infoAddress-input').type(data.legalInfo.infoAddress)
     cy.getBySel('infoAdditionalAddress-input').type(data.legalInfo.infoAdditionalAddress)
     cy.getBySel('infoPostalCode-input').type(data.legalInfo.infoPostalCode)

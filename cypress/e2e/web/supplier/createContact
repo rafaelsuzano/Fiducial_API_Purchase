@@ -1,0 +1,14 @@
+class createContact {
+
+  fillContact() {
+    cy.get('[label$="Ajouter un contact"]').click();
+    cy.get('fiducial-input[formcontrolname="name"] input').type("John");
+    cy.get('fiducial-input[formcontrolname="surname"] input').type("Walker");
+    cy.get('fiducial-input[formcontrolname="role"] input').type("Tester");
+    cy.get('fiducial-input[formcontrolname="email"] input').type("test@test.com");
+    cy.get("fiducial-phone-input #mobile").type("915844200");
+    cy.get("fiducial-phone-input #telephone").type("915844210");
+  }
+}
+
+export default new createContact();

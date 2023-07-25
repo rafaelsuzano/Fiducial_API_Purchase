@@ -16,5 +16,8 @@ Cypress.Commands.add('login', (data) => {
   cy.getBySel("login-form-password").type(data.password, {log: false});
   cy.getBySel("login-form-submit").click();
   cy.wait('@loginUser').its('response.statusCode').should('eq', 200);
+})
+
+Cypress.Commands.add('loginSuccessfully', () => {
   cy.getBySel("logout-button").should('be.visible');
 })

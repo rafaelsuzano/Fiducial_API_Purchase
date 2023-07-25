@@ -1,5 +1,5 @@
 class menuItems {
-  openServices() {
+  goToAchat() {
     cy.contains(" apps ")
       .should("be.visible")
       .click();
