@@ -1,0 +1,17 @@
+{
+
+    "c1":{"enum": "QUOTES", "prop" :"AMOUNT_TTC"},
+
+
+
+    "c2":{"enum": "INVOICES", "prop" :"AMOUNT_TTC"}
+  
+}
+
+ 
+  
+  
+
+
+
+

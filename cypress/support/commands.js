@@ -75,3 +75,17 @@ Cypress.Commands.add('DELETE_API',(Endpoint,Token)=>
   }).then(Response => {return Response})
 )
 
+Cypress.Commands.add('GET_API_SALES',(Endpoint,Token)=>
+
+ 
+  cy.api({
+    method: "GET",
+    url: Cypress.env('url_sales')+Endpoint,
+
+        
+    headers: {
+      'Authorization': Token
+    },
+    failOnStatusCode: false
+  }).then(Response => {return Response})
+)

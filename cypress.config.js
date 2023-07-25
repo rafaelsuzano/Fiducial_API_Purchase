@@ -5,10 +5,12 @@ module.exports = defineConfig({
 
   env: {
 
-
+    url_sales : 'https://recette-int-qa.facilia.com/',  
     Login: 'https://recette-int-qa.facilia.com/login',
     Url: '  https://purchase-qa.facilia.com/',
     companyId: 2
+
+
 
   },
 
