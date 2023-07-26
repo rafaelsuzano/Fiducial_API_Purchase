@@ -32,7 +32,7 @@ describe('Countries', () => {
 
 
   it('Get Value Range Quotes AMOUNT_TTC', () => {
-    cy.GET_API_SALES('companies/'+Company +'/value-ranges?entity=QUOTES&prop=AMOUNT_TTC', tt)
+    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=QUOTES&prop=AMOUNT_TTC', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
 
@@ -42,7 +42,7 @@ describe('Countries', () => {
   })
 
   it('Get Value Range INVOICES AMOUNT_TTC', () => {
-    cy.GET_API_SALES('companies/'+Company +'/value-ranges?entity=INVOICES&prop=AMOUNT_TTC', tt)
+    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=INVOICES&prop=AMOUNT_TTC', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
 
@@ -53,7 +53,7 @@ describe('Countries', () => {
 
 
   it('Get Value Range ARTICLES AMOUNT_TTC', () => {
-    cy.GET_API_SALES('companies/'+Company +'/value-ranges?entity=ARTICLES&prop=AMOUNT_TTC', tt)
+    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=ARTICLES&prop=AMOUNT_TTC', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
 
@@ -64,7 +64,7 @@ describe('Countries', () => {
 
 
   it('Get Value Range CHECKS AMOUNT_TTC', () => {
-    cy.GET_API_SALES('companies/'+Company +'/value-ranges?entity=CHECKS&prop=AMOUNT_TTC', tt)
+    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=CHECKS&prop=AMOUNT_TTC', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
 
@@ -75,7 +75,7 @@ describe('Countries', () => {
 
 
   it('Get Value Range ARTICLE_FAMILIES ARTICLES_QTY', () => {
-    cy.GET_API_SALES('companies/'+Company +'/value-ranges?entity=ARTICLE_FAMILIES&prop=ARTICLES_QTY', tt)
+    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=ARTICLE_FAMILIES&prop=ARTICLES_QTY', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
 
@@ -86,7 +86,7 @@ describe('Countries', () => {
 
 
   it('Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTYS', () => {
-    cy.GET_API_SALES('companies/'+Company +'/value-ranges?entity=CLIENT_FAMILIES&prop=ARTICLES_QTY', tt)
+    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=CLIENT_FAMILIES&prop=ARTICLES_QTY', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
 
@@ -94,9 +94,9 @@ describe('Countries', () => {
 
       })
   })
-      
+
   it('Get Value Range RECURRENCES  AMOUNT_TTC', () => {
-    cy.GET_API_SALES('companies/'+Company +'/value-ranges?entity=RECURRENCES&prop=AMOUNT_TTC', tt)
+    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=RECURRENCES&prop=AMOUNT_TTC', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
 
