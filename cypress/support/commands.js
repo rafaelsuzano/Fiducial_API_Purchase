@@ -89,3 +89,21 @@ Cypress.Commands.add('GET_API_SALES',(Endpoint,Token)=>
     failOnStatusCode: false
   }).then(Response => {return Response})
 )
+
+
+
+Cypress.Commands.add('Post_API_With_Body_SALES',(Endpoint,Token,pBody)=>
+
+ 
+  cy.api({
+    method: "POST",
+    url: Cypress.env('url_sales')+Endpoint,
+    body: pBody,
+    
+    
+    headers: {
+      'Authorization': Token
+    },
+    failOnStatusCode: false
+  }).then(Response => {return Response})
+)

@@ -57,18 +57,7 @@ describe('Suppliers', () => {
       })
   })
 
-  it('Get a Supplier List', () => {
-    cy.GET_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers, tt)
-      .then(Response => {
-        var d = (JSON.stringify(Response.body))
-        cy.log(JSON.stringify(d))
 
-        expect(Response.status).to.eq(200)
-
-        cy.addContext("Test get Suppliers" + id_suppliers)
-      })
-
-  })
   //   cy.Post_API_With_Body('companies/1/suppliers/export',tt)
   it('Get Export a Supplier ', () => {
 
@@ -99,6 +88,21 @@ describe('Suppliers', () => {
 
   })
 
+
+  it('Get a Supplier List', () => {
+    cy.GET_API('purchases/companies/'+Company+'/suppliers/' + id_delete, tt)
+      .then(Response => {
+        var d = (JSON.stringify(Response.body))
+        cy.log(JSON.stringify(d))
+
+        expect(Response.status).to.eq(200)
+
+        cy.addContext("Test get Suppliers" + id_suppliers)
+      })
+
+  })
+
+
   context('Rules', () => {
 
     it('Post Supplier 400 France', () => {
@@ -113,6 +117,12 @@ describe('Suppliers', () => {
 
     })
 
+    
+
+    
+    
+    
+    
     it('Post Supplier 201 France', () => {
 
       cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code201_France'])
@@ -124,6 +134,23 @@ describe('Suppliers', () => {
         })
 
     })
+
+
+    it('Get data about the siret', () => {
+      cy.GET_API('purchases/siret-database/31761525000014', tt)
+        .then(Response => {
+          expect(Response.status).to.eq(400)
+          //var d =(JSON.stringify(Response.body))
+  
+          cy.log(Response.body)
+  
+    
+  
+  
+  
+        })
+    })
+    
 
 
     it('Post Supplier 201 With contacts', () => {

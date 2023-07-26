@@ -85,8 +85,8 @@ describe('Countries', () => {
   })
 
 
-  it('Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTYS', () => {
-    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=CLIENT_FAMILIES&prop=ARTICLES_QTY', tt)
+  it('Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTY', () => {
+    cy.GET_API_SALES('companies/' + Company + '/value-ranges?entity=CLIENT_FAMILIES&prop=CLIENTS_QTY', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
 

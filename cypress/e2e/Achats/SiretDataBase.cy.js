@@ -42,17 +42,14 @@ describe('Suppliers', () => {
 
 
   it('Get data about the siret', () => {
-    cy.GET_API('purchases/siret-database/542084454', tt)
+    cy.GET_API('purchases/siret-database/31761525000014', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
-        var d = ((Response.body.items))
 
+        cy.log(Response.body)
 
-        for (var index in d) {
-          id_suppliers = (d[index].id)
-          //cy.log(d[index].id)
-        }
+  
 
 
 
