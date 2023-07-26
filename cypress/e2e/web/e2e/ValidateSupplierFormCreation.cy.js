@@ -31,7 +31,7 @@ describe("testing automation", () => {
           family.fillFamily(this.family);
           cy.get('fiducial-purchases-supplier-creator').should('be.visible')
           payment.fillPaymentMode(this.sup.properties.paymentMode);
-          cy.contains('Sauvegarder').click({force: false});
+          cy.contains('Sauvegarder').click();
         });
       });
     });

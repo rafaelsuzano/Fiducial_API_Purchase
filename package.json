@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "test:login:dev": "cypress run --spec cypress/e2e/web/e2e/login.cy.js --browser chrome --config baseUrl=https://dev.yesaccount.com",
-    "test:login:qa": "cypress run --spec cypress/e2e/web/e2e/login.cy.js --browser chrome --config baseUrl=https://recette-qa.facilia.com/"
+    "test:login:dev": "cypress run --spec cypress/e2e/web/e2e/ValidateSupplierFormCreation.cy.js --browser chrome --config baseUrl=https://dev.yesaccount.com",
+    "test:login:qa": "cypress run --spec cypress/e2e/web/e2e/ValidateSupplierFormCreation.cy.js --browser chrome --config baseUrl=https://recette-qa.facilia.com/"
   },
   "author": "rafael suzano cruz",
   "license": "ISC",
