@@ -13,6 +13,11 @@
       "additionalAddress": "Île-de-France",
       "postalCode": "95170",
       "city": "Blois"
+    },
+    "paymentMode": {
+      "banque": "Airwallex",
+      "iban": "FR3914508000303138627355W46",
+      "paiementPrivilegie": "Espèces"
     }
   }
 }

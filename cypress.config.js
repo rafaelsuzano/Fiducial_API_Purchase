@@ -21,7 +21,8 @@ module.exports = defineConfig({
  
   
   e2e: {
-    baseUrl:"https://dev.yesaccount.com",
+    //baseUrl:"https://dev.yesaccount.com",
+    baseUrl:"https://recette-qa.facilia.com/",
     viewportWidth: 1920,
     viewportHeight: 1080,
     setupNodeEvents(on, config) {

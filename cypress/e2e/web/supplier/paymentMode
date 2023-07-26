@@ -1,0 +1,17 @@
+class paymentMode {
+
+  fillPaymentMode(bankInfo) {
+    cy.get('[label$="Ajouter un mode de paiement"]').click();
+    cy.get('fiducial-supplier-banks-selection').type(bankInfo.banque);
+    cy.get('[formcontrolname="iban"] input').type(bankInfo.iban);
+    cy.get('[formcontrolname="paymentMode"]').click();
+    cy.get('p-dropdownitem').each(($el) => {
+      let text = $el.text().toLowerCase().trim();
+      if (text === bankInfo.paiementPrivilegie.toLowerCase().trim()) {
+        cy.wrap($el).click();
+      }
+    })
+  }
+}
+
+export default new paymentMode();

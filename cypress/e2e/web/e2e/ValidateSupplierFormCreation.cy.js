@@ -2,6 +2,7 @@ const { default: menuItem } = require("../supplier/menuItems");
 const { default: supplier } = require("../supplier/createSupplier");
 const { default: contact } = require("../supplier/createContact");
 const { default: family } = require("../supplier/createFamily");
+const { default: payment } = require("../supplier/paymentMode");
 
 
 describe("testing automation", () => {
@@ -9,7 +10,10 @@ describe("testing automation", () => {
     before(() => {
       cy.fixture("web/credentials").as("credential");
       cy.fixture("web/supplierInfo").as("sup");
-      cy.wrap('Fournisseur_'+Cypress._.random(0, 1e6)).as('name');      
+      let serial = Cypress._.random(0, 1e6);
+      cy.wrap('Fournisseur'+`_${serial}`).as('name');
+      cy.wrap('Family'+`_${serial}`).as('family');
+
     });
 
     context("And user logins successfully", () => {
@@ -24,8 +28,10 @@ describe("testing automation", () => {
           menuItem.menuItem("fournisseur").click();
           supplier.createGenericSupplier("Liechtenstein", this.name, this.sup.properties);
           contact.fillContact();
-          family.fillFamily(Cypress._.random(0, 1e6));
-          cy.contains('Sauvegarder').click();
+          family.fillFamily(this.family);
+          cy.get('fiducial-purchases-supplier-creator').should('be.visible')
+          payment.fillPaymentMode(this.sup.properties.paymentMode);
+          cy.contains('Sauvegarder').click({force: false});
         });
       });
     });

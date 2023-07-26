@@ -1,10 +1,10 @@
 class createFamily {
 
-  fillFamily(code) {
-    cy.get("fiducial-supplier-families-selection input").click();
-    debugger
+  fillFamily(name) {
+    cy.get("fiducial-supplier-families-selection").click();
+    cy.get("fiducial-supplier-families-selection").click();
     cy.getBySel('add-item-btn').click();
-    cy.get('fiducial-supplier-families-form #name input').type('family_'+code);
+    cy.get('fiducial-supplier-families-form #name input').type(name);
     cy.get('fiducial-supplier-families-form textarea').type('made in Portugal.');
     cy.contains('Sauvegarder').click();
   }
