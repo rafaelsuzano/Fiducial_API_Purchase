@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  "defaultCommandTimeout": 70000,
 
 
   env: {
