@@ -14,8 +14,18 @@ pipeline {
            steps {
                sh ' npm test'
            }
-       }
-    
-   
-}
+   post {
+    always {
+        publishHTML (target: [
+
+              allowMissing: false,
+              alwaysLinkToLastBuild: false,
+              keepAll: true,
+              reportDir: '',
+              reportFiles: "index.html",
+              reportName: "Report"])
+    }
+  }      
+ }     
+  }
 }
