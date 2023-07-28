@@ -44,14 +44,11 @@ describe('Validations', () => {
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
-        var d = ((Response.body.items))
+        //var d = ((Response.body.items))
 
 
-        for (var index in d) {
-          id_suppliers = (d[index].id)
-          //cy.log(d[index].id)
-        }
-
+        cy.log(JSON.stringify(Response.body))
+        
 
       })
   })
@@ -60,18 +57,57 @@ describe('Validations', () => {
     cy.GET_API('purchases/companies/'+Company+'/invoices-validations', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
-        //var d =(JSON.stringify(Response.body))
-        var d = ((Response.body.items))
-
-
-        for (var index in d) {
-          id_suppliers = (d[index].id)
-          //cy.log(d[index].id)
-        }
+        cy.log(JSON.stringify(Response.body))
+        
 
 
       })
   })
+
+  it('Export validations Excel', () => {
+    cy.GET_API('purchases/companies/'+Company+'/invoices-validations/export?page=0&size=30&sort=number,asc&companyId='+Company+'&exportFile%5Btype%5D=EXCEL', tt)
+      .then(Response => {
+        expect(Response.status).to.eq(200)
+        //var d =(JSON.stringify(Response.body))
+        cy.log(JSON.stringify(Response.body))
+        
+
+
+     
+
+
+      })
+  })
+
+  it('Export validations CSV COMMA', () => {
+    cy.GET_API('purchases/companies/'+Company+'/invoices-validations/export?page=0&size=30&sort=number,asc&companyId='+Company+'&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=COMMA', tt)
+      .then(Response => {
+        expect(Response.status).to.eq(200)
+        //var d =(JSON.stringify(Response.body))
+        cy.log(JSON.stringify(Response.body))
+        
+
+
+       
+
+      })
+  })
+
+
+  it('Export validations CSV SEMICOLON', () => {
+    cy.GET_API('purchases/companies/'+Company+'/invoices-validations/export?page=0&size=30&sort=number,asc&companyId='+Company+'&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=SEMICOLON', tt)
+      .then(Response => {
+        expect(Response.status).to.eq(200)
+        //var d =(JSON.stringify(Response.body))
+        cy.log(JSON.stringify(Response.body))
+        
+
+
+       
+
+      })
+  })
+
 
 
 }) 

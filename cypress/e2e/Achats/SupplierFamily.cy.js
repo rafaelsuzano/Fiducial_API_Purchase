@@ -38,6 +38,7 @@ describe('Suppliers Family', () => {
                 expect(Response.status).to.eq(201);
                 cy.log(JSON.stringify(Response.body))
                 id_suppliers_Family= ((Response.body["id"]))
+                cy.log(id_suppliers_Family)
            
             })
 
@@ -50,7 +51,7 @@ describe('Suppliers Family', () => {
     
                 expect(Response.status).to.eq(200);
                 cy.log(JSON.stringify(Response.body))
-                id_suppliers_Family= ((Response.body["id"]))
+       
            
             })
     
@@ -64,7 +65,7 @@ it('Get List Supplier Family 200', () => {
 
             expect(Response.status).to.eq(200);
             cy.log(JSON.stringify(Response.body))
-            id_suppliers_Family= ((Response.body["id"]))
+      
        
         })
 
@@ -89,12 +90,16 @@ it('Get Export Supplier Family 200', () => {
 
 it('Delete  Supplier Family 200', () => {
 
-    cy.DELETE_API('purchases/companies/'+ Company + '/supplier-families/'+id_suppliers_Family, tt)
-        .then(Response => {
+    https://purchase-qa.facilia.com/purchases/companies/2/supplier-families/124
 
-            expect(Response.status).to.eq(200);
-            cy.log(JSON.stringify(Response.body))
    
+
+    cy.DELETE_API('purchases/companies/'+ Company +'/supplier-families/'+id_suppliers_Family, tt)
+        .then(Response => {
+            cy.log(id_suppliers_Family)
+            expect(Response.status).to.eq(204);
+            cy.log(JSON.stringify(Response.body))
+        
        
         })
 
