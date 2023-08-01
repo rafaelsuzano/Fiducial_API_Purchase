@@ -1,4 +1,7 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress');
+
+require('dotenv').config();
+
 
 module.exports = defineConfig({
   "defaultCommandTimeout": 70000,
@@ -25,14 +28,21 @@ module.exports = defineConfig({
   },
 
 
-  e2e: {
-
-    setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
-
-
-
-
+    e2e: {
+      setupNodeEvents(on, config) {
+        on('after:run', async (results) => {   
+          const TestrailIntegration = require('cypress-testrail-integration');
+          const testrailIntegration = new TestrailIntegration(
+            process.env.TESTRAIL_USERNAME,
+            process.env.TESTRAIL_PASSWORD,
+            process.env.TESTRAIL_HOSTNAME,
+            process.env.TESTRAIL_PROJECT_ID,
+            testRunName = 'New Test Run' // adding a new name for Test Run
+          );
+          await testrailIntegration.addResultsToTestRailTestRun(results);
+        });
+        return config;
+      },
+     
     },
-  },
-});
+  })
