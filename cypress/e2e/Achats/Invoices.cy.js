@@ -17,7 +17,7 @@ let id_suppliers_paymentInfo
 
 let Company = Cypress.env("companyId")
 
-describe('Suppliers', () => {
+describe('Invoices', () => {
   before(() => {
     cy.fixture('supplier.json').then(dt => {
       dt1 = dt;

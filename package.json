@@ -9,7 +9,8 @@
   "author": "rafael suzano cruz",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.15.0"
+    "cypress": "^12.15.0",
+    "cypress-testrail": "^2.8.0"
   },
   "dependencies": {
     "cypress-mochawesome-reporter": "^3.5.1",
