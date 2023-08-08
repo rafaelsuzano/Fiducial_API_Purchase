@@ -4,7 +4,8 @@ const addContext = require('mochawesome/addContext');
 
 
 let tt
-
+let dt1
+let dt
 
 
 let Company = Cypress.env("companyId")
