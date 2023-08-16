@@ -1,15 +1,4 @@
 const { defineConfig } = require('cypress');
-const TestRailReporter = require('cypress-testrail');
-
-require('dotenv').config();
-
-
-module.exports = (on, config) => {
-  // configure and register our reporter
-  new TestRailReporter(on, config).register();
-  
-  return config
-}
 
 
 module.exports = defineConfig({
@@ -40,9 +29,8 @@ module.exports = defineConfig({
 
     e2e: {
       setupNodeEvents(on, config) {
-        //require('cypress-mochawesome-reporter/plugin')(on);
-        new TestRailReporter(on, config).register();
-        return config
+        require('cypress-mochawesome-reporter/plugin')(on);
+
 
         },
      
