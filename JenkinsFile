@@ -13,14 +13,11 @@ pipeline {
                sh 'npm install cypress --save-dev'
            }
        }
-       stage('e2e Tests') {
+        stage('e2e Tests') {
            steps {
                sh ' npm test'
            }
-    
-   
-   
-   
+  
    post {
     always {
      publishHTML([
@@ -34,5 +31,11 @@ pipeline {
   }      
  }     
   }
+        stage('Send Report TestRail') {
+           steps {
+              sh ' npx cypress run --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
+           }
+
+}
 }
 }
