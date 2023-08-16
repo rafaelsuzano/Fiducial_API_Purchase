@@ -15,9 +15,9 @@ pipeline {
        }
         stage('e2e Tests') {
            steps {
-               sh ' npx cypress run --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'''
+               sh " npx cypress run --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml" "
 
-'
+
            }
   
    post {
