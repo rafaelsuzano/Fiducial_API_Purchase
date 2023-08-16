@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.131" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-08-16T18:31:22" tests="0" file="cypress/e2e/Ventes/TaskManagement.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Sales" timestamp="2023-08-16T18:31:22" tests="1" time="5.026" failures="0">
+    <testcase name="Sales Get Task Management" time="5.008" classname="Get Task Management">
+    </testcase>
+  </testsuite>
+</testsuites>
