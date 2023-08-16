@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-16T14:24:28.890Z",
+    "end": "2023-08-16T14:24:31.700Z",
+    "duration": 2810,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fd4a49ed-a6fa-4cb0-9e6f-6294b4e34952",
+      "title": "",
+      "fullFile": "cypress/e2e/Ventes/DownloadImportModel.cy.js",
+      "file": "cypress/e2e/Ventes/DownloadImportModel.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8cd360ce-4a41-4089-8fd7-d53d5f02f275",
+          "title": "download-import-model",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get download-import-model CLIENTS",
+              "fullTitle": "download-import-model Get download-import-model CLIENTS",
+              "timedOut": null,
+              "duration": 2360,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/DownloadImportModel.cy.js\"\n}",
+              "code": "cy.GET_API_SALES('common/download-import-model?type=CLIENTS', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "43e2b07d-8a51-4c90-bc26-f9b2d6c73daa",
+              "parentUUID": "8cd360ce-4a41-4089-8fd7-d53d5f02f275",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get download-import-model ARTICLES",
+              "fullTitle": "download-import-model Get download-import-model ARTICLES",
+              "timedOut": null,
+              "duration": 422,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/DownloadImportModel.cy.js\"\n}",
+              "code": "cy.GET_API_SALES('common/download-import-model?type=ARTICLES', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "07953b68-483e-4d82-b6de-a746a821073c",
+              "parentUUID": "8cd360ce-4a41-4089-8fd7-d53d5f02f275",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "43e2b07d-8a51-4c90-bc26-f9b2d6c73daa",
+            "07953b68-483e-4d82-b6de-a746a821073c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2782,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Fiducial API Test",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

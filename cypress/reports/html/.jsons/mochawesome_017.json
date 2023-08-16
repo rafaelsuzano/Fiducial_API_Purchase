@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-15T13:39:50.237Z",
+    "end": "2023-08-15T13:39:56.208Z",
+    "duration": 5971,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4c3f6d22-6c23-478e-aaa6-29589211b982",
+      "title": "",
+      "fullFile": "cypress/e2e/Achats/Validations.cy.js",
+      "file": "cypress/e2e/Achats/Validations.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2aee9f56-92d0-4b38-8884-62ba6d833ed4",
+          "title": "Validations",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Invoices Validations Summary",
+              "fullTitle": "Validations Invoices Validations Summary",
+              "timedOut": null,
+              "duration": 2342,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Achats/Validations.cy.js\"\n}",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/invoices-validations/summary', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  //var d = ((Response.body.items))\n  cy.log(JSON.stringify(Response.body));\n});",
+              "err": {},
+              "uuid": "e64adb1d-302b-4bb2-a030-a219447f5063",
+              "parentUUID": "2aee9f56-92d0-4b38-8884-62ba6d833ed4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get a list of invoices validations",
+              "fullTitle": "Validations Get a list of invoices validations",
+              "timedOut": null,
+              "duration": 533,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Achats/Validations.cy.js\"\n}",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/invoices-validations', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  cy.log(JSON.stringify(Response.body));\n});",
+              "err": {},
+              "uuid": "0eacf1ea-4691-4da4-8f0e-9c8636d0b450",
+              "parentUUID": "2aee9f56-92d0-4b38-8884-62ba6d833ed4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Export validations Excel",
+              "fullTitle": "Validations Export validations Excel",
+              "timedOut": null,
+              "duration": 1036,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Achats/Validations.cy.js\"\n}",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/invoices-validations/export?page=0&size=30&sort=number,asc&companyId=' + Company + '&exportFile%5Btype%5D=EXCEL', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(JSON.stringify(Response.body));\n});",
+              "err": {},
+              "uuid": "a618ab05-0e75-479d-8e5e-880b59fdea85",
+              "parentUUID": "2aee9f56-92d0-4b38-8884-62ba6d833ed4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Export validations CSV COMMA",
+              "fullTitle": "Validations Export validations CSV COMMA",
+              "timedOut": null,
+              "duration": 932,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Achats/Validations.cy.js\"\n}",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/invoices-validations/export?page=0&size=30&sort=number,asc&companyId=' + Company + '&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=COMMA', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(JSON.stringify(Response.body));\n});",
+              "err": {},
+              "uuid": "ebfd6a16-4e72-4608-9369-0abaa6c2e45e",
+              "parentUUID": "2aee9f56-92d0-4b38-8884-62ba6d833ed4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Export validations CSV SEMICOLON",
+              "fullTitle": "Validations Export validations CSV SEMICOLON",
+              "timedOut": null,
+              "duration": 956,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Achats/Validations.cy.js\"\n}",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/invoices-validations/export?page=0&size=30&sort=number,asc&companyId=' + Company + '&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=SEMICOLON', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(JSON.stringify(Response.body));\n});",
+              "err": {},
+              "uuid": "2f98b053-6d3c-4961-8a25-a6d252be1b25",
+              "parentUUID": "2aee9f56-92d0-4b38-8884-62ba6d833ed4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e64adb1d-302b-4bb2-a030-a219447f5063",
+            "0eacf1ea-4691-4da4-8f0e-9c8636d0b450",
+            "a618ab05-0e75-479d-8e5e-880b59fdea85",
+            "ebfd6a16-4e72-4608-9369-0abaa6c2e45e",
+            "2f98b053-6d3c-4961-8a25-a6d252be1b25"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5799,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Fiducial API Test",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

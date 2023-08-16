@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.916" tests="7" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-08-16T10:02:39" tests="0" file="cypress/e2e/Ventes/ValueRange.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Countries" timestamp="2023-08-16T10:02:39" tests="7" time="5.882" failures="0">
+    <testcase name="Countries Get Value Range Quotes AMOUNT_TTC" time="2.776" classname="Get Value Range Quotes AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range INVOICES AMOUNT_TTC" time="0.934" classname="Get Value Range INVOICES AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range ARTICLES AMOUNT_TTC" time="0.909" classname="Get Value Range ARTICLES AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range CHECKS AMOUNT_TTC" time="0.314" classname="Get Value Range CHECKS AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range ARTICLE_FAMILIES ARTICLES_QTY" time="0.306" classname="Get Value Range ARTICLE_FAMILIES ARTICLES_QTY">
+    </testcase>
+    <testcase name="Countries Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTY" time="0.298" classname="Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTY">
+    </testcase>
+    <testcase name="Countries Get Value Range RECURRENCES  AMOUNT_TTC" time="0.329" classname="Get Value Range RECURRENCES  AMOUNT_TTC">
+    </testcase>
+  </testsuite>
+</testsuites>

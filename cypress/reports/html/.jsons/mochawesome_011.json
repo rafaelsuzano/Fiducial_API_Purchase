@@ -1,0 +1,134 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-08-15T13:38:47.672Z",
+    "end": "2023-08-15T13:38:53.719Z",
+    "duration": 6047,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0c85cfa4-4f2e-4cdd-ac1a-565fbf6184ab",
+      "title": "",
+      "fullFile": "cypress/e2e/Achats/Invoices.cy.js",
+      "file": "cypress/e2e/Achats/Invoices.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d935dd93-c289-40e0-adf7-c8f3c5e5289f",
+          "title": "Invoices",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get a list of invoices payments",
+              "fullTitle": "Invoices Get a list of invoices payments",
+              "timedOut": null,
+              "duration": 5639,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Achats/Invoices.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Achats/Invoices.cy.js/Invoices -- Get a list of invoices payments (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/invoice/invoices-payments', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  var d = Response.body.items;\n  for (var index in d) {\n    id_suppliers = d[index].id;\n    //cy.log(d[index].id)\n  }\n  cy.addContext(\"Test get Suppliers\");\n});",
+              "err": {
+                "message": "AssertionError: expected 404 to equal 200",
+                "estack": "AssertionError: expected 404 to equal 200\n    at Context.eval (webpack:///./cypress/e2e/Achats/Invoices.cy.js:43:35)",
+                "diff": "- 404\n+ 200\n"
+              },
+              "uuid": "524a48e4-9af8-4fde-a0d9-a9cb440e0ec2",
+              "parentUUID": "d935dd93-c289-40e0-adf7-c8f3c5e5289f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get Invoices Payments Summary",
+              "fullTitle": "Invoices Get Invoices Payments Summary",
+              "timedOut": null,
+              "duration": 329,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n    \"value\": \"cypress/e2e/Achats/Invoices.cy.js\"\n  },\n  \"Test get Suppliers\"\n]",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/invoices-payments/summary', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  var d = Response.body.items;\n  for (var index in d) {\n    id_suppliers = d[index].id;\n    //cy.log(d[index].id)\n  }\n  cy.addContext(\"Test get Suppliers\");\n});",
+              "err": {},
+              "uuid": "30338cde-c5c0-46b1-a7f2-97c9c5556269",
+              "parentUUID": "d935dd93-c289-40e0-adf7-c8f3c5e5289f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "30338cde-c5c0-46b1-a7f2-97c9c5556269"
+          ],
+          "failures": [
+            "524a48e4-9af8-4fde-a0d9-a9cb440e0ec2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5968,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Fiducial API Test",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

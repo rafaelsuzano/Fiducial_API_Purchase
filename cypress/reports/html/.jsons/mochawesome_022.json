@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-15T13:42:15.805Z",
+    "end": "2023-08-15T13:42:20.611Z",
+    "duration": 4806,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e746a7c9-9b1f-42db-bd38-0f33f122af0f",
+      "title": "",
+      "fullFile": "cypress/e2e/Ventes/TaskManagement.cy.js",
+      "file": "cypress/e2e/Ventes/TaskManagement.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b08d8886-eb7a-428e-b8f8-9c480746a6fd",
+          "title": "Sales",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Task Management",
+              "fullTitle": "Sales Get Task Management",
+              "timedOut": null,
+              "duration": 4736,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/TaskManagement.cy.js\"\n}",
+              "code": "cy.GET_API_SALES('task-management', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  cy.log(Response.body);\n});",
+              "err": {},
+              "uuid": "26801bcf-8e08-4671-bb6a-27be4002d54c",
+              "parentUUID": "b08d8886-eb7a-428e-b8f8-9c480746a6fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "26801bcf-8e08-4671-bb6a-27be4002d54c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4736,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Fiducial API Test",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

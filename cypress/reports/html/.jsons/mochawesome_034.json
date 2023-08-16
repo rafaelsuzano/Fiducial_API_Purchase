@@ -1,0 +1,275 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 6,
+    "pending": 0,
+    "failures": 3,
+    "start": "2023-08-16T14:22:24.781Z",
+    "end": "2023-08-16T14:24:10.175Z",
+    "duration": 105394,
+    "testsRegistered": 9,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a173f146-ddbd-4cab-878a-0447c24ff239",
+      "title": "",
+      "fullFile": "cypress/e2e/Ventes/Clients.cy.js",
+      "file": "cypress/e2e/Ventes/Clients.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+          "title": "Clients",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get_ExportClients_Excel Separtor COMMA 200",
+              "fullTitle": "Clients Get_ExportClients_Excel Separtor COMMA 200",
+              "timedOut": null,
+              "duration": 32131,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Ventes/Clients.cy.js/Clients -- Get_ExportClients_Excel Separtor COMMA 200 (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.GET_API_SALES('companies/' + Company + '/clients/export?companyId=' + Company + '&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=COMMA', tt).then(Response => {\n  cy.wait(4000);\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(Response.body);\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://recette-int-qa.facilia.com/companies/2/clients/export?companyId=2&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=COMMA\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://recette-int-qa.facilia.com/companies/2/clients/export?companyId=2&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=COMMA\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:37197/__cypress/runner/cypress_runner.js:149368:78)\n    at tryCatcher (http://localhost:37197/__cypress/runner/cypress_runner.js:18744:23)\n    at <unknown> (http://localhost:37197/__cypress/runner/cypress_runner.js:13866:41)\n    at tryCatcher (http://localhost:37197/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (http://localhost:37197/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (http://localhost:37197/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (http://localhost:37197/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (http://localhost:37197/__cypress/runner/cypress_runner.js:16857:18)\n    at _drainQueueStep (http://localhost:37197/__cypress/runner/cypress_runner.js:13451:12)\n    at _drainQueue (http://localhost:37197/__cypress/runner/cypress_runner.js:13444:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:37197/__cypress/runner/cypress_runner.js:13460:5)\n    at Async.drainQueues (http://localhost:37197/__cypress/runner/cypress_runner.js:13330:14)\nFrom Your Spec Code:\n    at Context.ee (webpack:///./node_modules/cypress-plugin-api/dist/support.js:14:2002)",
+                "diff": null
+              },
+              "uuid": "88600820-b690-46e3-a2d2-f990454aae8f",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get_ExportClients_Excel 200",
+              "fullTitle": "Clients Get_ExportClients_Excel 200",
+              "timedOut": null,
+              "duration": 30277,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Ventes/Clients.cy.js/Clients -- Get_ExportClients_Excel 200 (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.GET_API_SALES('companies/2/clients/export?companyId=2&exportFile%5Btype%5D=EXCEL', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  console.log(Response.body);\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://recette-int-qa.facilia.com/companies/2/clients/export?companyId=2&exportFile%5Btype%5D=EXCEL\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://recette-int-qa.facilia.com/companies/2/clients/export?companyId=2&exportFile%5Btype%5D=EXCEL\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:37197/__cypress/runner/cypress_runner.js:149368:78)\n    at tryCatcher (http://localhost:37197/__cypress/runner/cypress_runner.js:18744:23)\n    at <unknown> (http://localhost:37197/__cypress/runner/cypress_runner.js:13866:41)\n    at tryCatcher (http://localhost:37197/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (http://localhost:37197/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (http://localhost:37197/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (http://localhost:37197/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (http://localhost:37197/__cypress/runner/cypress_runner.js:16857:18)\n    at _drainQueueStep (http://localhost:37197/__cypress/runner/cypress_runner.js:13451:12)\n    at _drainQueue (http://localhost:37197/__cypress/runner/cypress_runner.js:13444:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:37197/__cypress/runner/cypress_runner.js:13460:5)\n    at Async.drainQueues (http://localhost:37197/__cypress/runner/cypress_runner.js:13330:14)\nFrom Your Spec Code:\n    at Context.ee (webpack:///./node_modules/cypress-plugin-api/dist/support.js:14:2002)",
+                "diff": null
+              },
+              "uuid": "b461b434-dc20-4be3-a21e-6ca5ef0b73fd",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get_ExportClients_Excel exportFile 403",
+              "fullTitle": "Clients Get_ExportClients_Excel exportFile 403",
+              "timedOut": null,
+              "duration": 30360,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Ventes/Clients.cy.js/Clients -- Get_ExportClients_Excel exportFile 403 (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "defaultCommandTimeout: 50000;\ncy.GET_API_SALES('companies/' + Company + '/clients/export?companyId=' + Company + '&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=', tt).then(Response => {\n  expect(Response.status).to.eq(400);\n  //var d =(JSON.stringify(Response.body))\n  console.log(Response.body);\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://recette-int-qa.facilia.com/companies/2/clients/export?companyId=2&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://recette-int-qa.facilia.com/companies/2/clients/export?companyId=2&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:37197/__cypress/runner/cypress_runner.js:149368:78)\n    at tryCatcher (http://localhost:37197/__cypress/runner/cypress_runner.js:18744:23)\n    at <unknown> (http://localhost:37197/__cypress/runner/cypress_runner.js:13866:41)\n    at tryCatcher (http://localhost:37197/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (http://localhost:37197/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (http://localhost:37197/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (http://localhost:37197/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (http://localhost:37197/__cypress/runner/cypress_runner.js:16857:18)\n    at _drainQueueStep (http://localhost:37197/__cypress/runner/cypress_runner.js:13451:12)\n    at _drainQueue (http://localhost:37197/__cypress/runner/cypress_runner.js:13444:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:37197/__cypress/runner/cypress_runner.js:13460:5)\n    at Async.drainQueues (http://localhost:37197/__cypress/runner/cypress_runner.js:13330:14)\nFrom Your Spec Code:\n    at Context.ee (webpack:///./node_modules/cypress-plugin-api/dist/support.js:14:2002)",
+                "diff": null
+              },
+              "uuid": "72a36942-4f50-47ef-bebf-3199720da680",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Client registration France 201",
+              "fullTitle": "Clients Client registration France 201",
+              "timedOut": null,
+              "duration": 4025,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n}",
+              "code": "cy.Post_API_With_Body_SALES('companies/' + Company + '/clients', tt, dt1['code201_FRANCE']).then(Response => {\n  cy.log(JSON.stringify(Response.body));\n  //cy.log(Response.body)\n  expect(Response.status).to.eq(201);\n  id_client = Response.body[\"id\"];\n});",
+              "err": {},
+              "uuid": "c9b98145-1c3e-43f0-b6e4-9a13b1ec93f7",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Client registration without_contact_email",
+              "fullTitle": "Clients Client registration without_contact_email",
+              "timedOut": null,
+              "duration": 942,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n}",
+              "code": "cy.Post_API_With_Body_SALES('companies/' + Company + '/clients', tt, dt1['code201_FRANCE_Contato_Sem_Email']).then(Response => {\n  cy.log(JSON.stringify(Response.body));\n  //cy.log(Response.body)\n  expect(Response.status).to.eq(400);\n  //        id_client = ((Response.body[\"id\"]))\n});",
+              "err": {},
+              "uuid": "42a97021-ad86-4580-8bd3-fcb9b5fe10fe",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Client registration without_contact_city",
+              "fullTitle": "Clients Client registration without_contact_city",
+              "timedOut": null,
+              "duration": 849,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n}",
+              "code": "cy.Post_API_With_Body_SALES('companies/' + Company + '/clients', tt, dt1['code201_FRANCE_Contato_Sem_city']).then(Response => {\n  cy.log(JSON.stringify(Response.body));\n  //cy.log(Response.body)\n  expect(Response.status).to.eq(400);\n  //        id_client = ((Response.body[\"id\"]))\n});",
+              "err": {},
+              "uuid": "4f72ac8c-ef84-44fb-9be8-646b510456d4",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Client registration Clients_TOKEN_NOK",
+              "fullTitle": "Clients Client registration Clients_TOKEN_NOK",
+              "timedOut": null,
+              "duration": 999,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n}",
+              "code": "cy.Post_API_With_Body_SALES('companies/' + Company + '/clients', \"aa\", dt1['code201_FRANCE_Contato_Sem_city']).then(Response => {\n  cy.log(JSON.stringify(Response.body));\n  //cy.log(Response.body)\n  expect(Response.status).to.eq(403);\n  //        id_client = ((Response.body[\"id\"]))\n});",
+              "err": {},
+              "uuid": "4e1170ee-ac97-4d01-985a-d86a16e33216",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get_Client ",
+              "fullTitle": "Clients Get_Client ",
+              "timedOut": null,
+              "duration": 3263,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n}",
+              "code": "defaultCommandTimeout: 50000;\ncy.GET_API_SALES('companies/' + Company + '/clients/' + id_client, tt).then(Response => {\n  console.log(Response.body);\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n});",
+              "err": {},
+              "uuid": "cff640f4-1429-407e-befc-43ca4f4c031d",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get_Client List ",
+              "fullTitle": "Clients Get_Client List ",
+              "timedOut": null,
+              "duration": 1145,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/Clients.cy.js\"\n}",
+              "code": "defaultCommandTimeout: 50000;\ncy.GET_API_SALES('companies/' + Company + '/clients/', tt).then(Response => {\n  console.log(Response.body);\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n});",
+              "err": {},
+              "uuid": "2fff8ccb-2dcf-4c43-a92b-c8efe89e3f9c",
+              "parentUUID": "59ef702a-df12-4fae-a824-5d2d03a731c7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c9b98145-1c3e-43f0-b6e4-9a13b1ec93f7",
+            "42a97021-ad86-4580-8bd3-fcb9b5fe10fe",
+            "4f72ac8c-ef84-44fb-9be8-646b510456d4",
+            "4e1170ee-ac97-4d01-985a-d86a16e33216",
+            "cff640f4-1429-407e-befc-43ca4f4c031d",
+            "2fff8ccb-2dcf-4c43-a92b-c8efe89e3f9c"
+          ],
+          "failures": [
+            "88600820-b690-46e3-a2d2-f990454aae8f",
+            "b461b434-dc20-4be3-a21e-6ca5ef0b73fd",
+            "72a36942-4f50-47ef-bebf-3199720da680"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 103991,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Fiducial API Test",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
