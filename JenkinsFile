@@ -15,11 +15,11 @@ pipeline {
        }
        stage('e2e Tests') {
            steps {
-              sh ' npm test'
+               sh ' npm test'
            }
    
-      
-        }
+   
+   
    
    post {
     always {
@@ -34,4 +34,5 @@ pipeline {
   }      
  }     
   }
+}
 }
