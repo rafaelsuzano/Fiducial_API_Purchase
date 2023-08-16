@@ -17,14 +17,9 @@ pipeline {
            steps {
                sh ' npm test'
            }
-       }
-
-        stage('Send Report TestRail') {
-            steps {
-              sh ' npx cypress run --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
-           }
-        
-
+    
+   
+   
    
    post {
     always {
@@ -39,4 +34,5 @@ pipeline {
   }      
  }     
   }
+}
 }
