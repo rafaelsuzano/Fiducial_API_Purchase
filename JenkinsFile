@@ -18,7 +18,7 @@ pipeline {
                sh 'npx cypress run --config video=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
 
 
-           }
+           
   
  }     
   }
