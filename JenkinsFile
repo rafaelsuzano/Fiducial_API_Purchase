@@ -23,7 +23,7 @@ pipeline {
             steps {
               sh ' npx cypress run --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
            }
-        }
+        
 
    
    post {
