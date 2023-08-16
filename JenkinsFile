@@ -15,29 +15,19 @@ pipeline {
        }
         stage('e2e Tests') {
            steps {
-               sh ''' npx cypress run --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml" '''
+               sh ' npx cypress run --config video=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"''
 
-
+'
            }
   
-   post {
-    always {
-     publishHTML([
-        allowMissing: false,
-        alwaysLinkToLastBuild: false,
-        keepAll: true,
-        reportDir: 'cypress/cypress/reports/html',
-        reportFiles: 'index.html',
-        reportName: 'HTML Report', 
-        reportTitles: ''])
-  }      
  }     
   }
         stage('Send Report TestRail') {
            steps {
-              sh ' npx cypress run --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
+              sh ' junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
+
+
            }
 
-}
 }
 }
