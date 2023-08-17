@@ -18,15 +18,13 @@ pipeline {
                sh 'npx cypress run --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
 
   
- }     
-        }
+    }
       post {
     always {
-                sh ' junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
+            sh ' junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
 
     }
   }      
  }  
-  
-  
-  
+}
+}
