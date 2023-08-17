@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.244" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-08-17T13:09:02" tests="0" file="cypress/e2e/Achats/PurchasesPayment.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Purchases Payment" timestamp="2023-08-17T13:09:02" tests="1" time="2.213" failures="1">
+    <testcase name="Purchases Payment Get a list of payments" time="0.000" classname="Get a list of payments">
+      <failure message="expected 500 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 500 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/PurchasesPayment.cy.js:39:35)
+
+      + expected - actual
+
+      -500
+      +200
+      ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
