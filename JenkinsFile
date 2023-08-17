@@ -19,13 +19,14 @@ pipeline {
 
   
  }     
-  }
-        stage('Merge Report TestRail') {
-           steps {
-              sh ' junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
+        }
+      post {
+    always {
+                sh ' junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
 
-
-           }
-}
-}
-}
+    }
+  }      
+ }  
+  
+  
+  
