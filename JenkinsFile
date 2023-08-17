@@ -10,7 +10,7 @@ pipeline {
         stage('Clear') {
            steps {
        
-               sh 'npm run report:delete"'
+               sh 'npm run report:delete'
               
            }
        }
