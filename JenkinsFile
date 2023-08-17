@@ -10,12 +10,7 @@ pipeline {
            steps {
        
                sh
-                '''
-                pip install trcli
-                npx cypress install --force
-                npm run report:delete'  
-               
-                '''
+                'npx cypress install --force'
               
            }
        }
