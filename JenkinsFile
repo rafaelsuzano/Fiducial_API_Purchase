@@ -5,7 +5,6 @@ pipeline {
     ansiColor('xterm')
   }
 
-
    stages {
        stage('Dependencies') {
            steps {
@@ -16,7 +15,7 @@ pipeline {
                 npx cypress install --force
                 npm run report:delete'  
                
-                    '''
+                '''
               
            }
        }
