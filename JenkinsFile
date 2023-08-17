@@ -30,26 +30,13 @@ pipeline {
     }
       post {
     always {
-            sh 'junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
-
+            sh '''
+            
+            junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
+            trcli -y -h https://facilia.testrail.io/  --project "Facilia QAE" --username  rafael.cruz-exterieur@fiducial.net  --password Suz@no30  parse_junit --title "Cypress Automated Test Run" -f "./reports/junit-report.xml"'
+            '''
     }
   }      
  }  
-        stage('Send Report') {
-          steps {
-                sh 'echo ok'
-
-  
-    }
-      post {
-    always {
-            sh 'trcli -y -h https://facilia.testrail.io/  --project "Facilia QAE" --username  rafael.cruz-exterieur@fiducial.net  --password Suz@no30  parse_junit --title "Cypress Automated Test Run" -f "./reports/junit-report.xml"'
-
-    }
-  }      
- } 
-
-
-
 }
 }
