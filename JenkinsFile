@@ -7,7 +7,7 @@ pipeline {
 
    stages {
        
-         stage('Clear') {
+        stage('Clear') {
            steps {
        
                sh 'npm run report:delete"'
