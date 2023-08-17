@@ -17,19 +17,12 @@ pipeline {
            steps {
                sh 'npx cypress run --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
 
-
-           
   
  }     
   }
-        stage('Send Report TestRail') {
+        stage('Merge Report TestRail') {
            steps {
-              sh ''' 
-                junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"
-                trcli -y -h https://qatesterl.testrail.io/  --project "Facilia QAE" --username  rafael.cruz-exterieur@fiducial.net  --password Suz@no30  parse_junit --title "Cypress Automated Test Run" -f "./reports/junit-report.xml"
-              
-              
-              ''' 
+              sh ' junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
 
 
            }
