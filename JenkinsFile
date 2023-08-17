@@ -11,6 +11,7 @@ pipeline {
            steps {
        
                sh 'npx cypress install --force'
+               sh 'npm run report:delete'
            }
        }
         stage('e2e Tests') {
@@ -24,7 +25,7 @@ pipeline {
   }
         stage('Send Report TestRail') {
            steps {
-              sh ' junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
+              sh ' junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"' 
 
 
            }

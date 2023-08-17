@@ -4,7 +4,8 @@
   "description": "teste api",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress run",
+    "report:delete": "rm -rf cypress/reports/{,.[!.],..?}*"
   },
   "author": "rafael suzano cruz",
   "license": "ISC",

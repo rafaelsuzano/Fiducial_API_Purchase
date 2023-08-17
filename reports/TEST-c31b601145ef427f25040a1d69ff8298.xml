@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.051" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-08-17T10:53:04" tests="0" file="cypress/e2e/Achats/Invoices.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Invoices" timestamp="2023-08-17T10:53:04" tests="2" time="6.989" failures="1">
+    <testcase name="Invoices Get a list of invoices payments" time="0.000" classname="Get a list of invoices payments">
+      <failure message="expected 404 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/Invoices.cy.js:43:35)
+
+      + expected - actual
+
+      -404
+      +200
+      ]]></failure>
+    </testcase>
+    <testcase name="Invoices Get Invoices Payments Summary" time="0.375" classname="Get Invoices Payments Summary">
+    </testcase>
+  </testsuite>
+</testsuites>

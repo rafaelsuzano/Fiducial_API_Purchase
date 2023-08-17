@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.442" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-08-17T10:40:01" tests="0" file="cypress/e2e/Ventes/Invoices_LastPaid.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Invoices Last Paid" timestamp="2023-08-17T10:40:01" tests="1" time="2.387" failures="0">
+    <testcase name="Invoices Last Paid Get Invoices Last Paid" time="2.388" classname="Get Invoices Last Paid">
+    </testcase>
+  </testsuite>
+</testsuites>
