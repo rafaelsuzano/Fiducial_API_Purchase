@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.238" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-08-17T14:25:40" tests="0" file="cypress/e2e/Achats/SiretDataBase.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Suppliers" timestamp="2023-08-17T14:25:40" tests="1" time="2.202" failures="0">
+    <testcase name="Suppliers Get data about the siret" time="2.212" classname="Get data about the siret">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -24,17 +24,16 @@ pipeline {
        }
         stage('e2e Tests') {
            steps {
-               sh 'npx cypress run --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
-
+               sh '''
+               npx cypress run --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
+               junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml" 
+                '''
   
     }
       post {
     always {
-            sh '''
+            sh 'trcli -y -h https://facilia.testrail.io/  --project "Facilia QAE" --username  rafael.cruz-exterieur@fiducial.net  --password Suz@no30  parse_junit --title "Cypress Automated Test Run" -f "./reports/junit-report.xml"'
             
-            junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml"'
-            trcli -y -h https://facilia.testrail.io/  --project "Facilia QAE" --username  rafael.cruz-exterieur@fiducial.net  --password Suz@no30  parse_junit --title "Cypress Automated Test Run" -f "./reports/junit-report.xml"'
-            '''
     }
   }      
  }  
