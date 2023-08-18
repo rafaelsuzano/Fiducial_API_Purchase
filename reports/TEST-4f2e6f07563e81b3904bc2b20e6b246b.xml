@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="8.109" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-08-17T19:27:56" tests="0" file="cypress/e2e/Achats/Validations.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Validations" timestamp="2023-08-17T19:27:56" tests="5" time="8.033" failures="0">
+    <testcase name="Validations Invoices Validations Summary" time="2.717" classname="Invoices Validations Summary">
+    </testcase>
+    <testcase name="Validations Get a list of invoices validations" time="1.015" classname="Get a list of invoices validations">
+    </testcase>
+    <testcase name="Validations Export validations Excel" time="1.178" classname="Export validations Excel">
+    </testcase>
+    <testcase name="Validations Export validations CSV COMMA" time="1.005" classname="Export validations CSV COMMA">
+    </testcase>
+    <testcase name="Validations Export validations CSV SEMICOLON" time="1.047" classname="Export validations CSV SEMICOLON">
+    </testcase>
+  </testsuite>
+</testsuites>

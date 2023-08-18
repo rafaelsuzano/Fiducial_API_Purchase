@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.180" tests="6" failures="6">
+  <testsuite name="Root Suite" timestamp="2023-08-17T19:26:58" tests="0" file="cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Suppliers Metrics" timestamp="2023-08-17T19:26:58" tests="6" time="5.091" failures="6">
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise month" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise month">
+      <failure message="expected 404 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:39:35)
+
+      + expected - actual
+
+      -404
+      +200
+      ]]></failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise year" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise year">
+      <failure message="expected 404 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:59:35)
+
+      + expected - actual
+
+      -404
+      +200
+      ]]></failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise year" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise year">
+      <failure message="expected 404 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:73:35)
+
+      + expected - actual
+
+      -404
+      +200
+      ]]></failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by civil year (monthly)" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by civil year (monthly)">
+      <failure message="expected 404 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:87:35)
+
+      + expected - actual
+
+      -404
+      +200
+      ]]></failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by civil year (January 1st to December 31st)" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by civil year (January 1st to December 31st)">
+      <failure message="expected 404 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:100:35)
+
+      + expected - actual
+
+      -404
+      +200
+      ]]></failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family for the last 12 months" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family for the last 12 months">
+      <failure message="expected 404 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:112:35)
+
+      + expected - actual
+
+      -404
+      +200
+      ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
