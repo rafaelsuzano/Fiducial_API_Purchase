@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites tests="122" failures="32" errors="0" skipped="0" time="125.488"><testsuite name="Root Suite" timestamp="2023-08-17T14:36:53" tests="0" file="cypress/e2e/Ventes/Invoices_LastPaid.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Invoices Last Paid" timestamp="2023-08-17T14:36:53" tests="1" time="2.261" failures="0" errors="0" skipped="0">
+    <testcase name="Invoices Last Paid Get Invoices Last Paid" time="2.261" classname="Get Invoices Last Paid">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:27:20" tests="0" file="cypress/e2e/Achats/Suppliers.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers" timestamp="2023-08-17T19:27:20" tests="5" time="6.724" failures="0" errors="0" skipped="0">
+    <testcase name="Suppliers Get Suppliers " time="3.052" classname="Get Suppliers ">
+    </testcase>
+    <testcase name="Suppliers Get Export a Supplier " time="0.406" classname="Get Export a Supplier ">
+    </testcase>
+    <testcase name="Suppliers Post Supplier 201" time="1.122" classname="Post Supplier 201">
+    </testcase>
+    <testcase name="Suppliers Get a Supplier List" time="1.083" classname="Get a Supplier List">
+    </testcase>
+    <testcase name="Suppliers Delete Supplier 201" time="1.061" classname="Delete Supplier 201">
+    </testcase>
+  </testsuite>
+  <testsuite name="Rules" timestamp="2023-08-17T19:27:27" tests="9" time="6.2" failures="0" errors="0" skipped="0">
+    <testcase name="Suppliers Rules Post Supplier 400 France" time="0.390" classname="Post Supplier 400 France">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 201 France" time="1.102" classname="Post Supplier 201 France">
+    </testcase>
+    <testcase name="Suppliers Rules Get data about the siret" time="0.386" classname="Get data about the siret">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 201 With contacts" time="1.160" classname="Post Supplier 201 With contacts">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 201 With paymentInfo" time="1.586" classname="Post Supplier 201 With paymentInfo">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 403 Invalid Token" time="0.426" classname="Post Supplier 403 Invalid Token">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 401 Not Authorized" time="0.380" classname="Post Supplier 401 Not Authorized">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 404 Not Found" time="0.388" classname="Post Supplier 404 Not Found">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 400 Malformaed" time="0.382" classname="Post Supplier 400 Malformaed">
+    </testcase>
+  </testsuite>
+  <testsuite name="Supplier Notes" timestamp="2023-08-17T19:27:33" tests="1" time="2.736" failures="0" errors="0" skipped="0">
+    <testcase name="Supplier Notes Get Supplier Families List Notes" time="2.736" classname="Get Supplier Families List Notes">
+    </testcase>
+  </testsuite>
+  <testsuite name="OCR" timestamp="2023-08-17T19:27:36" tests="1" time="4.876" failures="0" errors="0" skipped="0">
+    <testcase name="Supplier Notes OCR Get documents references list 404" time="4.876" classname="Get documents references list 404">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:36:32" tests="0" file="cypress/e2e/Ventes/Clients.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Clients" timestamp="2023-08-17T14:36:32" tests="6" time="6.226" failures="0" errors="0" skipped="0">
+    <testcase name="Clients Client registration France 201" time="2.484" classname="Client registration France 201">
+    </testcase>
+    <testcase name="Clients Client registration without_contact_email" time="0.370" classname="Client registration without_contact_email">
+    </testcase>
+    <testcase name="Clients Client registration without_contact_city" time="0.316" classname="Client registration without_contact_city">
+    </testcase>
+    <testcase name="Clients Client registration Clients_TOKEN_NOK" time="0.288" classname="Client registration Clients_TOKEN_NOK">
+    </testcase>
+    <testcase name="Clients Get_Client " time="2.346" classname="Get_Client ">
+    </testcase>
+    <testcase name="Clients Get_Client List " time="0.422" classname="Get_Client List ">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:35:30" tests="0" file="cypress/e2e/Achats/InvoicesMetrics.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers" timestamp="2023-08-17T14:35:30" tests="1" time="0.0" failures="1" errors="0" skipped="0">
+    <testcase name="Suppliers Get a current invoices stats" time="0.000" classname="Get a current invoices stats">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/InvoicesMetrics.cy.js:38:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:36:24" tests="0" file="cypress/e2e/Achats/Validations.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Validations" timestamp="2023-08-17T14:36:24" tests="5" time="5.829" failures="0" errors="0" skipped="0">
+    <testcase name="Validations Invoices Validations Summary" time="2.204" classname="Invoices Validations Summary">
+    </testcase>
+    <testcase name="Validations Get a list of invoices validations" time="0.721" classname="Get a list of invoices validations">
+    </testcase>
+    <testcase name="Validations Export validations Excel" time="1.031" classname="Export validations Excel">
+    </testcase>
+    <testcase name="Validations Export validations CSV COMMA" time="0.905" classname="Export validations CSV COMMA">
+    </testcase>
+    <testcase name="Validations Export validations CSV SEMICOLON" time="0.968" classname="Export validations CSV SEMICOLON">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:37:03" tests="0" file="cypress/e2e/Ventes/ValueRange.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Countries" timestamp="2023-08-17T14:37:03" tests="7" time="5.678" failures="0" errors="0" skipped="0">
+    <testcase name="Countries Get Value Range Quotes AMOUNT_TTC" time="2.796" classname="Get Value Range Quotes AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range INVOICES AMOUNT_TTC" time="0.826" classname="Get Value Range INVOICES AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range ARTICLES AMOUNT_TTC" time="0.877" classname="Get Value Range ARTICLES AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range CHECKS AMOUNT_TTC" time="0.294" classname="Get Value Range CHECKS AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range ARTICLE_FAMILIES ARTICLES_QTY" time="0.292" classname="Get Value Range ARTICLE_FAMILIES ARTICLES_QTY">
+    </testcase>
+    <testcase name="Countries Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTY" time="0.295" classname="Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTY">
+    </testcase>
+    <testcase name="Countries Get Value Range RECURRENCES  AMOUNT_TTC" time="0.298" classname="Get Value Range RECURRENCES  AMOUNT_TTC">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:27:08" tests="0" file="cypress/e2e/Achats/SupplierFamily.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers Family" timestamp="2023-08-17T19:27:08" tests="5" time="5.687" failures="2" errors="0" skipped="0">
+    <testcase name="Suppliers Family Post Supplier Family 201" time="3.671" classname="Post Supplier Family 201">
+    </testcase>
+    <testcase name="Suppliers Family Get Supplier Family  200" time="0.000" classname="Get Supplier Family  200">
+      <failure message="expected 405 to equal 200" type="AssertionError">AssertionError: expected 405 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamily.cy.js:52:43)
+
+      + expected - actual
+
+      -405
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Family Get List Supplier Family 200" time="0.437" classname="Get List Supplier Family 200">
+    </testcase>
+    <testcase name="Suppliers Family Get Export Supplier Family 200" time="0.000" classname="Get Export Supplier Family 200">
+      <failure message="expected 405 to equal 200" type="AssertionError">AssertionError: expected 405 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamily.cy.js:80:39)
+
+      + expected - actual
+
+      -405
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Family Delete  Supplier Family 200" time="1.579" classname="Delete  Supplier Family 200">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:36:42" tests="0" file="cypress/e2e/Ventes/Countries.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Countries" timestamp="2023-08-17T14:36:42" tests="1" time="3.008" failures="0" errors="0" skipped="0">
+    <testcase name="Countries Get Countries" time="3.008" classname="Get Countries">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:35:34" tests="0" file="cypress/e2e/Achats/PurchasesPayment.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Purchases Payment" timestamp="2023-08-17T14:35:34" tests="1" time="0.0" failures="1" errors="0" skipped="0">
+    <testcase name="Purchases Payment Get a list of payments" time="0.000" classname="Get a list of payments">
+      <failure message="expected 500 to equal 200" type="AssertionError">AssertionError: expected 500 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/PurchasesPayment.cy.js:39:35)
+
+      + expected - actual
+
+      -500
+      +200
+      </failure>
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:28:48" tests="0" file="cypress/e2e/Ventes/TaskManagement.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Sales" timestamp="2023-08-17T19:28:48" tests="1" time="4.353" failures="0" errors="0" skipped="0">
+    <testcase name="Sales Get Task Management" time="4.353" classname="Get Task Management">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:28:58" tests="0" file="cypress/e2e/Ventes/ValueRange.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Countries" timestamp="2023-08-17T19:28:58" tests="7" time="6.679" failures="0" errors="0" skipped="0">
+    <testcase name="Countries Get Value Range Quotes AMOUNT_TTC" time="3.099" classname="Get Value Range Quotes AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range INVOICES AMOUNT_TTC" time="0.980" classname="Get Value Range INVOICES AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range ARTICLES AMOUNT_TTC" time="0.997" classname="Get Value Range ARTICLES AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range CHECKS AMOUNT_TTC" time="0.399" classname="Get Value Range CHECKS AMOUNT_TTC">
+    </testcase>
+    <testcase name="Countries Get Value Range ARTICLE_FAMILIES ARTICLES_QTY" time="0.465" classname="Get Value Range ARTICLE_FAMILIES ARTICLES_QTY">
+    </testcase>
+    <testcase name="Countries Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTY" time="0.380" classname="Get Value Range CLIENT_FAMILIES ARTICLE CLIENTS_QTY">
+    </testcase>
+    <testcase name="Countries Get Value Range RECURRENCES  AMOUNT_TTC" time="0.359" classname="Get Value Range RECURRENCES  AMOUNT_TTC">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:26:58" tests="0" file="cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers Metrics" timestamp="2023-08-17T19:26:58" tests="6" time="0.0" failures="6" errors="0" skipped="0">
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise month" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise month">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:39:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise year" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise year">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:59:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise year" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise year">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:73:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by civil year (monthly)" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by civil year (monthly)">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:87:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by civil year (January 1st to December 31st)" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by civil year (January 1st to December 31st)">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:100:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family for the last 12 months" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family for the last 12 months">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:112:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:28:41" tests="0" file="cypress/e2e/Ventes/Invoices_LastPaid.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Invoices Last Paid" timestamp="2023-08-17T19:28:41" tests="1" time="2.871" failures="0" errors="0" skipped="0">
+    <testcase name="Invoices Last Paid Get Invoices Last Paid" time="2.871" classname="Get Invoices Last Paid">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:28:09" tests="0" file="cypress/e2e/Ventes/Clients.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Clients" timestamp="2023-08-17T19:28:09" tests="6" time="6.548" failures="0" errors="0" skipped="0">
+    <testcase name="Clients Client registration France 201" time="2.348" classname="Client registration France 201">
+    </testcase>
+    <testcase name="Clients Client registration without_contact_email" time="0.491" classname="Client registration without_contact_email">
+    </testcase>
+    <testcase name="Clients Client registration without_contact_city" time="0.348" classname="Client registration without_contact_city">
+    </testcase>
+    <testcase name="Clients Client registration Clients_TOKEN_NOK" time="0.425" classname="Client registration Clients_TOKEN_NOK">
+    </testcase>
+    <testcase name="Clients Get_Client " time="2.348" classname="Get_Client ">
+    </testcase>
+    <testcase name="Clients Get_Client List " time="0.588" classname="Get_Client List ">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:26:42" tests="0" file="cypress/e2e/Achats/PurchasesPayment.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Purchases Payment" timestamp="2023-08-17T19:26:42" tests="1" time="0.0" failures="1" errors="0" skipped="0">
+    <testcase name="Purchases Payment Get a list of payments" time="0.000" classname="Get a list of payments">
+      <failure message="expected 500 to equal 200" type="AssertionError">AssertionError: expected 500 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/PurchasesPayment.cy.js:39:35)
+
+      + expected - actual
+
+      -500
+      +200
+      </failure>
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:26:23" tests="0" file="cypress/e2e/Achats/Invoices.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Invoices" timestamp="2023-08-17T19:26:23" tests="2" time="0.495" failures="1" errors="0" skipped="0">
+    <testcase name="Invoices Get a list of invoices payments" time="0.000" classname="Get a list of invoices payments">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/Invoices.cy.js:43:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Invoices Get Invoices Payments Summary" time="0.495" classname="Get Invoices Payments Summary">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:35:39" tests="0" file="cypress/e2e/Achats/SiretDataBase.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers" timestamp="2023-08-17T14:35:39" tests="1" time="2.282" failures="0" errors="0" skipped="0">
+    <testcase name="Suppliers Get data about the siret" time="2.282" classname="Get data about the siret">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:36:17" tests="0" file="cypress/e2e/Achats/SuppliersMetrics.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers Metrics" timestamp="2023-08-17T14:36:17" tests="5" time="0.0" failures="5" errors="0" skipped="0">
+    <testcase name="Suppliers Metrics Get total amount of invoices associated to a supplier by exercise month" time="0.000" classname="Get total amount of invoices associated to a supplier by exercise month">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:39:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices associated to a supplier by exercise year" time="0.000" classname="Get total amount of invoices associated to a supplier by exercise year">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:57:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices associated to a supplier by civil year (monthly)" time="0.000" classname="Get total amount of invoices associated to a supplier by civil year (monthly)">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:71:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices associated to a supplier by civil year (January 1st to December 31st)" time="0.000" classname="Get total amount of invoices associated to a supplier by civil year (January 1st to December 31st)">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:83:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers for the last 12 months" time="0.000" classname="Get total amount of invoices of the suppliers for the last 12 months">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:96:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:26:50" tests="0" file="cypress/e2e/Achats/SiretDataBase.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers" timestamp="2023-08-17T19:26:50" tests="1" time="2.662" failures="0" errors="0" skipped="0">
+    <testcase name="Suppliers Get data about the siret" time="2.662" classname="Get data about the siret">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:27:56" tests="0" file="cypress/e2e/Achats/Validations.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Validations" timestamp="2023-08-17T19:27:56" tests="5" time="6.962" failures="0" errors="0" skipped="0">
+    <testcase name="Validations Invoices Validations Summary" time="2.717" classname="Invoices Validations Summary">
+    </testcase>
+    <testcase name="Validations Get a list of invoices validations" time="1.015" classname="Get a list of invoices validations">
+    </testcase>
+    <testcase name="Validations Export validations Excel" time="1.178" classname="Export validations Excel">
+    </testcase>
+    <testcase name="Validations Export validations CSV COMMA" time="1.005" classname="Export validations CSV COMMA">
+    </testcase>
+    <testcase name="Validations Export validations CSV SEMICOLON" time="1.047" classname="Export validations CSV SEMICOLON">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:28:33" tests="0" file="cypress/e2e/Ventes/DownloadImportModel.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="download-import-model" timestamp="2023-08-17T19:28:33" tests="2" time="3.417" failures="0" errors="0" skipped="0">
+    <testcase name="download-import-model Get download-import-model CLIENTS" time="2.812" classname="Get download-import-model CLIENTS">
+    </testcase>
+    <testcase name="download-import-model Get download-import-model ARTICLES" time="0.605" classname="Get download-import-model ARTICLES">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:28:23" tests="0" file="cypress/e2e/Ventes/Countries.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Countries" timestamp="2023-08-17T19:28:23" tests="1" time="3.526" failures="0" errors="0" skipped="0">
+    <testcase name="Countries Get Countries" time="3.526" classname="Get Countries">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:27:46" tests="0" file="cypress/e2e/Achats/SuppliersMetrics.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers Metrics" timestamp="2023-08-17T19:27:46" tests="5" time="0.0" failures="5" errors="0" skipped="0">
+    <testcase name="Suppliers Metrics Get total amount of invoices associated to a supplier by exercise month" time="0.000" classname="Get total amount of invoices associated to a supplier by exercise month">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:39:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices associated to a supplier by exercise year" time="0.000" classname="Get total amount of invoices associated to a supplier by exercise year">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:57:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices associated to a supplier by civil year (monthly)" time="0.000" classname="Get total amount of invoices associated to a supplier by civil year (monthly)">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:71:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices associated to a supplier by civil year (January 1st to December 31st)" time="0.000" classname="Get total amount of invoices associated to a supplier by civil year (January 1st to December 31st)">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:83:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers for the last 12 months" time="0.000" classname="Get total amount of invoices of the suppliers for the last 12 months">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:96:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:36:48" tests="0" file="cypress/e2e/Ventes/DownloadImportModel.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="download-import-model" timestamp="2023-08-17T14:36:48" tests="2" time="2.933" failures="0" errors="0" skipped="0">
+    <testcase name="download-import-model Get download-import-model CLIENTS" time="2.316" classname="Get download-import-model CLIENTS">
+    </testcase>
+    <testcase name="download-import-model Get download-import-model ARTICLES" time="0.617" classname="Get download-import-model ARTICLES">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:35:57" tests="0" file="cypress/e2e/Achats/Suppliers.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers" timestamp="2023-08-17T14:35:57" tests="5" time="6.084" failures="0" errors="0" skipped="0">
+    <testcase name="Suppliers Get Suppliers " time="2.485" classname="Get Suppliers ">
+    </testcase>
+    <testcase name="Suppliers Get Export a Supplier " time="0.294" classname="Get Export a Supplier ">
+    </testcase>
+    <testcase name="Suppliers Post Supplier 201" time="1.315" classname="Post Supplier 201">
+    </testcase>
+    <testcase name="Suppliers Get a Supplier List" time="0.933" classname="Get a Supplier List">
+    </testcase>
+    <testcase name="Suppliers Delete Supplier 201" time="1.057" classname="Delete Supplier 201">
+    </testcase>
+  </testsuite>
+  <testsuite name="Rules" timestamp="2023-08-17T14:36:03" tests="9" time="5.219" failures="0" errors="0" skipped="0">
+    <testcase name="Suppliers Rules Post Supplier 400 France" time="0.299" classname="Post Supplier 400 France">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 201 France" time="1.076" classname="Post Supplier 201 France">
+    </testcase>
+    <testcase name="Suppliers Rules Get data about the siret" time="0.310" classname="Get data about the siret">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 201 With contacts" time="1.065" classname="Post Supplier 201 With contacts">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 201 With paymentInfo" time="1.236" classname="Post Supplier 201 With paymentInfo">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 403 Invalid Token" time="0.311" classname="Post Supplier 403 Invalid Token">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 401 Not Authorized" time="0.293" classname="Post Supplier 401 Not Authorized">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 404 Not Found" time="0.319" classname="Post Supplier 404 Not Found">
+    </testcase>
+    <testcase name="Suppliers Rules Post Supplier 400 Malformaed" time="0.310" classname="Post Supplier 400 Malformaed">
+    </testcase>
+  </testsuite>
+  <testsuite name="Supplier Notes" timestamp="2023-08-17T14:36:08" tests="1" time="2.319" failures="0" errors="0" skipped="0">
+    <testcase name="Supplier Notes Get Supplier Families List Notes" time="2.319" classname="Get Supplier Families List Notes">
+    </testcase>
+  </testsuite>
+  <testsuite name="OCR" timestamp="2023-08-17T14:36:10" tests="1" time="4.438" failures="0" errors="0" skipped="0">
+    <testcase name="Supplier Notes OCR Get documents references list 404" time="4.438" classname="Get documents references list 404">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:35:22" tests="0" file="cypress/e2e/Achats/Invoices.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Invoices" timestamp="2023-08-17T14:35:22" tests="2" time="0.303" failures="1" errors="0" skipped="0">
+    <testcase name="Invoices Get a list of invoices payments" time="0.000" classname="Get a list of invoices payments">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/Invoices.cy.js:43:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Invoices Get Invoices Payments Summary" time="0.303" classname="Get Invoices Payments Summary">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:35:49" tests="0" file="cypress/e2e/Achats/SupplierFamily.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers Family" timestamp="2023-08-17T14:35:49" tests="5" time="4.704" failures="2" errors="0" skipped="0">
+    <testcase name="Suppliers Family Post Supplier Family 201" time="3.320" classname="Post Supplier Family 201">
+    </testcase>
+    <testcase name="Suppliers Family Get Supplier Family  200" time="0.000" classname="Get Supplier Family  200">
+      <failure message="expected 405 to equal 200" type="AssertionError">AssertionError: expected 405 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamily.cy.js:52:43)
+
+      + expected - actual
+
+      -405
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Family Get List Supplier Family 200" time="0.315" classname="Get List Supplier Family 200">
+    </testcase>
+    <testcase name="Suppliers Family Get Export Supplier Family 200" time="0.000" classname="Get Export Supplier Family 200">
+      <failure message="expected 405 to equal 200" type="AssertionError">AssertionError: expected 405 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamily.cy.js:80:39)
+
+      + expected - actual
+
+      -405
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Family Delete  Supplier Family 200" time="1.069" classname="Delete  Supplier Family 200">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:26:35" tests="0" file="cypress/e2e/Achats/InvoicesMetrics.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers" timestamp="2023-08-17T19:26:35" tests="1" time="0.0" failures="1" errors="0" skipped="0">
+    <testcase name="Suppliers Get a current invoices stats" time="0.000" classname="Get a current invoices stats">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/InvoicesMetrics.cy.js:38:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:35:43" tests="0" file="cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Suppliers Metrics" timestamp="2023-08-17T14:35:43" tests="6" time="0.0" failures="6" errors="0" skipped="0">
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise month" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise month">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:39:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise year" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise year">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:59:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by exercise year" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by exercise year">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:73:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by civil year (monthly)" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by civil year (monthly)">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:87:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family by civil year (January 1st to December 31st)" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family by civil year (January 1st to December 31st)">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:100:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+    <testcase name="Suppliers Metrics Get total amount of invoices of the suppliers belonging to a given family for the last 12 months" time="0.000" classname="Get total amount of invoices of the suppliers belonging to a given family for the last 12 months">
+      <failure message="expected 404 to equal 200" type="AssertionError">AssertionError: expected 404 to equal 200
+    at Context.eval (webpack://api/./cypress/e2e/Achats/SupplierFamiliesMetrics.cy.js:112:35)
+
+      + expected - actual
+
+      -404
+      +200
+      </failure>
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:37:11" tests="0" file="cypress/e2e/Ventes/Winsis_Settings.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Sales" timestamp="2023-08-17T14:37:11" tests="1" time="3.085" failures="0" errors="0" skipped="0">
+    <testcase name="Sales Get Winsis Settings" time="3.085" classname="Get Winsis Settings">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T19:29:10" tests="0" file="cypress/e2e/Ventes/Winsis_Settings.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Sales" timestamp="2023-08-17T19:29:10" tests="1" time="3.446" failures="0" errors="0" skipped="0">
+    <testcase name="Sales Get Winsis Settings" time="3.446" classname="Get Winsis Settings">
+    </testcase>
+  </testsuite>
+<testsuite name="Root Suite" timestamp="2023-08-17T14:36:57" tests="0" file="cypress/e2e/Ventes/TaskManagement.cy.js" time="0" failures="0" errors="0" skipped="0">
+  </testsuite>
+  <testsuite name="Sales" timestamp="2023-08-17T14:36:57" tests="1" time="3.937" failures="0" errors="0" skipped="0">
+    <testcase name="Sales Get Task Management" time="3.937" classname="Get Task Management">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="8.235" tests="9" failures="0" skipped="3">
+  <testsuite name="Root Suite" timestamp="2023-08-17T14:36:32" tests="0" file="cypress/e2e/Ventes/Clients.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Clients" timestamp="2023-08-17T14:36:32" tests="9" time="8.198" failures="0">
+    <testcase name="Clients Client registration France 201" time="2.484" classname="Client registration France 201">
+    </testcase>
+    <testcase name="Clients Client registration without_contact_email" time="0.370" classname="Client registration without_contact_email">
+    </testcase>
+    <testcase name="Clients Client registration without_contact_city" time="0.316" classname="Client registration without_contact_city">
+    </testcase>
+    <testcase name="Clients Client registration Clients_TOKEN_NOK" time="0.288" classname="Client registration Clients_TOKEN_NOK">
+    </testcase>
+    <testcase name="Clients Get_Client " time="2.346" classname="Get_Client ">
+    </testcase>
+    <testcase name="Clients Get_Client List " time="0.422" classname="Get_Client List ">
+    </testcase>
+  </testsuite>
+</testsuites>

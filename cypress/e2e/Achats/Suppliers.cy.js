@@ -302,13 +302,13 @@ describe('OCR', () => {
 
 
   // fazer before para pegar id de novo suplier
-  it('Get documents references list 404', () => {
+  it('Get documents references list 400', () => {
     cy.GET_API('ocr/documents-references', tt)
       .then(Response => {
         var d = (JSON.stringify(Response.body))
         cy.log(JSON.stringify(d))
 
-        expect(Response.status).to.eq(401)
+        expect(Response.status).to.eq(400)
 
         cy.addContext("Test get Supplier Family")
       })

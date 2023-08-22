@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.970" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-08-17T14:36:48" tests="0" file="cypress/e2e/Ventes/DownloadImportModel.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="download-import-model" timestamp="2023-08-17T14:36:48" tests="2" time="2.941" failures="0">
+    <testcase name="download-import-model Get download-import-model CLIENTS" time="2.316" classname="Get download-import-model CLIENTS">
+    </testcase>
+    <testcase name="download-import-model Get download-import-model ARTICLES" time="0.617" classname="Get download-import-model ARTICLES">
+    </testcase>
+  </testsuite>
+</testsuites>
