@@ -1,2 +1,2 @@
-/cypress/reports/*.xml
+/cypress/reports/*.*
 /node_modules
