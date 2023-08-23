@@ -18,10 +18,7 @@ pipeline {
        stage('Dependencies') {
            steps {
        
-               sh '''
-               npx cypress install --force
-               pip install trcli
-               '''
+              sh 'npx cypress install --force'
               
            }
        }
