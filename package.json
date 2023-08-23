@@ -10,11 +10,17 @@
   "author": "rafael suzano cruz",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@types/node": "^20.5.3",
+    "babel-loader": "^9.1.3",
     "cypress": "^12.17.4",
-    "cypress-testrail": "^2.8.0"
+    "cypress-testrail": "^2.8.0",
+    "webpack": "^5.88.2"
   },
   "dependencies": {
     "cypress-mochawesome-reporter": "^3.5.1",
-    "cypress-plugin-api": "^2.11.1"
+    "cypress-plugin-api": "^2.11.1",
+    "fs-promise": "^2.0.3"
   }
 }
