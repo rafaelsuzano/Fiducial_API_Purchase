@@ -7,7 +7,7 @@ pipeline {
 
    stages {
        
-        stage('Clear') {
+         stage('Clear') {
            steps {
        
                sh 'npm run report:delete'
@@ -59,7 +59,7 @@ pipeline {
  } 
    
      
- } 
+
 
          stage('Tests API Ventes Winsis_Settings' ) {
            steps {
