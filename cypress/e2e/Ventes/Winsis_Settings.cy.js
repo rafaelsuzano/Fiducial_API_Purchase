@@ -10,7 +10,7 @@ let dt1
 
 let Company = Cypress.env("companyId")
 
-describe('Sales', () => {
+describe('Winsis_Settings', () => {
   before(() => {
     cy.fixture('supplier.json').then(dt => {
       dt1 = dt;

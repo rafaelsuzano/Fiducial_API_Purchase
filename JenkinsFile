@@ -38,7 +38,8 @@ pipeline {
     }
      
  }   
-          stage('Tests API Ventes InvoicesLastPaid' ) {
+          
+        stage('Tests API Ventes InvoicesLastPaid' ) {
            steps {
                 sh './integration_InvoicesLastPaid.sh'
    
@@ -46,7 +47,7 @@ pipeline {
     }
      
  } 
-            stage('Tests API Ventes DownloadImportModel' ) {
+        stage('Tests API Ventes DownloadImportModel' ) {
            steps {
                 sh './integration_DownloadImportModel.sh'
    
@@ -55,7 +56,39 @@ pipeline {
      
  } 
 
+        stage('Tests API Ventes TaskManagement' ) {
+           steps {
+                sh './integration_Ventes_TaskManagement.sh'
+   
+ 
+    }
+     
+ } 
+        stage('Tests API Ventes TaskManagement' ) {
+           steps {
+                sh './integration_Ventes_TaskManagement.sh'
+   
+ 
+    }
+     
+ } 
 
+         stage('Tests API Ventes Winsis_Settings' ) {
+           steps {
+                sh './integration_Ventes_Winsis_Settings.sh'
+   
+ 
+    }
+     
+ }
+        stage('Tests API Ventes ValueRange' ) {
+           steps {
+                sh './integration_Ventes_ValueRange.sh'
+   
+ 
+    }
+     
+ }
 
 }
 }
