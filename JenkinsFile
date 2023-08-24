@@ -22,21 +22,21 @@ pipeline {
               
            }
        }
-        stage('Tests API Ventes_Clients') {
+        stage('Tests API') {
            steps {
-               sh ' ./integration_Ventes_Clients.sh'
+               sh '''
+               npx cypress run --spec cypress/e2e/Ventes/Clients.cy.js --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
+               junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml" 
+                               
+                '''
   
     }
-  
- }
-        stage('Tests API Ventes_Countries') {
-           steps {
-               sh ' ./integration_Ventes_Countries.sh'
-  
+      post {
+    always {
+            sh './integration_Ventes_Clients'
+            
     }
-  
- } 
-
-
+  }      
+ }  
 }
 }
