@@ -11,7 +11,7 @@ let Company = Cypress.env("companyId")
 
 describe('Suppliers Family', () => {
     before(() => {
-        cy.fixture('SupplierFamily.json').then(dt => {
+        cy.fixture('SupplierFamily').then(dt => {
             dt1 = dt;
 
 
