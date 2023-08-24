@@ -33,7 +33,7 @@ describe('Clients', () => {
 
 
 
-    it.skip('Get_ExportClients_Excel Separtor COMMA 200', () => {
+    it('Get_ExportClients_Excel Separtor COMMA 200', () => {
 
         cy.GET_API_SALES('companies/' + Company + '/clients/export?companyId=' + Company + '&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=COMMA', tt)
             .then(Response => {
@@ -51,7 +51,7 @@ describe('Clients', () => {
 
 
 
-    it.skip('Get_ExportClients_Excel 200', () => {
+    it('Get_ExportClients_Excel 200', () => {
 
         cy.GET_API_SALES('companies/2/clients/export?companyId=2&exportFile%5Btype%5D=EXCEL', tt)
             .then(Response => {
@@ -68,7 +68,7 @@ describe('Clients', () => {
 
 
 
-    it.skip('Get_ExportClients_Excel exportFile 403', () => {
+    it('Get_ExportClients_Excel exportFile 403', () => {
         defaultCommandTimeout: 50000
         cy.GET_API_SALES('companies/' + Company + '/clients/export?companyId=' + Company + '&exportFile%5Btype%5D=CSV&exportFile%5Bseparator%5D=', tt)
             .then(Response => {
