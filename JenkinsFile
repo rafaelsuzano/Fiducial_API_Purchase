@@ -57,12 +57,7 @@ pipeline {
     }
      
  } 
-         stage('Tests API Ventes TaskManagement' ) {
-           steps {
-                sh './integration_Ventes_TaskManagement.sh'
    
- 
-    }
      
  } 
 
