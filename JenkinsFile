@@ -38,6 +38,24 @@ pipeline {
     }
      
  }   
+          stage('Tests API Ventes InvoicesLastPaid' ) {
+           steps {
+                sh './integration_InvoicesLastPaid.sh'
+   
+ 
+    }
+     
+ } 
+            stage('Tests API Ventes DownloadImportModel' ) {
+           steps {
+                sh './integration_DownloadImportModel.sh'
+   
+ 
+    }
+     
+ } 
+
+
 
 }
 }
