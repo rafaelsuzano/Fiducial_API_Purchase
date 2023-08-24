@@ -33,7 +33,7 @@ pipeline {
     }
       post {
     always {
-            sh './integration_Ventes_Clients'
+            sh './integration_Ventes_Clients.sh'
             
     }
   }      
