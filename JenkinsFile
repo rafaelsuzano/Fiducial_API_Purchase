@@ -15,14 +15,14 @@ pipeline {
            }
        }
        
-       stage('Dependencies') {
+         stage('Dependencies') {
            steps {
        
               sh 'npx cypress install --force'
               
            }
        }
-        stage('Tests API Ventes Clients' ) {
+         stage('Tests API Ventes Clients' ) {
            steps {
                 sh './integration_Ventes_Clients.sh'
    
@@ -30,7 +30,7 @@ pipeline {
     }
        
  }  
-        stage('Tests API Ventes Countries' ) {
+         stage('Tests API Ventes Countries' ) {
            steps {
                 sh './integration_Ventes_Countries.sh'
    
@@ -39,7 +39,7 @@ pipeline {
      
  }   
           
-        stage('Tests API Ventes InvoicesLastPaid' ) {
+         stage('Tests API Ventes InvoicesLastPaid' ) {
            steps {
                 sh './integration_InvoicesLastPaid.sh'
    
@@ -47,7 +47,7 @@ pipeline {
     }
      
  } 
-        stage('Tests API Ventes DownloadImportModel' ) {
+         stage('Tests API Ventes DownloadImportModel' ) {
            steps {
                 sh './integration_DownloadImportModel.sh'
    
@@ -56,7 +56,7 @@ pipeline {
      
  } 
 
-        stage('Tests API Ventes TaskManagement' ) {
+         stage('Tests API Ventes TaskManagement' ) {
            steps {
                 sh './integration_Ventes_TaskManagement.sh'
    
@@ -64,7 +64,7 @@ pipeline {
     }
      
  } 
-        stage('Tests API Ventes TaskManagement' ) {
+         stage('Tests API Ventes TaskManagement' ) {
            steps {
                 sh './integration_Ventes_TaskManagement.sh'
    
