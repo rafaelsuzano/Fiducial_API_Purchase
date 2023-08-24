@@ -22,21 +22,21 @@ pipeline {
               
            }
        }
-        stage('Tests API') {
+        stage('Tests API Ventes_Clients') {
            steps {
-               sh '''
-               npx cypress run --spec cypress/e2e/Ventes/Clients.cy.js --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
-               junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml" 
-                               
-                '''
+               sh ' ./integration_Ventes_Clients.sh'
   
     }
-      post {
-    always {
-            sh 'trcli -y -h https://facilia.testrail.io/  --project "Facilia" --username  rafael.cruz-exterieur@fiducial.net  --password Suz@no30  parse_junit --title "Cypress API Automated Test Run Ventes_Clients" -f "./reports/junit-report.xml"'
-            
+  
+ }
+        stage('Tests API Ventes_Countries') {
+           steps {
+               sh ' ./integration_Ventes_Countries.sh'
+  
     }
-  }      
- }  
+  
+ } 
+
+
 }
 }
