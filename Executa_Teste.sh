@@ -6,4 +6,5 @@ rm -rf reports/*.*
 rm -rf reports/*.*
 ./integration_DownloadImportModel.sh
 rm -rf reports/*.*
-
+./integration_InvoicesLastPaid.cy
+rm -rf reports/*.*
