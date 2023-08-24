@@ -24,11 +24,9 @@ pipeline {
        }
         stage('Tests API Ventes Clients' ) {
            steps {
-               sh '''
-               npx cypress run --spec cypress/e2e/Ventes/Clients.cy.js --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
-               junitparser merge --glob "reports/TEST-*" "reports/junit-report.xml" 
-                               
-                '''
+               sh 'npx cypress run --spec cypress/e2e/Ventes/Clients.cy.js --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
+   
+
   
     }
       post {
