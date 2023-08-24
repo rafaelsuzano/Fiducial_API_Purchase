@@ -22,7 +22,7 @@ pipeline {
               
            }
        }
-        stage('Tests API') {
+        stage('Tests API Ventes Clients' ) {
            steps {
                sh '''
                npx cypress run --spec cypress/e2e/Ventes/Clients.cy.js --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options "mochaFile=reports/TEST-[hash].xml"'
