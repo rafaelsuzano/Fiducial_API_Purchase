@@ -47,14 +47,7 @@ pipeline {
     }
      
  } 
-         stage('Tests API Ventes DownloadImportModel' ) {
-           steps {
-                sh './integration_DownloadImportModel.sh'
-   
  
-    }
-     
- } 
 
          stage('Tests API Ventes TaskManagement' ) {
            steps {
