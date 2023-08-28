@@ -22,9 +22,9 @@ pipeline {
               
            }
        }
-         stage('Tests API Ventes Clients' ) {
+         stage('Tests API Ventes' ) {
            steps {
-                sh './Executa_Teste.sh'
+                sh './Executa_Ventes_Teste.sh'
    
  
     }
