@@ -10,7 +10,7 @@ let id_client
 
 let Company = Cypress.env("companyId")
 
-describe('Get Users', () => {
+describe('Management Get Users', () => {
     before(() => {
         cy.fixture('clients.json').then(dt => {
             dt1 = dt;
