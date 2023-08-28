@@ -24,80 +24,16 @@ pipeline {
        }
          stage('Tests API Ventes Clients' ) {
            steps {
-                sh './integration_Ventes_Clients.sh'
+                sh './Executa_Teste.sh'
    
  
     }
        
  }  
-         stage('Tests API Ventes Countries' ) {
-           steps {
-                sh './integration_Ventes_Countries.sh'
-   
- 
-    }
-     
- }   
-          
-         stage('Tests API Ventes InvoicesLastPaid' ) {
-           steps {
-                sh './integration_InvoicesLastPaid.sh'
-   
- 
-    }
-     
- } 
- 
-
-         stage('Tests API Ventes TaskManagement' ) {
-           steps {
-                sh './integration_Ventes_TaskManagement.sh'
-   
- 
-    }
-     
- } 
-   
-     
-
-
-         stage('Tests API Ventes Winsis_Settings' ) {
-           steps {
-                sh './integration_Ventes_Winsis_Settings.sh'
-   
- 
-    }
-     
- }
-        stage('Tests API Ventes ValueRange' ) {
-           steps {
-                sh './integration_Ventes_ValueRange.sh'
-   
- 
-    }
-     
- }
-
-         stage('Tests API Ventes Management_Users' ) {
-           steps {
-                sh './integration_Management_Users.sh'
-   
- 
-    }
-     
- }
-
-        stage('Tests API Ventes Download Import Model' ) {
-           steps {
-                sh './integration_DownloadImportModel.sh'
-   
- 
-    }
-     
+    
  }
 
 
 
 }
 
-}
