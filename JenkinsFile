@@ -78,6 +78,16 @@ pipeline {
      
  }
 
+         stage('Tests API Ventes Management_Users' ) {
+           steps {
+                sh './integration_Management_Users.sh'
+   
+ 
+    }
+     
+ }
+
+
 }
 
 }
