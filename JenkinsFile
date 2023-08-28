@@ -87,6 +87,16 @@ pipeline {
      
  }
 
+        stage('Tests API Ventes Download Import Model' ) {
+           steps {
+                sh './integration_DownloadImportModel.sh'
+   
+ 
+    }
+     
+ }
+
+
 
 }
 
