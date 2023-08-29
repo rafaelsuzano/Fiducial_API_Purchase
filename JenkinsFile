@@ -30,12 +30,6 @@ pipeline {
     }
        
  }  
-    stage('Tests API Achats' ) {
-           steps {
-                sh '@cho'
-   
- 
-    }
        
 
 
@@ -44,5 +38,5 @@ pipeline {
 
 
 }
-}
+
 
