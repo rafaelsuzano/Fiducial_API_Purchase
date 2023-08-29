@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-29T09:09:32.896Z",
+    "end": "2023-08-29T09:09:36.544Z",
+    "duration": 3648,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fae6930f-6265-4eb6-a4b5-ec169caeb002",
+      "title": "",
+      "fullFile": "cypress/e2e/Ventes/Countries.cy.js",
+      "file": "cypress/e2e/Ventes/Countries.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eff84695-e59a-428e-90c6-278d418429ff",
+          "title": "Countries",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Countries",
+              "fullTitle": "Countries Get Countries",
+              "timedOut": null,
+              "duration": 3123,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/Countries.cy.js\"\n}",
+              "code": "cy.GET_API_SALES('common/countries', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  cy.log(Response.body);\n});",
+              "err": {},
+              "uuid": "904fdc91-7426-4e81-9021-ad4586352d85",
+              "parentUUID": "eff84695-e59a-428e-90c6-278d418429ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "904fdc91-7426-4e81-9021-ad4586352d85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3123,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Fiducial API Test",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

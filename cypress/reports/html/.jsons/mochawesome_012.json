@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-29T09:09:48.939Z",
+    "end": "2023-08-29T09:09:51.039Z",
+    "duration": 2100,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b5376382-7b6d-4e7b-a969-1731cc7b2147",
+      "title": "",
+      "fullFile": "cypress/e2e/Ventes/Invoices_LastPaid.cy.js",
+      "file": "cypress/e2e/Ventes/Invoices_LastPaid.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f705dc16-3caf-4b7a-b5b0-15fffe08438b",
+          "title": "Invoices Last Paid",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Invoices Last Paid",
+              "fullTitle": "Invoices Last Paid Get Invoices Last Paid",
+              "timedOut": null,
+              "duration": 2064,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/Ventes/Invoices_LastPaid.cy.js\"\n}",
+              "code": "cy.GET_API_SALES('companies/' + Company + '/invoices/last-paid', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "afed919b-d5bc-48e5-a3f0-ad6804757de3",
+              "parentUUID": "f705dc16-3caf-4b7a-b5b0-15fffe08438b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "afed919b-d5bc-48e5-a3f0-ad6804757de3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2064,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Fiducial API Test",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

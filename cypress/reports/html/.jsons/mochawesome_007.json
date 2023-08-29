@@ -1,0 +1,206 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 0,
+    "pending": 0,
+    "failures": 5,
+    "start": "2023-08-29T09:08:44.006Z",
+    "end": "2023-08-29T09:08:49.112Z",
+    "duration": 5106,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3ad001f3-f64a-4c09-8643-501ca0fc53ce",
+      "title": "",
+      "fullFile": "cypress/e2e/Achats/SuppliersMetrics.cy.js",
+      "file": "cypress/e2e/Achats/SuppliersMetrics.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dd537d3b-9c3f-4643-85ed-2107d33b2bd0",
+          "title": "Suppliers Metrics",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get total amount of invoices associated to a supplier by exercise month",
+              "fullTitle": "Suppliers Metrics Get total amount of invoices associated to a supplier by exercise month",
+              "timedOut": null,
+              "duration": 2712,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Achats/SuppliersMetrics.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Achats/SuppliersMetrics.cy.js/Suppliers Metrics -- Get total amount of invoices associated to a supplier by exercise month (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/suppliers/metrics/invoices/exercise-amount-monthly', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(Response.body);\n});",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:39:35)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "bd5369a9-7eb7-4fdb-9a9b-8f747829891b",
+              "parentUUID": "dd537d3b-9c3f-4643-85ed-2107d33b2bd0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get total amount of invoices associated to a supplier by exercise year",
+              "fullTitle": "Suppliers Metrics Get total amount of invoices associated to a supplier by exercise year",
+              "timedOut": null,
+              "duration": 557,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Achats/SuppliersMetrics.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Achats/SuppliersMetrics.cy.js/Suppliers Metrics -- Get total amount of invoices associated to a supplier by exercise year (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/suppliers/metrics/invoices/exercise-amount-yearly', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(Response.body);\n});",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:57:35)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "61021a30-d479-4073-832a-cdf7bd1852ec",
+              "parentUUID": "dd537d3b-9c3f-4643-85ed-2107d33b2bd0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get total amount of invoices associated to a supplier by civil year (monthly)",
+              "fullTitle": "Suppliers Metrics Get total amount of invoices associated to a supplier by civil year (monthly)",
+              "timedOut": null,
+              "duration": 614,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Achats/SuppliersMetrics.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Achats/SuppliersMetrics.cy.js/Suppliers Metrics -- Get total amount of invoices associated to a supplier by civil year (monthly) (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/suppliers/metrics/invoices/civil-year-amount-monthly', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(Response.body);\n});",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:71:35)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "3c8c8cb1-fe0a-4229-8848-b248f7063bc4",
+              "parentUUID": "dd537d3b-9c3f-4643-85ed-2107d33b2bd0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get total amount of invoices associated to a supplier by civil year (January 1st to December 31st)",
+              "fullTitle": "Suppliers Metrics Get total amount of invoices associated to a supplier by civil year (January 1st to December 31st)",
+              "timedOut": null,
+              "duration": 516,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Achats/SuppliersMetrics.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Achats/SuppliersMetrics.cy.js/Suppliers Metrics -- Get total amount of invoices associated to a supplier by civil year (January 1st to December 31st) (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/suppliers/metrics/invoices/civil-year-amount-yearly', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(Response.body);\n});",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:83:35)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "5c591645-ba8c-4a50-8907-90c698e0c0ea",
+              "parentUUID": "dd537d3b-9c3f-4643-85ed-2107d33b2bd0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get total amount of invoices of the suppliers for the last 12 months",
+              "fullTitle": "Suppliers Metrics Get total amount of invoices of the suppliers for the last 12 months",
+              "timedOut": null,
+              "duration": 520,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/Achats/SuppliersMetrics.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/Achats/SuppliersMetrics.cy.js/Suppliers Metrics -- Get total amount of invoices of the suppliers for the last 12 months (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.GET_API('purchases/companies/' + Company + '/suppliers/metrics/invoices/amount-monthly', tt).then(Response => {\n  expect(Response.status).to.eq(200);\n  //var d =(JSON.stringify(Response.body))\n  cy.log(Response.body);\n});",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.eval (webpack://api/./cypress/e2e/Achats/SuppliersMetrics.cy.js:96:35)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "9d116b25-e6e7-42fb-9b5b-264f4b24f09c",
+              "parentUUID": "dd537d3b-9c3f-4643-85ed-2107d33b2bd0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bd5369a9-7eb7-4fdb-9a9b-8f747829891b",
+            "61021a30-d479-4073-832a-cdf7bd1852ec",
+            "3c8c8cb1-fe0a-4229-8848-b248f7063bc4",
+            "5c591645-ba8c-4a50-8907-90c698e0c0ea",
+            "9d116b25-e6e7-42fb-9b5b-264f4b24f09c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4919,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Fiducial API Test",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

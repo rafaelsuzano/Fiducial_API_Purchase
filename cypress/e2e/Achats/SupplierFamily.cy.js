@@ -74,7 +74,7 @@ it('Get List Supplier Family 200', () => {
 
 it('Get Export Supplier Family 200', () => {
 
-    cy.GET_API('purchases/companies/' + Company + '/supplier-families/export', tt)
+    cy.GET_API('purchases/companies/' + Company + '/supplier-families/export?sort=name,asc&+companyId='+Company+'&exportFile%5Btype%5D=EXCEL&exportFile%5Bseparator%5D=COMMA', tt)
         .then(Response => {
 
             expect(Response.status).to.eq(200);
