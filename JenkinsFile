@@ -1,7 +1,6 @@
 pipeline {
-    agent {
-        docker { image 'rafaelsuzano/work:latest' }
-    }
+  agent any
+  
   options {
     ansiColor('xterm')
   }
@@ -16,24 +15,12 @@ pipeline {
            }
        }
        
-          stage('Dependencies 1') {
-           steps {
-       
-              sh 'export CYPRESS_CACHE_FOLDER=/app/.cache'
-              
-           }
-          }
-
-
-
-
-          stage('Dependencies') {
+         stage('Dependencies') {
            steps {
        
               sh 'npx cypress install --force'
               
            }
-       
        }
          stage('Tests API Ventes' ) {
            steps {
