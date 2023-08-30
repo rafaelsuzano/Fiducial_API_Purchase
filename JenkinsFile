@@ -29,7 +29,7 @@ pipeline {
           stage('Dependencies 2') {
            steps {
        
-              sh 'bash -c "chmod -R 775 /home/.cache/cypress/"
+              sh 'bash -c "chmod -R 775 /home/.cache/cypress/"''
 '
               
            }
