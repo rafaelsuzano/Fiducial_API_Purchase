@@ -38,15 +38,6 @@ pipeline {
 
 
 
-          stage('Dependencies 22') {
-           steps {
-       
-              sh 'bash -c "CYPRESS_CACHE_FOLDER=/home/.cache/cypress npm ci --legacy-peer-deps"'
-              
-           }
-          }
-
-
           stage('Dependencies') {
            steps {
        
