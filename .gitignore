@@ -6,3 +6,4 @@ cypress/videos/*.*/
 /cypress/reports/*.*
 /node_modules
 /reports/*.*
+/cypress/screenshots/*.*
