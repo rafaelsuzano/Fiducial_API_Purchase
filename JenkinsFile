@@ -16,12 +16,22 @@ pipeline {
            }
        }
        
-         stage('Dependencies') {
+          stage('Dependencies') {
+           steps {
+       
+              sh 'export CYPRESS_CACHE_FOLDER=/app/.cache
+'
+              
+           }
+       
+
+          stage('Dependencies') {
            steps {
        
               sh 'npx cypress install --force'
               
            }
+       
        }
          stage('Tests API Ventes' ) {
            steps {
