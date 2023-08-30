@@ -9,29 +9,9 @@ pipeline {
 
    stages {
        
-         stage('Clear') {
-           steps {
-       
-               sh 'npm run report:delete'
-              
-           }
-       }
-       
-         stage('Dependencies') {
-           steps {
-       
-              sh 'npx cypress install --force'
-              
-           }
-       }
-         stage('Tests API Ventes' ) {
-           steps {
-                sh './Executa_Ventes_Teste.sh'
    
- 
-    }
        
- }  
+   
        
 
 
