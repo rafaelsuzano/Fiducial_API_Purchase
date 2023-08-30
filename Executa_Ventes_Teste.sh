@@ -1,4 +1,3 @@
-
 rm -rf reports/*.*
 ./integration_Ventes_Countries.sh
 rm -rf reports/*.*

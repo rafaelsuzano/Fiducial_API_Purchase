@@ -6,8 +6,11 @@ RUN apt-get update && apt-get install -y python3-pip
 RUN apt-get update && apt-get install -y junitparser
 RUN apt-get update && apt-get install -y python-is-python3
 RUN pip install trcli
+RUN pip install junitparser
 WORKDIR /app
-COPY . .
 
-RUN npm install
-CMD ["npm run test_Achats"]
+
+COPY . .
+RUN npx cypress install --force
+
+ENTRYPOINT ["npm","run", "teste:Achats"]

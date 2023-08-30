@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     
-    "test_Achats": "./Executa_Ventes_Teste.sh"
+    "teste:Achats": "./Executa_Ventes_Teste.sh",
+    "teste:Achats" :"./Executa_Achats_Teste.sh"
 
-   
   },
   "author": "rafael suzano cruz",
   "license": "ISC",
