@@ -19,7 +19,7 @@ pipeline {
          stage('Dependencies') {
            steps {
        
-              sh 'npx install -g cypress --unsafe-perm --silent'
+              sh 'npx cypress install --force'
               
            }
        }
