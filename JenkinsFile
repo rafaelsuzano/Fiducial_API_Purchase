@@ -16,14 +16,13 @@ pipeline {
            }
        }
        
-          stage('Dependencies') {
+          stage('Dependencies 1') {
            steps {
        
-              sh 'export CYPRESS_CACHE_FOLDER=/app/.cache
-'
+              sh 'export CYPRESS_CACHE_FOLDER=/app/.cache'
               
            }
-       
+          }
 
           stage('Dependencies') {
            steps {
