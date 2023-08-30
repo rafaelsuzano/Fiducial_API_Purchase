@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     
-    "teste:Achats": "./Executa_Ventes_Teste.sh",
-    "teste:Achats" :"./Executa_Achats_Teste.sh"
+    "teste:Ventes_Achats": "./Executa_Teste.sh"
+
 
   },
   "author": "rafael suzano cruz",

@@ -13,4 +13,4 @@ WORKDIR /app
 COPY . .
 RUN npx cypress install --force
 
-ENTRYPOINT ["npm","run", "teste:Achats"]
+ENTRYPOINT ["npm","run", "teste:Ventes_Achats"]
