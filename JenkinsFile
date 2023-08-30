@@ -24,6 +24,29 @@ pipeline {
            }
           }
 
+
+
+          stage('Dependencies 2') {
+           steps {
+       
+              sh 'bash -c "chmod -R 775 /home/.cache/cypress/"
+'
+              
+           }
+          }
+
+
+
+
+          stage('Dependencies 22') {
+           steps {
+       
+              sh 'bash -c "CYPRESS_CACHE_FOLDER=/home/.cache/cypress npm ci --legacy-peer-deps'
+              
+           }
+          }
+
+
           stage('Dependencies') {
            steps {
        
