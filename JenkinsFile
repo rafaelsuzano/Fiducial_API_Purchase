@@ -8,9 +8,7 @@ pipeline {
   }
 
 
-
-
-
 }
 
-
+https://blog.knoldus.com/how-to-build-and-push-a-docker-image-using-jenkinsfile/
+https://gist.github.com/ismailyenigul/4a89ac1297b6263d77244421aab87c53
