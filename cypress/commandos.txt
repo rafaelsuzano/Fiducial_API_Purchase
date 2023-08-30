@@ -1,9 +1,0 @@
-docker run -it imag /bin/bash
-docker container ps
-docker container exec -it  515e8e9189a6 /bin/bash
-docker commit 515e8e9189a6(container)  rafaelsuzano/teste_demo
-docker login --username rafaelsuzano@hotmail.com
-
-
-#root
-docker container exec -u 0 -it 3ac0ad901033 bash

@@ -1,1 +1,21 @@
 npx cypress install --force
+
+
+docker run -it imag /bin/bash
+docker container ps
+docker container exec -it  515e8e9189a6 /bin/bash
+docker commit 515e8e9189a6(container)  rafaelsuzano/teste_demo
+docker login --username rafaelsuzano@hotmail.com
+docker login -u rafaelsuzano
+dckr_pat_JecKMmmLhZwNurimwFG8e-2140Q
+
+#commit container
+docker tag my-image username/my-repo
+docker push username/my-repo
+
+#root container
+docker container exec -u 0 -it 3ac0ad901033 bash
+
+
+#root imagem
+docker run -it 01f29b872827

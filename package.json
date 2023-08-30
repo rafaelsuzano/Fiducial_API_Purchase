@@ -5,11 +5,9 @@
   "main": "index.js",
   "scripts": {
     
-    "test_Achats": "npx cypress run  --spec cypress/e2e/Achats/*.js --config video=false,screenshotOnRunFailure=false --reporter junit --reporter-options 'mochaFile=reports/TEST-[hash].xml'",
-    "Report_Achats": "junitparser merge  --glob 'reports/TEST-*'  reports/junit-report_Achats.xml", 
-    "report:delete": "rm -rf cypress/reports/{,.[!.],..?}*",
-    "ReportTesteRail": "trcli -y -h https://facilia.testrail.io/  --project ""Facilia"" --username  rafael.cruz-exterieur@fiducial.net  --password Suz@no30  parse_junit --title 'Cypress API Automated Test Run Achats' -f './reports/junit-report_Achats.xml"
-  
+    "test_Achats": "./Executa_Ventes_Teste.sh"
+
+   
   },
   "author": "rafael suzano cruz",
   "license": "ISC",
