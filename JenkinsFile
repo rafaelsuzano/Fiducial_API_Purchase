@@ -9,12 +9,11 @@ pipeline {
     stages {
         stage('Dependencias') {
             steps {
-                sh 'apt-get install -y python3-pip '
+                sh '''
+                apt-get install -y python3-pip 
+                 pip install trcli
+                '''
             }
-             steps {
-                sh 'pip install trcli'
-            }
-            
         }
         stage('Test') {
             steps {
