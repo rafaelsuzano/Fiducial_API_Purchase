@@ -1,6 +1,7 @@
 #FROM cypress/included:12.17.1 
 FROM ubuntu:22.04
 
+
 RUN apt-get update 
 RUN apt install -y curl
 
@@ -12,6 +13,15 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key |  gpg 
 RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" |  tee /etc/apt/sources.list.d/nodesource.list
 RUN apt-get update 
 RUN apt install -y nodejs -y
+
+
+
+RUN chown -R node:node /root
+USER node
+
+RUN mkdir /root/.cache
+
+
 RUN apt install -y xvfb
 RUN apt-get install -y python3 
 RUN apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb

@@ -13,7 +13,7 @@ pipeline {
                 }
             }
             steps {
-              
+                 sh 'export CYPRESS_CACHE_FOLDER=/app/.cache' 
                  sh 'npx cypress install --force'
                  sh './Executa_Teste.sh'
             }
