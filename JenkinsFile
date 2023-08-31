@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 
-                 sh 'trcli --version'
+                 sh 'npm --version'
             }
         }
     }
