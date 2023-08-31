@@ -24,6 +24,8 @@ RUN python get-pip.py
 
 RUN pip install trcli
 RUN pip install junitparser
+RUN npm cache clean --force 
+
 WORKDIR /app
 RUN cd /app
 
