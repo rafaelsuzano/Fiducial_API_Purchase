@@ -15,7 +15,7 @@ pipeline {
                 }
             }
             steps {
-                   sh 'pip install -r requirements.txt'
+                  sh 'npm i'
                  sh 'npx cypress install --force'
                  sh './Executa_Teste.sh'
             }
