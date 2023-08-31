@@ -3,12 +3,29 @@ pipeline {
         docker { image 'rafaelsuzano/work:latest' }
     }
 
-  options {
-    ansiColor('xterm')
-  }
+
 
 
 }
 
-https://blog.knoldus.com/how-to-build-and-push-a-docker-image-using-jenkinsfile/
-https://gist.github.com/ismailyenigul/4a89ac1297b6263d77244421aab87c53
+
+
+pipeline {
+    options {
+    ansiColor('xterm')
+  }
+    agent any
+    stages {
+        stage('Build') {
+            agent {
+                docker {
+                    image 'rafaelsuzano/work:latest'
+             
+                }
+            }
+            steps {
+                sh 'npm run teste:Ventes_Achats'
+            }
+        }
+    }
+}
