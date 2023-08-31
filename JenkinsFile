@@ -8,16 +8,16 @@ pipeline {
             agent {
                 docker {
                     image 'rafaelsuzano/work:latest'
-                    args '-u root:root'
+                    user 'root' 
                     reuseNode true
                 }
             }
             steps {
-                 sh 'export CYPRESS_CACHE_FOLDER="/home/jenkins/agent/workspace/project/app/.cache"' 
+                 
+                 sh "mkdir -p /root/.cache/Cypress"
                  sh 'npx cypress install --force'
                  sh './Executa_Teste.sh'
             }
         }
     }
 }
-  
