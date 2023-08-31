@@ -6,8 +6,6 @@ pipeline {
 
 
 
-}
-
 
 
 pipeline {
@@ -28,4 +26,5 @@ pipeline {
             }
         }
     }
+}
 }
