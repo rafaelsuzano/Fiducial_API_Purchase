@@ -4,7 +4,7 @@ pipeline {
     ansiColor('xterm')
   }
     stages {
-        stage('Build') {
+        stage('Test') {
             agent {
                 docker {
                     image 'rafaelsuzano/work:latest'
@@ -15,10 +15,7 @@ pipeline {
                 }
             }
             steps {
-                 sh 'RUN useradd -m bot'
-              
-                 sh 'apt-get update &&apt-get install -y python3 && apt-get install -y python3-pip && pip install trcli'
-                 sh 'npm install'
+                
                  sh 'npm run teste:Ventes_Achats'
             }
         }
