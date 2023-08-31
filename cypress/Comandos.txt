@@ -19,3 +19,8 @@ docker container exec -u 0 -it 3ac0ad901033 bash
 
 #root imagem
 docker run -it 01f29b872827
+
+
+
+https://blog.knoldus.com/how-to-build-and-push-a-docker-image-using-jenkinsfile/
+https://gist.github.com/ismailyenigul/4a89ac1297b6263d77244421aab87c53
