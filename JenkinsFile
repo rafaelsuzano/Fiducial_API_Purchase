@@ -8,7 +8,9 @@ pipeline {
             agent {
                 docker {
                     image 'rafaelsuzano/work:latest'
-           
+    
+                    reuseNode true
+                }
             }
             steps {
                  sh 'apt-get install git'
@@ -20,4 +22,4 @@ pipeline {
         }
     }
 }
-}
+  
