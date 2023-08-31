@@ -13,6 +13,7 @@ pipeline {
                 }
             }
             steps {
+                 sh 'apt-get install git'
                  sh 'npm i --unsafe-perm'
                  sh 'npm install --save-dev cypress'
                  sh 'pip install trcli'
