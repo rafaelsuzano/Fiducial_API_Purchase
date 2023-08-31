@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
               
-                 sh 'npx cypress install --force'
+                 sh 'npm install --save-dev cypress'
                  sh './Executa_Teste.sh'
             }
         }
