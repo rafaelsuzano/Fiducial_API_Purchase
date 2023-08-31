@@ -7,10 +7,16 @@ pipeline {
         docker { image 'rafaelsuzano/work:latest' }
     }
     stages {
+        stage('Dependencias') {
+            steps {
+                sh 'pip install trcli'
+            }
+        }
         stage('Test') {
             steps {
                 sh 'npm run teste:Ventes_Achats'
             }
         }
+    
     }
 }
