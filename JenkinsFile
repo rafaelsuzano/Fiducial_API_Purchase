@@ -8,12 +8,16 @@ pipeline {
             agent {
                 docker {
                     image 'rafaelsuzano/work:latest'
-                      user 'root'
+                   
                     reuseNode true
                 }
             }
             steps {
-                sh "mkdir -p /root/.cache/Cypress"
+                 script {
+                    def cypressCacheDir = "${WORKSPACE}/.cache/Cypress"
+                    sh "mkdir -p ${cypressCacheDir}"
+                } 
+               
                  sh 'npx cypress install --force'
                  sh './Executa_Teste.sh'
             }
