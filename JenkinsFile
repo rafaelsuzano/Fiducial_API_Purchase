@@ -1,21 +1,15 @@
 pipeline {
-    agent any
-        options {
+    options {
     ansiColor('xterm')
   }
+    
+    agent {
+        docker { image 'rafaelsuzano/work:latest' }
+    }
     stages {
-        stage('Build') {
-            agent {
-                docker {
-                  image 'rafaelsuzano/work:latest'
-                    // Run the container on the node specified at the
-                    // top-level of the Pipeline, in the same workspace,
-                    // rather than on a new node entirely:
-                    reuseNode true
-                }
-            }
+        stage('Test') {
             steps {
-               sh 'npm run teste:Ventes_Achats'
+                sh 'node --version'
             }
         }
     }
