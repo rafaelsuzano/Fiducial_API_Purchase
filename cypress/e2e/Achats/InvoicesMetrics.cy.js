@@ -18,8 +18,8 @@ describe('Suppliers', () => {
 
 
       cy.api("POST",  Cypress.env('Login') , {
-        "email": "sad@fiducial.net",
-        "password": "1234"
+        "email": Cypress.env('email') ,
+        "password": Cypress.env('password')
       }).then((response) => {
 
         //tt=JSON.stringify(response.body.token)

@@ -11,9 +11,9 @@ module.exports = defineConfig({
     url_sales : 'https://recette-int-qa.facilia.com/',  
     Login: 'https://recette-int-qa.facilia.com/login',
     Url: '  https://purchase-qa.facilia.com/',
-    companyId: 2
-    
-
+    companyId: 2,
+    email: 'sad@fiducial.net',
+    password: '1234'
 
   },
 
