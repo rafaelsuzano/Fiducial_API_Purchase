@@ -127,6 +127,26 @@ describe('OCR', () => {
   })
 
 
+  it('Get the nex document to be process', () => {
+    cy.GET_API('ocr/documents/next_to_process', tt)
+      .then(Response => {
+        expect(Response.status).to.eq(200)
+
+     
+        cy.log( (JSON.stringify(Response.body)))
+
+
+
+      })
+  })
+
 
 })
+
+
+
+context(' Post', () => {
+
+})
+
 })

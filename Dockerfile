@@ -3,14 +3,7 @@ FROM ubuntu:22.04
 
 
 
-
 RUN groupadd -r regular-users && useradd -m -r -g regular-users person
-
-
-
-
-
-
 
 RUN apt-get update 
 RUN apt install -y curl
