@@ -13,8 +13,9 @@ module.exports = defineConfig({
     Url: '  https://purchase-qa.facilia.com/',
     companyId: 2,
     email: 'sad@fiducial.net',
-    password: '1234'
-
+    password: '1234',
+    client_secret:'ya-7d663883-ef9b-465c-b426-ba0ac2fc516b',
+    clientid:'ya-id',  
   },
 
   reporter: 'cypress-mochawesome-reporter',

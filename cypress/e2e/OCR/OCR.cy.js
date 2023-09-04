@@ -5,15 +5,7 @@ const addContext = require('mochawesome/addContext');
 
 let tt
 let dt1
-let id_delete
-let ID_TESTE
 
-let id_suppliers
-let dt_Family
-let id_suppliers_france
-let id_suppliers_Family
-let id_suppliers_contacts
-let id_suppliers_paymentInfo
 
 let Company = Cypress.env("companyId")
 
@@ -27,7 +19,8 @@ describe('OCR', () => {
 
       cy.api("POST", Cypress.env('Login') , {
         "email": Cypress.env('email') ,
-        "password": Cypress.env('password')
+        "password": Cypress.env('password'),
+
       }).then((response) => {
 
         //tt=JSON.stringify(response.body.token)
