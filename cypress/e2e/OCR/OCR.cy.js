@@ -607,5 +607,3 @@ describe('OCR', () => {
 
 
 
-
-//http://127.0.0.1:4010/ocr/document/{documentReferenceId}/accept
