@@ -7,3 +7,5 @@ cypress/videos/*.*/
 /node_modules
 /reports/*.*
 /cypress/screenshots/*.*
+/cypress/videos/Ventes/*.*
+/cypress/videos/Achats/*.*
