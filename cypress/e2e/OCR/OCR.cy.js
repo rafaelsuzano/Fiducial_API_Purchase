@@ -208,75 +208,6 @@ describe('OCR', () => {
     })
 
 
-    it('Accept a document ', () => {
-
-
-      cy.api({
-        method: "POST",
-        url: Cypress.env('url_achats') + 'ocr/document/' + documentReferenceId + '/accept',
-        body: {
-
-
-          "documentReferenceId": documentReferenceId,
-
-          "base64": Cypress.env('Pbody_Base64'),
-
-          "fileName": "teste.pdf"
-        },
-
-        headers: {
-          'Authorization': tt
-        },
-
-
-        failOnStatusCode: false
-      }).then(Response => {
-
-        expect(Response.status).to.eq(201)
-
-        documentReferenceId = ((Response.body.documentReferenceId))
-        documentReferenceId = Response.body.documentReferenceId
-
-        cy.log(documentReferenceId)
-      })
-
-
-    })
-
-    it('Refuse a document', () => {
-
-
-      cy.api({
-        method: "POST",
-        url: Cypress.env('url_achats') + 'ocr/document/' + documentReferenceId + '/refuse',
-        body: {
-
-
-          "documentReferenceId": documentReferenceId,
-
-          "base64": Cypress.env('Pbody_Base64'),
-
-          "fileName": "teste.pdf"
-        },
-
-        headers: {
-          'Authorization': tt
-        },
-
-
-        failOnStatusCode: false
-      }).then(Response => {
-
-        expect(Response.status).to.eq(201)
-
-        documentReferenceId = ((Response.body.documentReferenceId))
-        documentReferenceId = Response.body.documentReferenceId
-
-        cy.log(documentReferenceId)
-      })
-
-
-    })
 
     it('Update the document metadata_TO_VALIDATE', () => {
 
@@ -291,11 +222,11 @@ describe('OCR', () => {
           "documentReferenceId": documentReferenceId,
           "status": "TO_VALIDATE",
           "type": "INVOICE",
-          "siret": "string",
+          "siret": "34518442800018",
           "supplierName": "string",
           "mainCode": "string",
           "documentDate": "2023-02-24T00:00:00Z",
-          "documentNumber": "string",
+          "documentNumber":  Math.random(),
           "currency": "EUR",
           "amountTTC": 0,
           "paymentTerms": [
@@ -320,7 +251,7 @@ describe('OCR', () => {
         failOnStatusCode: false
       }).then(Response => {
 
-        expect(Response.status).to.eq(201)
+        expect(Response.status).to.eq(200)
 
         documentReferenceId = ((Response.body.documentReferenceId))
         documentReferenceId = Response.body.documentReferenceId
@@ -330,6 +261,76 @@ describe('OCR', () => {
 
 
     })
+
+
+
+    it('Accept a document ', () => {
+      /// status TO_VALIDATE
+     
+           cy.api({
+             method: "POST",
+             url: Cypress.env('url_achats') + 'ocr/document/' + documentReferenceId + '/accept',
+             body: {
+     
+     
+               "documentReferenceId": documentReferenceId,
+     
+               "base64": Cypress.env('Pbody_Base64'),
+     
+               "fileName": "teste.pdf"
+             },
+     
+             headers: {
+               'Authorization': tt
+             },
+     
+     
+             failOnStatusCode: false
+           }).then(Response => {
+     
+             expect(Response.status).to.eq(200)
+
+     
+             cy.log(documentReferenceId)
+           })
+     
+     
+         })
+     
+         it('Refuse a document', () => {
+     
+     
+           cy.api({
+             method: "POST",
+             url: Cypress.env('url_achats') + 'ocr/document/' + documentReferenceId + '/refuse',
+             body: {
+     
+     
+               "documentReferenceId": documentReferenceId,
+     
+               "base64": Cypress.env('Pbody_Base64'),
+     
+               "fileName": "teste.pdf"
+             },
+     
+             headers: {
+               'Authorization': tt
+             },
+     
+     
+             failOnStatusCode: false
+           }).then(Response => {
+     
+             expect(Response.status).to.eq(200)
+     
+          
+     
+             cy.log(documentReferenceId)
+           })
+     
+     
+         })
+
 
 
 
@@ -346,11 +347,11 @@ describe('OCR', () => {
           "documentReferenceId": documentReferenceId,
           "status": "IN_PROCESS",
           "type": "INVOICE",
-          "siret": "string",
+          "siret": "34518442800018",
           "supplierName": "string",
           "mainCode": "string",
           "documentDate": "2023-02-24T00:00:00Z",
-          "documentNumber": "string",
+          "documentNumber": Math.random(),
           "currency": "EUR",
           "amountTTC": 0,
           "paymentTerms": [
@@ -375,7 +376,7 @@ describe('OCR', () => {
         failOnStatusCode: false
       }).then(Response => {
 
-        expect(Response.status).to.eq(201)
+        expect(Response.status).to.eq(200)
 
         documentReferenceId = ((Response.body.documentReferenceId))
         documentReferenceId = Response.body.documentReferenceId
@@ -400,20 +401,20 @@ describe('OCR', () => {
           "documentReferenceId": documentReferenceId,
           "status": "PROCESSED",
           "type": "INVOICE",
-          "siret": "string",
+          "siret": "34518442800018",
           "supplierName": "string",
           "mainCode": "string",
           "documentDate": "2023-02-24",
-          "documentNumber": "string",
+          "documentNumber":  Math.random(),
           "currency": "EUR",
           "amountTTC": 0,
           "paymentTerms": [
             {
-              "dueDate": "2023-02-24",
+              "dueDate": "2023-02-24T00:00:00Z",
               "amountTTC": 0,
               "amountAlreadyPaid": 0,
               "amountMissingPayment": 0,
-              "paymentDate": "2023-02-24"
+              "paymentDate": "2023-02-24T00:00:00Z"
             }
           ],
           "comments": "TESTE AUTOMATICO"
@@ -429,7 +430,7 @@ describe('OCR', () => {
         failOnStatusCode: false
       }).then(Response => {
 
-        expect(Response.status).to.eq(201)
+        expect(Response.status).to.eq(200)
 
         documentReferenceId = ((Response.body.documentReferenceId))
         documentReferenceId = Response.body.documentReferenceId
@@ -454,20 +455,20 @@ describe('OCR', () => {
           "documentReferenceId": documentReferenceId,
           "status": "REFUSED",
           "type": "INVOICE",
-          "siret": "string",
+          "siret": "34518442800018",
           "supplierName": "string",
           "mainCode": "string",
           "documentDate": "2023-02-24",
-          "documentNumber": "string",
+          "documentNumber": Math.random(),
           "currency": "EUR",
           "amountTTC": 0,
           "paymentTerms": [
             {
-              "dueDate": "2023-02-24",
+              "dueDate": "2023-02-24T00:00:00Z",
               "amountTTC": 0,
               "amountAlreadyPaid": 0,
               "amountMissingPayment": 0,
-              "paymentDate": "2023-02-24"
+              "paymentDate": "2023-02-24T00:00:00Z"
             }
           ],
           "comments": "TESTE AUTOMATICO"
@@ -483,7 +484,7 @@ describe('OCR', () => {
         failOnStatusCode: false
       }).then(Response => {
 
-        expect(Response.status).to.eq(201)
+        expect(Response.status).to.eq(200)
 
         documentReferenceId = ((Response.body.documentReferenceId))
         documentReferenceId = Response.body.documentReferenceId
@@ -510,16 +511,16 @@ describe('OCR', () => {
           "supplierName": "string",
           "mainCode": "string",
           "documentDate": "2023-02-24",
-          "documentNumber": "string",
+          "documentNumber":  Math.random(),
           "currency": "EUR",
           "amountTTC": 0,
           "paymentTerms": [
             {
-              "dueDate": "2023-02-24",
+              "dueDate": "2023-02-24T00:00:00Z",
               "amountTTC": 0,
               "amountAlreadyPaid": 0,
               "amountMissingPayment": 0,
-              "paymentDate": "2023-02-24"
+              "paymentDate": "2023-02-24T00:00:00Z"
             }
           ],
           "comments": "TESTE AUTOMATICO"
@@ -535,7 +536,7 @@ describe('OCR', () => {
         failOnStatusCode: false
       }).then(Response => {
 
-        expect(Response.status).to.eq(201)
+        expect(Response.status).to.eq(200)
 
         documentReferenceId = ((Response.body.documentReferenceId))
         documentReferenceId = Response.body.documentReferenceId
@@ -559,20 +560,20 @@ describe('OCR', () => {
           "documentReferenceId": documentReferenceId,
           "status": "NOT_PROCESSED",
           "type": "INVOICE",
-          "siret": "string",
+          "siret": "34518442800018",
           "supplierName": "string",
           "mainCode": "string",
           "documentDate": "2023-02-24",
-          "documentNumber": "string",
+          "documentNumber":  Math.random(),
           "currency": "EUR",
           "amountTTC": 0,
           "paymentTerms": [
             {
-              "dueDate": "2023-02-24",
+              "dueDate": "2023-02-24T00:00:00Z",
               "amountTTC": 0,
               "amountAlreadyPaid": 0,
               "amountMissingPayment": 0,
-              "paymentDate": "2023-02-24"
+              "paymentDate": "2023-02-24T00:00:00Z"
             }
           ],
           "comments": "TESTE AUTOMATICO"
@@ -588,7 +589,7 @@ describe('OCR', () => {
         failOnStatusCode: false
       }).then(Response => {
 
-        expect(Response.status).to.eq(201)
+        expect(Response.status).to.eq(200)
 
         documentReferenceId = ((Response.body.documentReferenceId))
         documentReferenceId = Response.body.documentReferenceId
