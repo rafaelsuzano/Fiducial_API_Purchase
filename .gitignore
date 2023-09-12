@@ -8,4 +8,4 @@ cypress/videos/*.*/
 /reports/*.*
 /cypress/screenshots/*.*
 /cypress/videos/Ventes/*.*
-/cypress/videos/Achats/*.*
+/cypress/videos/Achats/*.*git 
