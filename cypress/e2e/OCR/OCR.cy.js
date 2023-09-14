@@ -201,12 +201,14 @@ it('Save OCR processed document with metadata', () => {
 
     documentReferenceId = ((Response.body.documentReferenceId))
     documentReferenceId = Response.body.documentReferenceId
-
+    expect(Response.body.type).to.eq("FACTURE")
     cy.log(documentReferenceId)
   })
 
 
 })
+
+
 
 
 
@@ -260,10 +262,12 @@ it('Update the document metadata_TO_VALIDATE', () => {
     cy.log(documentReferenceId)
     cy.log(Response.body.type)
 
+
   })
 
 
 })
+
 
 
 
