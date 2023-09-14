@@ -222,20 +222,20 @@ it('Update the document metadata_TO_VALIDATE', () => {
 
       "documentReferenceId": documentReferenceId,
       "status": "TO_VALIDATE",
-      "type": "INVOICE",
+      "type": "FACTURE",
       "siret": "34518442800018",
-      "supplierName": "string",
-      "mainCode": "string",
+  "supplierName": "Teste_OCR",
+      "mainCode": Math.random(),
       "documentDate": "2023-02-24T00:00:00Z",
       "documentNumber": Math.random(),
       "currency": "EUR",
-      "amountTTC": 0,
+      "amountTTC": 2,
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 0,
-          "amountAlreadyPaid": 0,
-          "amountMissingPayment": 0,
+          "amountTTC": 2,
+          "amountAlreadyPaid": 2,
+          "amountMissingPayment": 2,
           "paymentDate": "2023-02-24T00:00:00Z"
         }
       ],
@@ -347,18 +347,18 @@ it('Update the document metadata_IN_PROCESS', () => {
 
       "documentReferenceId": documentReferenceId,
       "status": "IN_PROCESS",
-      "type": "INVOICE",
+      "type": "FACTURE",
       "siret": "34518442800018",
-      "supplierName": "string",
-      "mainCode": "string",
+  "supplierName": "Teste_OCR",
+      "mainCode": Math.random(),
       "documentDate": "2023-02-24T00:00:00Z",
       "documentNumber": Math.random(),
       "currency": "EUR",
-      "amountTTC": 0,
+      "amountTTC": 2,
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 0,
+          "amountTTC": 2,
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -401,18 +401,18 @@ it('Update the document metadata_PROCESSED', () => {
 
       "documentReferenceId": documentReferenceId,
       "status": "PROCESSED",
-      "type": "INVOICE",
+      "type": "FACTURE",
       "siret": "34518442800018",
-      "supplierName": "string",
-      "mainCode": "string",
+  "supplierName": "Teste_OCR",
+      "mainCode": Math.random(),
       "documentDate": "2023-02-24",
       "documentNumber": Math.random(),
       "currency": "EUR",
-      "amountTTC": 0,
+      "amountTTC": 2,
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 0,
+          "amountTTC": 2,
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -455,18 +455,18 @@ it('Update the document metadata_REFUSED', () => {
 
       "documentReferenceId": documentReferenceId,
       "status": "REFUSED",
-      "type": "INVOICE",
+      "type": "FACTURE",
       "siret": "34518442800018",
-      "supplierName": "string",
-      "mainCode": "string",
+  "supplierName": "Teste_OCR",
+      "mainCode": Math.random(),
       "documentDate": "2023-02-24",
       "documentNumber": Math.random(),
       "currency": "EUR",
-      "amountTTC": 0,
+      "amountTTC": 2,
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 0,
+          "amountTTC": 2,
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -507,18 +507,18 @@ it('Update the document metadata_ACCEPTED', () => {
 
       "documentReferenceId": documentReferenceId,
       "status": "ACCEPTED",
-      "type": "INVOICE",
+      "type": "FACTURE",
       "siret": "string",
-      "supplierName": "string",
-      "mainCode": "string",
+  "supplierName": "Teste_OCR",
+      "mainCode": Math.random(),
       "documentDate": "2023-02-24",
       "documentNumber": Math.random(),
       "currency": "EUR",
-      "amountTTC": 0,
+      "amountTTC": 2,
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 0,
+          "amountTTC": 2,
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -560,18 +560,18 @@ it('Update the document metadata_NOT_PROCESSED', () => {
 
       "documentReferenceId": documentReferenceId,
       "status": "NOT_PROCESSED",
-      "type": "INVOICE",
+      "type": "FACTURE",
       "siret": "34518442800018",
-      "supplierName": "string",
-      "mainCode": "string",
+  "supplierName": "Teste_OCR",
+      "mainCode": Math.random(),
       "documentDate": "2023-02-24",
       "documentNumber": Math.random(),
       "currency": "EUR",
-      "amountTTC": 0,
+      "amountTTC": 2,
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 0,
+          "amountTTC": 2,
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"

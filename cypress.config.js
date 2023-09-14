@@ -2,6 +2,7 @@ const { defineConfig } = require('cypress');
 
 
 module.exports = defineConfig({
+  projectId: '3z9gcx',
   "defaultCommandTimeout": 70000,
     // configure and register our reporter
   
