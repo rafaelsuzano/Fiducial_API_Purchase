@@ -3,7 +3,7 @@ const addContext = require('mochawesome/addContext');
 
 let dt1
 let dt
-
+let type
 let tt
 
 let documentReferenceId
@@ -258,6 +258,8 @@ it('Update the document metadata_TO_VALIDATE', () => {
     documentReferenceId = Response.body.documentReferenceId
 
     cy.log(documentReferenceId)
+    cy.log(Response.body.type)
+
   })
 
 
@@ -489,6 +491,7 @@ it('Update the document metadata_REFUSED', () => {
 
     documentReferenceId = ((Response.body.documentReferenceId))
     documentReferenceId = Response.body.documentReferenceId
+
 
     cy.log(documentReferenceId)
   })
