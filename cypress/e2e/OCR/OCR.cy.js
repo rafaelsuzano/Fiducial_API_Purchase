@@ -289,11 +289,11 @@ it('Update the document metadata_Status_TO_VALIDATE_Type_AVOIR', () => {
       "documentDate": "2023-02-24T00:00:00Z",
       "documentNumber": Math.floor(Math.random() * 999989),
       "currency": "EUR",
-      "amountTTC": 2,
+       "amountTTC":Math.floor(Math.random() * 999989),
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 2,
+           "amountTTC":Math.floor(Math.random() * 999989),
           "amountAlreadyPaid": 2,
           "amountMissingPayment": 2,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -348,11 +348,11 @@ it('Update the document metadata_Status_TO_VALIDATE_Type_FACTURE', () => {
       "documentDate": "2023-02-24T00:00:00Z",
       "documentNumber": Math.floor(Math.random() * 999989),
       "currency": "EUR",
-      "amountTTC": 2,
+       "amountTTC":Math.floor(Math.random() * 999989),
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 2,
+           "amountTTC":Math.floor(Math.random() * 999989),
           "amountAlreadyPaid": 2,
           "amountMissingPayment": 2,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -360,7 +360,7 @@ it('Update the document metadata_Status_TO_VALIDATE_Type_FACTURE', () => {
       ],
       "comments": "TESTE AUTOMATICO"
     },
-
+   
 
 
     headers: {
@@ -478,11 +478,11 @@ it('Update the document metadata_IN_PROCESS', () => {
       "documentDate": "2023-02-24T00:00:00Z",
       "documentNumber": Math.floor(Math.random() * 999989),
       "currency": "EUR",
-      "amountTTC": 2,
+       "amountTTC":Math.floor(Math.random() * 999989),
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 2,
+           "amountTTC":Math.floor(Math.random() * 999989),
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -532,11 +532,11 @@ it('Update the document metadata_PROCESSED', () => {
       "documentDate": "2023-02-24",
       "documentNumber": Math.floor(Math.random() * 999989),
       "currency": "EUR",
-      "amountTTC": 2,
+       "amountTTC":Math.floor(Math.random() * 999989),
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 2,
+           "amountTTC":Math.floor(Math.random() * 999989),
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -586,11 +586,11 @@ it('Update the document metadata_REFUSED', () => {
       "documentDate": "2023-02-24",
       "documentNumber": Math.floor(Math.random() * 999989),
       "currency": "EUR",
-      "amountTTC": 2,
+       "amountTTC":Math.floor(Math.random() * 999989),
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 2,
+           "amountTTC":Math.floor(Math.random() * 999989),
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -639,11 +639,11 @@ it('Update the document metadata_ACCEPTED', () => {
       "documentDate": "2023-02-24",
       "documentNumber": Math.floor(Math.random() * 999989),
       "currency": "EUR",
-      "amountTTC": 2,
+       "amountTTC":Math.floor(Math.random() * 999989),
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 2,
+           "amountTTC":Math.floor(Math.random() * 999989),
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
@@ -692,11 +692,11 @@ it('Update the document metadata_NOT_PROCESSED', () => {
       "documentDate": "2023-02-24",
       "documentNumber": Math.floor(Math.random() * 999989),
       "currency": "EUR",
-      "amountTTC": 2,
+       "amountTTC":Math.floor(Math.random() * 999989),
       "paymentTerms": [
         {
           "dueDate": "2023-02-24T00:00:00Z",
-          "amountTTC": 2,
+           "amountTTC":Math.floor(Math.random() * 999989),
           "amountAlreadyPaid": 0,
           "amountMissingPayment": 0,
           "paymentDate": "2023-02-24T00:00:00Z"
