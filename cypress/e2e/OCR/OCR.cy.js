@@ -120,7 +120,7 @@ describe('OCR', () => {
   })
 
 
-  it('Get the nex document to be process', () => {
+  it('Get the next document to be process', () => {
     cy.GET_API('ocr/documents/next_to_process', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
