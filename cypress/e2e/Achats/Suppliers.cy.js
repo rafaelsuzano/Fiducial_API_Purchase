@@ -2,7 +2,7 @@ const { beforeEach } = require('mocha');
 const addContext = require('mochawesome/addContext');
 
 
-
+let Id_Notes
 let tt
 let dt1
 let id_delete
@@ -271,12 +271,12 @@ describe('Supplier Notes', () => {
         cy.addContext("Test get Supplier Family")
       })
 
-
-    it('Post Supplier Families List Notes 201', () => {
+    })
+  it('Post Supplier Families List Notes 201', () => {
       cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers/' + ID_TESTE + '/notes', tt,dt1['code201_notes'])
         .then(Response => {
-            var d = (JSON.stringify(Response.body))
-            cy.log(JSON.stringify(d))
+          Id_Notes = ((Response.body.id))
+            cy.log(Id_Notes)
     
             expect(Response.status).to.eq(201)
     
@@ -284,9 +284,75 @@ describe('Supplier Notes', () => {
           })
     
       })
+  it('Get a Supplier Note', () => {
+        cy.GET_API('purchases/companies/'+Company+'/suppliers/' + ID_TESTE + '/notes/'+Id_Notes, tt)
+          .then(Response => {
+            var d = (JSON.stringify(Response.body))
+            cy.log(JSON.stringify(d))
+    
+            expect(Response.status).to.eq(200)
+    
+            cy.addContext("Test get Supplier Family")
+          })
+        
+        })
+
+  it('Update a Supplier Note', () => {
 
 
-})
+          cy.api({
+            method: "PUT",
+            url: Cypress.env('url_achats') + 'purchases/companies/'+Company+'/suppliers/' + ID_TESTE + '/notes/'+Id_Notes,
+            body: {
+              
+            "note": Id_Notes,
+            "title": "UPDATE AUTOMACAO"
+      
+            },
+        
+        
+        
+            headers: {
+              'Authorization': tt
+            },
+        
+        
+            failOnStatusCode: false
+          }).then(Response => {
+        
+            expect(Response.status).to.eq(200)
+    
+        
+          })
+        
+        
+        })      
+  it('Delete a Supplier Note', () => {
+
+
+          cy.api({
+            method: "DELETE",
+            url: Cypress.env('url_achats') + 'purchases/companies/'+Company+'/suppliers/' + ID_TESTE + '/notes/'+Id_Notes,
+             
+        
+            headers: {
+              'Authorization': tt
+            },
+        
+        
+            failOnStatusCode: false
+          }).then(Response => {
+        
+            expect(Response.status).to.eq(200)
+    
+        
+          })
+        
+        
+        })    
+
+
+      })
 
 describe('Delete Data', () => {
 
@@ -305,9 +371,9 @@ describe('Delete Data', () => {
   it('Get documents references list 400', () => {
     cy.GET_API('ocr/documents-references', tt)
       .then(Response => {
-        var d = (JSON.stringify(Response.body))
-        cy.log(JSON.stringify(d))
-
+        Id_Notes = (JSON.stringify(Response.body.id))
+        cy.log(JSON.stringify(Id_Notes))
+          
         expect(Response.status).to.eq(400)
 
         cy.addContext("Test get Supplier Family")
@@ -315,5 +381,4 @@ describe('Delete Data', () => {
 
   })
 
-})
 })

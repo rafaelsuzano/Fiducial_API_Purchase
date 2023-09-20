@@ -9,7 +9,7 @@ let dt1
 
 let Company = Cypress.env("companyId")
 
-describe('Suppliers', () => {
+describe('Invoices Metrics', () => {
   before(() => {
     cy.fixture('supplier.json').then(dt => {
       dt1 = dt;
@@ -33,7 +33,24 @@ describe('Suppliers', () => {
 
 
   it('Get a current invoices stats', () => {
-    cy.GET_API('purchases/companies/'+ Company + 'invoices/current-invoices-stats', tt)
+    cy.GET_API('purchases/companies/'+ Company + '/invoices/current-invoices-stats', tt)
+      .then(Response => {
+        expect(Response.status).to.eq(200)
+        //var d =(JSON.stringify(Response.body))
+
+        cy.log(Response.body)
+
+  
+     
+
+
+      })
+  })
+
+
+
+  it('Get accepted invoices amount for each supplier for exercise monthly period', () => {
+    cy.GET_API('purchases/companies/'+ Company + '/invoices/metrics/exercise-amount-monthly', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))

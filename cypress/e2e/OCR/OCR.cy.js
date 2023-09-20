@@ -388,6 +388,38 @@ it('Update the document metadata_Status_TO_VALIDATE_Type_FACTURE', () => {
 
 
 
+it('Push documents to OCR ', () => {
+  /// status TO_VALIDATE
+
+  cy.api({
+    method: "POST",
+    url: Cypress.env('url_achats') + 'push_documents_to_ocr',
+    body: {
+
+
+      "documentReferenceId": documentReferenceId,
+
+    },
+
+    headers: {
+      'Authorization': tt
+    },
+
+
+    failOnStatusCode: false
+  }).then(Response => {
+
+    expect(Response.status).to.eq(200)
+
+
+    cy.log(documentReferenceId)
+  })
+
+
+})
+
+
+
 
 it('Accept a document ', () => {
   /// status TO_VALIDATE
