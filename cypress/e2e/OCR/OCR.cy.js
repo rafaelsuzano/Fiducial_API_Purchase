@@ -287,7 +287,7 @@ it('Update the document metadata_Status_TO_VALIDATE_Type_AVOIR', () => {
   "supplierName": "Teste_OCR",
       "mainCode": Math.floor(Math.random() * 999989),
       "documentDate": "2023-02-24T00:00:00Z",
-      "documentNumber": Math.random(),
+      "documentNumber": Math.floor(Math.random() * 999989),
       "currency": "EUR",
       "amountTTC": 2,
       "paymentTerms": [
