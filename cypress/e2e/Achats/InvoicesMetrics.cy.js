@@ -37,8 +37,8 @@ describe('Invoices Metrics', () => {
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
+        cy.log(JSON.stringify(Response.body))
 
-        cy.log(Response.body)
 
   
      
@@ -56,7 +56,7 @@ describe('Invoices Metrics', () => {
         //var d =(JSON.stringify(Response.body))
 
         cy.log(Response.body)
-
+        cy.log(JSON.stringify(Response.body)) 
   
      
 

@@ -38,7 +38,9 @@ describe('Invoices', () => {
   })
 
   it('Get a list of invoices payments', () => {
-    cy.GET_API('purchases/companies/'+Company+'/invoice/invoices-payments', tt)
+  
+  //https://purchase-qa.facilia.com/purchases/companies/2/invoices-payments
+    cy.GET_API('purchases/companies/'+Company+'/invoices-payments', tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
@@ -60,13 +62,10 @@ describe('Invoices', () => {
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
-        var d = ((Response.body.items))
+      
+        cy.log(Response.body)
 
-
-        for (var index in d) {
-          id_suppliers = (d[index].id)
-          //cy.log(d[index].id)
-        }
+     
         cy.addContext("Test get Suppliers")
 
 
