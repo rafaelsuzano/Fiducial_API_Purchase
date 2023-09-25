@@ -388,7 +388,52 @@
       "note":"TESTESAUTOMATICOS",
       "title":"TESTESAUTOMATICOS"
   
+},
+
+"code201_France_SIRET_OCR":{
+  
+  "legalInfo": {
+    "commercialName": "TESTE AUTOMATICO OCR",
+    "address": "TESTE AUTOMATICO",
+    "postalCode": 12345,
+    "city": "TESTE",
+    "siret": 43949409700041,
+    "country": {
+
+      "id":73,
+      "name":"FRANCE",
+      "country":"France",
+      "isoAlpha2":"FR",
+      "isoAlpha3":"FRA",
+      "isoDig3":"250",
+      "phonePrefix":33,
+      "label":"+33"
+    }
+  },
+  "headOfficeInfo": {
+    "companyName": "TESTE AUTOMATICO",
+    "address": "TESTE AUTOMATICO",
+    
+    "siren": 412250714,
+    
+    "postalCode": 12345,
+    "city": "TESTE AUTOMATICO",
+    "country": {
+              "id":73,
+      "name":"FRANCE",
+      "country":"France",
+      "isoAlpha2":"FR",
+      "isoAlpha3":"FRA",
+      "isoDig3":"250",
+      "phonePrefix":33,
+      "label":"+33"
+    
+    
+    
+    }
+  }
 }
+
 
 }
 

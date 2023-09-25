@@ -5,10 +5,10 @@ let dt1
 let dt
 let type
 let tt
-
+let id_suppliers_france
 let documentReferenceId
 let documentReferenceId_AVOIR
-
+let Company = Cypress.env("companyId")
 
 describe('OCR', () => {
   before(() => {
@@ -31,6 +31,21 @@ describe('OCR', () => {
   })
 
 
+  
+  
+  it('Post Supplier 201 France', () => {
+
+    cy.Post_API_With_Body('purchases/companies/' + Company + '/suppliers', tt, dt1['code201_France_SIRET_OCR'])
+      .then(Response => {
+        cy.log(JSON.stringify(Response.body))
+        expect(Response.status).to.eq(201);
+
+        id_suppliers_france = ((Response.body["id"]))
+      })
+
+  })
+  
+  
   it('Get documents references list TO_VALIDATE', () => {
     cy.GET_API('ocr/documents-references?status=TO_VALIDATE', tt)
       .then(Response => {
@@ -283,8 +298,8 @@ it('Update the document metadata_Status_TO_VALIDATE_Type_AVOIR', () => {
       "documentReferenceId": documentReferenceId_AVOIR,
       "status": "TO_VALIDATE",
       "type": "AVOIR",
-      "siret": "34518442800018",
-  "supplierName": "Teste_OCR",
+      "siret": "31761525000014",
+      "supplierName": "TESTE AUTOMATICO",
       "mainCode": Math.floor(Math.random() * 999989),
       "documentDate": "2023-02-24T00:00:00Z",
       "documentNumber": Math.floor(Math.random() * 999989),
@@ -342,8 +357,8 @@ it('Update the document metadata_Status_TO_VALIDATE_Type_FACTURE', () => {
       "documentReferenceId": documentReferenceId,
       "status": "TO_VALIDATE",
       "type": "FACTURE",
-      "siret": "34518442800018",
-  "supplierName": "Teste_OCR",
+      "siret": "31761525000014",
+  "supplierName": "TESTE AUTOMATICO",
       "mainCode": Math.floor(Math.random() * 999989),
       "documentDate": "2023-02-24T00:00:00Z",
       "documentNumber": Math.floor(Math.random() * 999989),
@@ -390,10 +405,10 @@ it('Update the document metadata_Status_TO_VALIDATE_Type_FACTURE', () => {
 
 it('Push documents to OCR ', () => {
   /// status TO_VALIDATE
-
+  cy.log(documentReferenceId)
   cy.api({
     method: "POST",
-    url: Cypress.env('url_achats') + 'push_documents_to_ocr',
+    url: Cypress.env('url_achats') + 'push_documents_to_ocr?companyId=2',
     body: {
 
 
@@ -504,8 +519,8 @@ it('Update the document metadata_IN_PROCESS', () => {
       "documentReferenceId": documentReferenceId,
       "status": "IN_PROCESS",
       "type": "FACTURE",
-      "siret": "34518442800018",
-  "supplierName": "Teste_OCR",
+      "siret": "31761525000014",
+  "supplierName": "TESTE AUTOMATICO",
       "mainCode": Math.floor(Math.random() * 999989),
       "documentDate": "2023-02-24T00:00:00Z",
       "documentNumber": Math.floor(Math.random() * 999989),
@@ -558,8 +573,8 @@ it('Update the document metadata_PROCESSED', () => {
       "documentReferenceId": documentReferenceId,
       "status": "PROCESSED",
       "type": "FACTURE",
-      "siret": "34518442800018",
-  "supplierName": "Teste_OCR",
+      "siret": "31761525000014",
+  "supplierName": "TESTE AUTOMATICO",
       "mainCode": Math.floor(Math.random() * 999989),
       "documentDate": "2023-02-24",
       "documentNumber": Math.floor(Math.random() * 999989),
@@ -612,8 +627,8 @@ it('Update the document metadata_REFUSED', () => {
       "documentReferenceId": documentReferenceId,
       "status": "REFUSED",
       "type": "FACTURE",
-      "siret": "34518442800018",
-  "supplierName": "Teste_OCR",
+      "siret": "31761525000014",
+  "supplierName": "TESTE AUTOMATICO",
       "mainCode": Math.floor(Math.random() * 999989),
       "documentDate": "2023-02-24",
       "documentNumber": Math.floor(Math.random() * 999989),
@@ -666,7 +681,7 @@ it('Update the document metadata_ACCEPTED', () => {
       "status": "ACCEPTED",
       "type": "FACTURE",
       "siret": "string",
-  "supplierName": "Teste_OCR",
+  "supplierName": "TESTE AUTOMATICO",
       "mainCode": Math.floor(Math.random() * 999989),
       "documentDate": "2023-02-24",
       "documentNumber": Math.floor(Math.random() * 999989),
@@ -718,8 +733,8 @@ it('Update the document metadata_NOT_PROCESSED', () => {
       "documentReferenceId": documentReferenceId,
       "status": "NOT_PROCESSED",
       "type": "FACTURE",
-      "siret": "34518442800018",
-  "supplierName": "Teste_OCR",
+      "siret": "31761525000014",
+  "supplierName": "TESTE AUTOMATICO",
       "mainCode": Math.floor(Math.random() * 999989),
       "documentDate": "2023-02-24",
       "documentNumber": Math.floor(Math.random() * 999989),
@@ -754,11 +769,20 @@ it('Update the document metadata_NOT_PROCESSED', () => {
 
     cy.log(documentReferenceId)
   })
+})
+it('Delete suppliers', () => {
+    cy.DELETE_API('purchases/companies/' + Company + '/suppliers/' + id_suppliers_france, tt)
 
+
+
+  })
 
 })
 
-})
+
+
+
+
 
 
 
