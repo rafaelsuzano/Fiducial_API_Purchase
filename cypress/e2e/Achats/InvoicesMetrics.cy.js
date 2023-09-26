@@ -32,9 +32,9 @@ describe('Invoices Metrics', () => {
 
 
 
-  it('Post Supplier 201 France', () => {
+  it('Post Supplier', () => {
 
-    cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code201_France'])
+    cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code201'])
       .then(Response => {
         cy.log(JSON.stringify(Response.body))
         expect(Response.status).to.eq(201);

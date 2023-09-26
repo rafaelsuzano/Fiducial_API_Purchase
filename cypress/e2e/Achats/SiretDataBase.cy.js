@@ -44,15 +44,32 @@ describe('SiretDataBase', () => {
   it('Get data about the siret', () => {
     cy.GET_API('purchases/siret-database/31761525000014', tt)
       .then(Response => {
-        expect(Response.status).to.eq(200)
+      
         //var d =(JSON.stringify(Response.body))
 
         cy.log(Response.body)
-
+        expect(Response.status).to.eq(200)
   
 
-
+      })
 
       })
+  
+  
+  it('Get data about the not siret ', () => {
+    cy.GET_API('purchases/siret-database/31761525000015', tt)
+          .then(Response => {
+          
+            //var d =(JSON.stringify(Response.body))
+    
+            cy.log(Response.body)
+            expect(Response.status).to.eq(200)
+      
+    
+    
+    
+          })    
+
+
   })
 })

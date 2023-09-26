@@ -6,7 +6,7 @@ const addContext = require('mochawesome/addContext');
 let tt
 let dt1
 let dt
-
+let id_suppliers
 
 let Company = Cypress.env("companyId")
 
@@ -30,11 +30,22 @@ describe('Supplier Families Metrics', () => {
     })
   })
 
+  it('Post Supplier', () => {
+
+    cy.Post_API_With_Body('purchases/companies/'+Company+'/suppliers', tt, dt1['code201'])
+      .then(Response => {
+        cy.log(JSON.stringify(Response.body))
+        expect(Response.status).to.eq(201);
+
+        id_suppliers = ((Response.body["id"]))
+      })
+
+  })
 
 
 
   it('Get total amount of invoices by exercise month', () => {
-    cy.GET_API( 'purchases/companies/'+ Company + '/supplier-families/metrics/invoices/exercise-amount-monthly', tt)
+    cy.GET_API( 'purchases/companies/'+ Company + '/supplier-families/metrics/invoices/exercise-amount-monthly?supplierId='+id_suppliers, tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
@@ -107,7 +118,7 @@ describe('Supplier Families Metrics', () => {
   })
 
   it('Get total amount of invoices for the last 12 months', () => {
-    cy.GET_API( 'purchases/companies/'+ Company + '/supplier-families/metrics/invoices/amount-monthly', tt)
+    cy.GET_API( 'purchases/companies/'+ Company + '/supplier-families/metrics/invoices/amount-monthly?supplierId='+id_suppliers, tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
@@ -117,7 +128,13 @@ describe('Supplier Families Metrics', () => {
       })
   })
 
+  it('Delete suppliers', () => {    
+    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers, tt)
 
 
+
+  })
 
 })
+
+
