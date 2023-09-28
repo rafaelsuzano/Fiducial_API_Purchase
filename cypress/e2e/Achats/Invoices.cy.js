@@ -5,15 +5,7 @@ const addContext = require('mochawesome/addContext');
 
 let tt
 let dt1
-let id_delete
-let ID_TESTE
 
-let id_suppliers
-let dt_Family
-let id_suppliers_france
-let id_suppliers_Family
-let id_suppliers_contacts
-let id_suppliers_paymentInfo
 
 let Company = Cypress.env("companyId")
 
@@ -39,20 +31,17 @@ describe('Invoices', () => {
 
   it('Get a list of invoices payments', () => {
   
-  //https://purchase-qa.facilia.com/purchases/companies/2/invoices-payments
+
     cy.GET_API('purchases/companies/'+Company+'/invoices-payments', tt)
       .then(Response => {
+        cy.log(JSON.stringify(Response.body))
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
         var d = ((Response.body.items))
 
 
-        for (var index in d) {
-          id_suppliers = (d[index].id)
-          //cy.log(d[index].id)
-        }
-        cy.addContext("Test get Suppliers")
-
+   
+   
 
       })
   })
