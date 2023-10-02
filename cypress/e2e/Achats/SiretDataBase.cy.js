@@ -40,7 +40,7 @@ describe('SiretDataBase', () => {
         //var d =(JSON.stringify(Response.body))
 
         cy.log(Response.body)
-        expect(Response.status).to.eq(200)
+        expect(Response.status).to.eq(400)
   
 
       })

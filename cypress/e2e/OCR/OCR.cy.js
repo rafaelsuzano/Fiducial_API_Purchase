@@ -33,7 +33,7 @@ describe('OCR', () => {
 
 
 
-  it.skip('Post Supplier 201 France', () => {
+  it('Post Supplier 201 France', () => {
 
     cy.Post_API_With_Body('purchases/companies/' + Company + '/suppliers', tt, dt1['code201_France_SIRET_OCR'])
       .then(Response => {
@@ -459,7 +459,7 @@ describe('OCR', () => {
       body: {
 
 
-        "documentReferenceId": documentReferenceId,
+       documentReferenceId,
 
       },
 
