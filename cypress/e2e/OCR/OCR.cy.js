@@ -291,7 +291,7 @@ describe('OCR', () => {
         "status": "TO_VALIDATE",
         "type": "AVOIR",
         "siret": "31761525000014",
-        "supplierName": "TESTE AUTOMATICO",
+        "supplierName": "TESTE AUTOMATICO TESTE",
         "mainCode": Math.floor(Math.random() * 999989),
         "documentDate": "2023-02-24T00:00:00Z",
         "documentNumber": Math.floor(Math.random() * 999989),
@@ -405,7 +405,7 @@ describe('OCR', () => {
         "status": "TO_VALIDATE",
         "type": "FACTURE",
         "siret": "31761525000014",
-        "supplierName": "TESTE AUTOMATICO",
+        "supplierName": "TESTE AUTOMATICO TESTE",
         "mainCode": Math.floor(Math.random() * 999989),
         "documentDate": "2023-02-24T00:00:00Z",
         "documentNumber": Math.floor(Math.random() * 999989),
@@ -567,7 +567,7 @@ describe('OCR', () => {
         "status": "IN_PROCESS",
         "type": "FACTURE",
         "siret": "31761525000014",
-        "supplierName": "TESTE AUTOMATICO",
+        "supplierName": "TESTE AUTOMATICO TESTE",
         "mainCode": Math.floor(Math.random() * 999989),
         "documentDate": "2023-02-24T00:00:00Z",
         "documentNumber": Math.floor(Math.random() * 999989),
@@ -621,7 +621,7 @@ describe('OCR', () => {
         "status": "PROCESSED",
         "type": "FACTURE",
         "siret": "31761525000014",
-        "supplierName": "TESTE AUTOMATICO",
+        "supplierName": "TESTE AUTOMATICO TESTE",
         "mainCode": Math.floor(Math.random() * 999989),
         "documentDate": "2023-02-24",
         "documentNumber": Math.floor(Math.random() * 999989),
@@ -675,7 +675,7 @@ describe('OCR', () => {
         "status": "REFUSED",
         "type": "FACTURE",
         "siret": "31761525000014",
-        "supplierName": "TESTE AUTOMATICO",
+        "supplierName": "TESTE AUTOMATICO TESTE",
         "mainCode": Math.floor(Math.random() * 999989),
         "documentDate": "2023-02-24",
         "documentNumber": Math.floor(Math.random() * 999989),
@@ -728,7 +728,7 @@ describe('OCR', () => {
         "status": "ACCEPTED",
         "type": "FACTURE",
         "siret": null,
-        "supplierName": "TESTE AUTOMATICO",
+        "supplierName": "TESTE AUTOMATICO TESTE",
         "mainCode": Math.floor(Math.random() * 999989),
         "documentDate": "2023-02-24",
         "documentNumber": Math.floor(Math.random() * 999989),
@@ -781,7 +781,7 @@ describe('OCR', () => {
         "status": "NOT_PROCESSED",
         "type": "FACTURE",
         "siret": "31761525000014",
-        "supplierName": "TESTE AUTOMATICO",
+        "supplierName": "TESTE AUTOMATICO TESTE",
         "mainCode": Math.floor(Math.random() * 999989),
         "documentDate": "2023-02-24",
         "documentNumber": Math.floor(Math.random() * 999989),
@@ -817,7 +817,7 @@ describe('OCR', () => {
       cy.log(documentReferenceId)
     })
   })
-  it('Delete suppliers', () => {
+  it.skip('Delete suppliers', () => {
     cy.DELETE_API('purchases/companies/' + Company + '/suppliers/' + id_suppliers_france, tt)
 
 

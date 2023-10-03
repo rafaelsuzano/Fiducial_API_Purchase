@@ -67,7 +67,7 @@ describe('Supplier Families Metrics', () => {
 
 
   it('Get total amount of invoices  exercise year', () => {
-    cy.GET_API( 'purchases/companies/'+ Company + '/suppliers/metrics/invoices/exercise-amount-yearly?supplierFamilyId=' + id_suppliers_Family, tt)
+    cy.GET_API( 'purchases/companies/'+ Company + '/supplier-families/metrics/invoices/exercise-amount-yearly?supplierFamilyId=' + id_suppliers_Family, tt)
       .then(Response => {
         expect(Response.status).to.eq(200)
         //var d =(JSON.stringify(Response.body))
