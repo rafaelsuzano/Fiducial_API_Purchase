@@ -357,14 +357,14 @@ describe('Supplier Notes', () => {
 describe('Delete Data', () => {
 
   before(() =>{
-    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + ID_TESTE, tt)
-    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_france, tt)
-    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_contacts, tt)
-    cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_paymentInfo, tt)
+  cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + ID_TESTE, tt)
+  cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_france, tt)
+  cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_contacts, tt)
+  cy.DELETE_API('purchases/companies/'+Company+'/suppliers/' + id_suppliers_paymentInfo, tt)
 
 
-  })
 
+})
 
 
   // fazer before para pegar id de novo suplier
